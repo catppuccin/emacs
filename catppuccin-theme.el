@@ -91,9 +91,9 @@ read it before opening a new issue about your will.")
                 (catppuccin-red     "#f28fad" "#ff8787" "red")         ; official red
                 (catppuccin-yellow  "#fae3b0" "#ffff87" "yellow")      ; official yellow
                 ;; Other colors
-                (bg2             "#373844" "#121212" "brightblack")
-                (bg3             "#464752" "#262626" "brightblack")
-                (bg4             "#565761" "#444444" "brightblack")
+                (bg2             "#1A1826" "#121212" "brightblack")
+                (bg3             "#1A1826" "#262626" "brightblack")
+                (bg4             "#1a1826" "#444444" "brightblack")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
                 (fg4             "#b6b6b2" "#b2b2b2" "white")
