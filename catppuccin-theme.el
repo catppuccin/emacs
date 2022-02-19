@@ -79,7 +79,7 @@ read it before opening a new issue about your will.")
 
 ;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let ((colors '(;; Upstream theme color
-                (catppuccin-bg      "#1e1d2f" "unspecified-bg" "unspecified-bg") ; official background
+                (catppuccin-bg      "1e1e2e" "unspecified-bg" "unspecified-bg") ; official background
                 (catppuccin-fg      "#d9e0ee" "#ffffff" "brightwhite") ; official foreground
                 (catppuccin-current "#44475a" "#303030" "brightblack") ; official current-line/selection
                 (catppuccin-comment "#6272a4" "#5f5faf" "blue")        ; official comment
@@ -92,7 +92,7 @@ read it before opening a new issue about your will.")
                 (catppuccin-yellow  "#fae3b0" "#ffff87" "yellow")      ; official yellow
                 ;; Other colors
                 (bg2             "#1A1826" "#121212" "brightblack")
-                (bg3             "#1A1826" "#262626" "brightblack")
+                (bg3             "#1e1e2e" "#262626" "brightblack")
                 (bg4             "#1a1826" "#444444" "brightblack")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
@@ -113,7 +113,7 @@ read it before opening a new issue about your will.")
                (lazy-highlight :foreground ,fg2 :background ,bg2)
                (link :foreground ,catppuccin-cyan :underline t)
                (linum :slant italic :foreground ,bg4 :background ,catppuccin-bg)
-               (line-number :slant italic :foreground ,bg4 :background ,catppuccin-bg)
+               (line-number :slant italic :foreground ,catppuccin-purple :background ,catppuccin-bg)
                (match :background ,catppuccin-yellow :foreground ,catppuccin-bg)
                (menu :background ,catppuccin-current :inverse-video nil
                      ,@(if catppuccin-alternate-mode-line-and-minibuffer

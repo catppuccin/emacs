@@ -18,14 +18,13 @@
 ## Usage
 
 1. Clone this repository locally
-2. Open the app's settings
-3. Select `import theme` and browse to where you cloned Catppuccin
-4. Select it
+2. Add the directory to emacs load-path
+3. Run `M-x load-theme` to load the `catppuccin` theme.
 
-## 🙋 FAQ (optional)
+## 🙋 FAQ 
 
-- Q: **_"Where can I find the doc?"_**
-  A: Run `:help theme`
+- Q: **_"Can it be installed using melpa?"_**
+  A: We are in the process of uploading to melpa
 
 ## 💝 Thanks to
 
