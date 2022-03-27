@@ -7,7 +7,7 @@
 ;; Maintainer: pspiagicw <pspiagicw@gmail.com>
 ;; Author: pspiagicw
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
