@@ -17,14 +17,19 @@
 
 ## Usage
 
-1. Clone this repository locally
-2. Add the directory to emacs load-path
-3. Run `M-x load-theme` to load the `catppuccin` theme.
+1. Use either `package.el` or your choice of package manager to install from MELPA.
+2. Use `load-theme` to load `catppuccin` theme
+
 
 ## 🙋 FAQ 
 
-- Q: **_"Can it be installed using melpa?"_**
-  A: We are in the process of uploading to melpa
+- Q: **_"Is it available on MELPA?"_**
+  A: Yes , it is available on melpa.
+  
+- Q: **_"Can it be customized?"_**
+  A: Yes some customization variables are provided
+
+
 
 ## 💝 Thanks to
 
