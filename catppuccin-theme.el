@@ -1,8 +1,8 @@
 ;;; catppuccin-theme.el --- Catppuccin Theme
 
 ;; Copyright 2015-present, All rights reserved
-;;
-;; Code licensed under the MIT license
+;; 
+;; SPDX-License-Identifier: MIT
 
 ;; Maintainer: pspiagicw <pspiagicw@gmail.com>
 ;; Author: pspiagicw
