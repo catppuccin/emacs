@@ -112,8 +112,8 @@ read it before opening a new issue about your will.")
                (info-string :foreground ,catppuccin-yellow)
                (lazy-highlight :foreground ,fg2 :background ,bg2)
                (link :foreground ,catppuccin-cyan :underline t)
-               (linum :slant italic :foreground ,catppuccin-fg :background ,catppuccin-bg)
-               (line-number :slant italic :foreground ,catppuccin-fg :background ,catppuccin-bg)
+               (linum :slant italic :foreground ,catppuccin-comment :background ,catppuccin-bg)
+               (line-number :slant italic :foreground ,catppuccin-comment :background ,catppuccin-bg)
                (match :background ,catppuccin-yellow :foreground ,catppuccin-bg)
                (menu :background ,catppuccin-current :inverse-video nil
                      ,@(if catppuccin-alternate-mode-line-and-minibuffer
