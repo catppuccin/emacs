@@ -27,7 +27,7 @@ This is the port of catppuccin-theme for the Emacs text editor.
 
 Using `use-package`
    ```emacs-lisp
-   (use-package catpuccin-theme
+   (use-package catppuccin-theme
     :config
     (setq catppuccin-height-title1 1.5))
 ```
