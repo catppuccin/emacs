@@ -18,6 +18,7 @@
 ## About
 
 This is the port of catppuccin-theme for the Emacs text editor.
+Now in v2.0 B)
 
 
 ## Usage
