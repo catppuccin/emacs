@@ -4,9 +4,9 @@
 ;; 
 ;; SPDX-License-Identifier: MIT
 
-;; Maintainers: pspiagicw <pspiagicw@gmail.com> (pspiagicw may not maintain still), Name <https://github.com/NamesCode> <Discord: NameExists#3898> <Twitter: @NameIsALoser>  
+;; Maintainers: pspiagicw <pspiagicw@gmail.com>
 ;; Author: pspiagicw
-;; Updater to Catppuccin 2.0: Name
+;; Updater to Catppuccin 2.0: Name <https://github.com/NamesCode> <Discord: NameExists#3898> <Twitter: @NameIsALoser>  
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
@@ -78,25 +78,25 @@ read it before opening a new issue about your will.")
 
 ;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let ((colors '(;; Upstream theme color
-                (catppuccin-bg      "#1e1e2e "unspecified-bg" "unspecified-bg") ; official background
-                (catppuccin-fg      "#cdd6f4" "#f5e0dc" "brightwhite") ; official foreground
-                (catppuccin-current "#585b70" "#45475a" "brightblack") ; official current-line/selection
-                (catppuccin-comment "#6c7086" "#89b4fa" "blue")        ; official comment
-                (catppuccin-cyan    "#74c7ec" "#89dceb" "brightcyan")  ; official cyan
-                (catppuccin-green   "#94e2d5" "#a6e3a1" "green")       ; official green
-                (catppuccin-orange  "#eba0ac" "#fab387" "brightred")   ; official orange
-                (catppuccin-pink    "#f5c2e7" "#cba6f7" "magenta")     ; official pink
-                (catppuccin-purple  "#b4befe "#cba6f7 "brightmagenta") ; official purple
-                (catppuccin-red     "#eba0ac" "#f38ba8" "red")         ; official red
-                (catppuccin-yellow  "#f9e2af" "#f9e2af" "yellow")      ; official yellow
+                (catppuccin-bg      "#303446" "unspecified-bg" "unspecified-bg") ; official background (Base)
+                (catppuccin-fg      "#c6d0f5" "#f2d5cf" "brightwhite")   ; official foreground (Text, rosewater)
+                (catppuccin-current "#626880" "#51576d" "brightblack")   ; official current-line/selection (surface2, surface1)
+                (catppuccin-comment "#737994" "#8caaee" "blue")          ; official comment (overlay0, Blue)
+                (catppuccin-cyan    "#85c1dc" "#99d1db" "brightcyan")    ; official cyan (Sapphire, sky)
+                (catppuccin-green   "#81c8be" "#a6d189" "green")         ; official green (Teal, Green)
+                (catppuccin-orange  "#ea999c" "#ef9f76" "brightred")     ; official orange (Maroon, Peach)
+                (catppuccin-pink    "#f4b8e4" "#ca9ee6" "magenta")       ; official pink (Pink, Mauve)
+                (catppuccin-purple  "#babbf1" "#ca9ee6" "brightmagenta") ; official purple (Lavender, Mauve)
+                (catppuccin-red     "#ea999c" "#e78284" "red")           ; official red (Maroon, Red)
+                (catppuccin-yellow  "#e5c890" "#e5c890" "yellow")        ; official yellow (Yellow, Yellow)
                 ;; Other colors
-                (bg2             "#1e1e2e" "#11111b" "brightblack")
-                (bg3             "#1e1e2e" "#313244" "brightblack")
-                (bg4             "#1e1e2e" "#45475a" "brightblack")
-                (fg2             "#bac2de" "#cdd6f4" "brightwhite")
-                (fg3             "#a6adc8" "#9399b2" "white")
-                (fg4             "#6c7086" "#7f849c" "white")
-                (other-blue      "#89b4fa" "#74c7ec" "brightblue")))
+                (bg2             "#303446" "#232634" "brightblack")  ; (Base, Crust)
+                (bg3             "#303446" "#414559" "brightblack")  ; (Base, Surface0)
+                (bg4             "#303446" "#51576d" "brightblack")  ; (Base, Surface1)
+                (fg2             "#b5bfe2" "#c6d0f5" "brightwhite")  ; (Subtext1, Text)
+                (fg3             "#a5adce" "#949cbb" "white")        ; (Subtext0, Overlay2)
+                (fg4             "#737994" "#838ba7" "white") 		 ; (Overlay0, Overlay1)
+                (other-blue      "#99d1db" "#85c1dc" "brightblue"))) ; (Sky, Sapphire)
       (faces '(;; default / basic faces
                (cursor :background ,fg3)
                (default :background ,catppuccin-bg :foreground ,catppuccin-fg)
@@ -477,17 +477,17 @@ read it before opening a new issue about your will.")
                                                       :extend t)
                ;; the four following lines are just a patch of the
                ;; upstream color to add the extend keyword.
-               (magit-diff-added :background "#a6e3a1"
-                                 :foreground "#94e2d5"
+               (magit-diff-added :background "#a6d189" ; (Greem)
+                                 :foreground "#81c8be" ; (Teal)
                                  :extend t)
-               (magit-diff-added-highlight :background "#a6e3a1"
-                                           :foreground "#94e2d5"
+               (magit-diff-added-highlight :background "#a6d189"  ; (Green)
+                                           :foreground "#81c8be" ; (Teal)
                                            :extend t)
-               (magit-diff-removed :background "#f38ba8"
-                                   :foreground "#eba0ac"
+               (magit-diff-removed :background "#e78284" ; (Red)
+                                   :foreground "#ea999c" ; (Maroon)
                                    :extend t)
-               (magit-diff-removed-highlight :background "#f38ba8"
-                                             :foreground "#eba0ac"
+               (magit-diff-removed-highlight :background "#e78284" ; (Red)
+                                             :foreground "#ea999c" ; (Maroon)
                                              :extend t)
                (magit-diff-file-heading :foreground ,catppuccin-fg)
                (magit-diff-file-heading-highlight :inherit magit-section-highlight)
