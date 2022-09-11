@@ -79,17 +79,17 @@ read it before opening a new issue about your will.")
 
 ;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let ((colors '(;; Upstream theme color
-                (catppuccin-bg      "#1e1e2e" "unspecified-bg" "unspecified-bg") ; official background
-                (catppuccin-fg      "#cdd6f4" "#ffffff" "brightwhite") ; official foreground
+                (catppuccin-bg      "#1e1d2f" "unspecified-bg" "unspecified-bg") ; official background
+                (catppuccin-fg      "#d9e0ee" "#ffffff" "brightwhite") ; official foreground
                 (catppuccin-current "#44475a" "#303030" "brightblack") ; official current-line/selection
                 (catppuccin-comment "#6272a4" "#5f5faf" "blue")        ; official comment
                 (catppuccin-cyan    "#89dceb" "#87d7ff" "brightcyan")  ; official cyan
-                (catppuccin-green   "#a6e3a1" "#5fff87" "green")       ; official green
-                (catppuccin-orange  "#f38ba8" "#ffaf5f" "brightred")   ; official orange
+                (catppuccin-green   "#abe9b3" "#5fff87" "green")       ; official green
+                (catppuccin-orange  "#f28fad" "#ffaf5f" "brightred")   ; official orange
                 (catppuccin-pink    "#f5c2e7" "#ff87d7" "magenta")     ; official pink
                 (catppuccin-purple  "#bd93f9" "#af87ff" "brightmagenta") ; official purple
-                (catppuccin-red     "#f38ba8" "#ff8787" "red")         ; official red
-                (catppuccin-yellow  "#f9e2af" "#ffff87" "yellow")      ; official yellow
+                (catppuccin-red     "#f28fad" "#ff8787" "red")         ; official red
+                (catppuccin-yellow  "#fae3b0" "#ffff87" "yellow")      ; official yellow
                 ;; Other colors
                 (bg2             "#1A1826" "#121212" "brightblack")
                 (bg3             "#1A1826" "#262626" "brightblack")
@@ -97,7 +97,7 @@ read it before opening a new issue about your will.")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
                 (fg4             "#b6b6b2" "#b2b2b2" "white")
-                (other-blue      "#89b4fa" "#0087ff" "brightblue")))
+                (other-blue      "#96cdfb" "#0087ff" "brightblue")))
       (faces '(;; default / basic faces
                (cursor :background ,fg3)
                (default :background ,catppuccin-bg :foreground ,catppuccin-fg)
