@@ -13,8 +13,7 @@
 ;;; Commentary:
 
 ;; A dark color theme available for a number of editors.
-;; This theme tries as much as possible to follow the consensual
-;; specification (see URL `https://spec.catppuccintheme.com/').
+;; This theme tries as much as possible to follow the consensual.
 
 ;;; Code:
 (deftheme catppuccin)
