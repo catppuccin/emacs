@@ -1,7 +1,7 @@
 ;;; catppuccin-theme.el --- Catppuccin Theme
 
 ;; Copyright 2015-present, All rights reserved
-;; 
+;;
 ;; SPDX-License-Identifier: MIT
 
 ;; Maintainer: pspiagicw <pspiagicw@gmail.com>
@@ -13,8 +13,7 @@
 ;;; Commentary:
 
 ;; A dark color theme available for a number of editors.
-;; This theme tries as much as possible to follow the consensual
-;; specification (see URL `https://spec.catppuccintheme.com/').
+;; This theme tries as much as possible to follow the consensual.
 
 ;;; Code:
 (deftheme catppuccin)
