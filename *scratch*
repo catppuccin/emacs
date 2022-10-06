@@ -1,0 +1,26 @@
+rosewater:  #F5E0DC -> rosewater: #f5e0dc #f4dbd6 #f2d5cf #dc8a78
+flamingo:   #F2CDCD -> flamingo:  #f2cdcd #f0c6c6 #eebebe #dd7878
+mauve:      #DDB6F2 -> mauve:     #cba6f7 #c6a0f6 #ca9ee6 #8839ef
+pink:       #F5C2E7 -> pink:      #f5c2e7 #f5bde6 #f4b8e4 #ea76cb
+maroon:     #E8A2AF -> maroon:    #eba0ac #ee99a0 #ea999c #e64553
+red:        #F28FAD -> red:       #f38ba8 #ed8796 #e78284 #d20f39
+peach:      #F8BD96 -> peach:     #fab387 #f5a97f #ef9f76 #fe640b
+yellow:     #FAE3B0 -> yellow:    #f9e2af #eed49f #e5c890 #df8e1d
+green:      #ABE9B3 -> green:     #a6e3a1 #a6da95 #a6d189 #40a02b
+teal:       #B5E8E0 -> teal:      #94e2d5 #8bd5ca #81c8be #179299
+blue:       #96CDFB -> blue       #87b0f9 #8aadf4 #8caaee #1e66f5
+sky:        #89DCEB -> sky:       #89dceb #91d7e3 #99d1db #04a5e5
+                    -> sapphire:  #74c7ec #7dc4e4 #85c1dc #209fb5
+lavender:   #C9CBFF -> lavender:  #b4befe #b7bdf8 #babbf1 #7287fd
+black0:     #131020 -> crust:     #11111b #181926 #232634 #dce0e8
+black1:     #1A1823 -> mantle:    #181825 #1e2030 #292c3c #e6e9ef
+black2:     #1E1D2F -> base:      #1e1e2e #24273a #303446 #eff1f5
+black3:     #302D41 -> surface0:  #313244 #363a4f #414559 #ccd0da
+black4:     #575268 -> surface1:  #43465a #494d64 #51576d #bcc0cc
+gray0:      #6E6C7E -> surface2:  #565970 #5b6078 #626880 #acb0be
+gray1:      #988BA2 -> overlay0:  #696d86 #6e738d #737994 #9ca0b0
+gray2:      #C3BAC6 -> overlay1:  #7b819d #8087a2 #838ba7 #8c8fa1
+                       overlay2:  #8e95b3 #939ab7 #949cbb #7c7f93
+white:      #D9E0EE -> text:      #c6d0f5 #cad3f5 #c6d0f5 #4c4f69
+                    -> subtext0:  #a1a8c9 #a5adcb #a5adce #6c6f85
+                    -> subtext1:  #b3bcdf #b8c0e0 #b5bfe2 #5c5f77
