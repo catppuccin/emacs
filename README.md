@@ -11,7 +11,7 @@
 <a href="https://github.com/catppuccin/emacs/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/emacs?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 <p align="center">
-<img src="assets/screenshot1.png"/>
+<img src="assets/EmacsCatppuccin.webp"/>
 </p>
 
 ## About
@@ -32,7 +32,7 @@ In your `.emacs.d` or `.doom.d` add the following lines in `config.el`
 (use-package autothemer
   :ensure t)
 
-(load-theme 'catppuccin-mocha t)
+(load-theme 'catppuccin-(mocha, macchiato, frappe or latte go here) t)
 ```
 
 ## 💝 Thanks to
