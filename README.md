@@ -10,13 +10,29 @@
 <a href="https://github.com/catppuccin/emacs/issues"><img src="https://img.shields.io/github/issues/catppuccin/emacs?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
 <a href="https://github.com/catppuccin/emacs/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/emacs?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
+
 <p align="center">
-<img src="assets/EmacsCatppuccin.webp"/>
+<img src="assets/Screenshot.webp"/>
 </p>
 
-## About
-This is the port of catppuccin-theme for the Emacs text editor.
-Now in 4 fantastic varients!
+## Previews
+
+<details>
+<summary>🌻 Latte</summary>
+<img src="assets/Latte.webp"/>
+</details>
+<details>
+<summary>🪴 Frappé</summary>
+<img src="assets/Frappe.webp"/>
+</details>
+<details>
+<summary>🌺 Macchiato</summary>
+<img src="assets/Macchiato.webp"/>
+</details>
+<details>
+<summary>🌿 Mocha</summary>
+<img src="assets/Mocha.webp"/>
+</details>
 
 ## Installation
 
