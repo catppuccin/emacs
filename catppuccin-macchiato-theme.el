@@ -506,7 +506,7 @@
   (swift-mode:builtin-enum-case-face (:foreground teal))
   (swift-mode:builtin-method-trailing-closure-face (:foreground teal))
   (swift-mode:builtin-function-trailing-closure-face (:foreground teal))
- )
+ ))
 
 ;;;###autoload
 (and load-file-name
