@@ -4,7 +4,7 @@
 ;; 
 ;; SPDX-License-Identifier: MIT
 
-;; Maintainer: pspiagicw <pspiagicw@gmail.com>
+;; Maintainer: Name <namesexistsinemails@gmail.com>
 ;; Author: pspiagicw
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -12,8 +12,7 @@
 
 ;;; Commentary:
 
-;; A dark color theme available for a number of editors.
-;; This theme tries as much as possible to follow the consensual.
+;; A sweet color theme available for a number of editors.
 
 ;;; Code:
 (deftheme catppuccin)
@@ -73,7 +72,7 @@ There is a lot of discussion behind the 256 colors theme (see URL
 `https://github.com/catppuccin/emacs/pull/57').  Please take time to
 read it before opening a new issue about your will.")
 
-
+
 ;;;; Theme definition:
 
 ;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
