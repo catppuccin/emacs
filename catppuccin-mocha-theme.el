@@ -1,4 +1,18 @@
-;;; commentary: catppuccin-mocha based theme
+;;; catppuccin-mocha-theme.el --- Catppuccin Theme
+
+;; Copyright 2015-present, All rights reserved
+;;
+;; SPDX-License-Identifier: MIT
+
+;; Maintainer: Name <namesexistsinemails@gmail.com>
+;; Author: Mikael Konradsson, Name
+;; Version: 2.0.0
+;; Package-Requires: ((emacs "25.1")(autothemer "0.2"))
+;; URL: https://github.com/catppuccin/emacs
+
+;;; Commentary:
+
+;; A sweet color theme available for a number of editors.
 
 ;;; Code:
 (eval-when-compile
