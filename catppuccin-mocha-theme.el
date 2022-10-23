@@ -175,7 +175,7 @@
   (custom-link                          (:foreground blue))
   (link                                 (:foreground blue))
 
-  ;; org-modeo
+  ;; org-mode
   (org-done                             (:foreground overlay2))
   (org-code                             (:background crust))
   (org-meta-line                        (:background surface1 :foreground blue))
