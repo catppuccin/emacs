@@ -97,7 +97,7 @@
   (warning                              (:foreground yellow))
   (window-border                        (:foreground peach))
   (window-divider                       (:foreground surface0))
-  
+
   ;; ;; Font lock
   (font-lock-type-face                  (:foreground lavender))
   (font-lock-regexp-grouping-backslash  (:foreground yellow))
@@ -123,14 +123,14 @@
   (highlight-numbers-face               (:foreground pink))
   (highlight-symbol-face                (:background mantle :foreground green :weight 'semi-bold))
   (info-xref                            (:foreground yellow))
-  
+
   (minibuffer-prompt-end                (:foreground red))
   (minibuffer-prompt                    (:foreground mauve))
   (epa-mark                             (:foreground pink))
   (dired-mark                           (:foreground pink))
 
   (trailing-rosewaterspace                  (:background surface1))
-  
+
   ;; ;; Battery colors
   (doom-modeline-battery-critical       (:inherit 'error))
   (doom-modeline-battery-warning        (:inherit 'warning))
@@ -342,14 +342,14 @@
   (solaire-default-face (:background mantle))
   ;; lsp
   (lsp-headerline-breadcrumb-path-error-face (:underline (:color maroon :style 'wave)
-                                                         :foreground overlay2 :background crust))
+                                                         :foreground overlay2 :background base))
 
-  (lsp-headerline-breadcrumb-path-face				(:background crust))
-  (lsp-headerline-breadcrumb-path-hint-face	   		(:background crust))
-  (lsp-headerline-breadcrumb-path-info-face	   		(:background crust))
-  (lsp-headerline-breadcrumb-separator-face			(:background crust))
-  (lsp-headerline-breadcrumb-symbols-face			(:background crust))
-  (lsp-headerline-breadcrumb-project-prefix-face	(:background crust))
+  (lsp-headerline-breadcrumb-path-face				(:background base))
+  (lsp-headerline-breadcrumb-path-hint-face	   		(:background base))
+  (lsp-headerline-breadcrumb-path-info-face	   		(:background base))
+  (lsp-headerline-breadcrumb-separator-face			(:background base))
+  (lsp-headerline-breadcrumb-symbols-face			(:background base))
+  (lsp-headerline-breadcrumb-project-prefix-face	(:background base))
   (lsp-headerline-breadcrumb-symbols-error-face     (:foreground red))
 
   (lsp-ui-doc-background							(:background crust :foreground red))
@@ -408,7 +408,7 @@
   (vterm-color-yellow (:background peach :foreground yellow))
   (vterm-color-red (:background red :foreground red))
   (vterm-color-rosewater (:background text :foreground text))
-  
+
   (popup-face (:inherit 'tooltip))
   (popup-selection-face (:inherit 'tooltip))
   (popup-tip-face (:inherit 'tooltip))
