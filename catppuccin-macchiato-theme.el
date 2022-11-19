@@ -342,14 +342,14 @@
   (solaire-default-face (:background mantle))
   ;; lsp
   (lsp-headerline-breadcrumb-path-error-face (:underline (:color maroon :style 'wave)
-                                                         :foreground overlay2 :background crust))
+                                                         :foreground overlay2 :background base))
 
-  (lsp-headerline-breadcrumb-path-face				(:background crust))
-  (lsp-headerline-breadcrumb-path-hint-face	   		(:background crust))
-  (lsp-headerline-breadcrumb-path-info-face	   		(:background crust))
-  (lsp-headerline-breadcrumb-separator-face			(:background crust))
-  (lsp-headerline-breadcrumb-symbols-face			(:background crust))
-  (lsp-headerline-breadcrumb-project-prefix-face	(:background crust))
+  (lsp-headerline-breadcrumb-path-face				(:background base))
+  (lsp-headerline-breadcrumb-path-hint-face	   		(:background base))
+  (lsp-headerline-breadcrumb-path-info-face	   		(:background base))
+  (lsp-headerline-breadcrumb-separator-face			(:background base))
+  (lsp-headerline-breadcrumb-symbols-face			(:background base))
+  (lsp-headerline-breadcrumb-project-prefix-face	(:background base))
   (lsp-headerline-breadcrumb-symbols-error-face     (:foreground red))
 
   (lsp-ui-doc-background							(:background crust :foreground red))
