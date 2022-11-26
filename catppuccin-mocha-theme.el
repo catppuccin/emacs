@@ -162,9 +162,19 @@
   (doom-modeline                        (:foreground overlay1))
   (doom-themes-visual-bell              (:background red))
 
-  ;;elfeed
+  ;; elfeed
   (elfeed-search-feed-face              (:foreground lavender))
   (elfeed-search-tag-face               (:foreground green))
+
+  ;; ediff
+  (ediff-even-diff-A                    (:background crust))
+  (ediff-even-diff-B                    (:background crust))
+  (ediff-even-diff-C                    (:background crust))
+  (ediff-even-diff-Ancestor             (:background crust))
+  (ediff-odd-diff-A                     (:inherit 'ediff-odd-diff-A))
+  (ediff-odd-diff-B                     (:inherit 'ediff-odd-diff-B))
+  (ediff-odd-diff-C                     (:inherit 'ediff-odd-diff-C))
+  (ediff-odd-diff-Ancestor              (:inherit 'ediff-even-diff-Ancestor))
 
   ;; message colors
   (message-header-name                  (:foreground overlay2))
