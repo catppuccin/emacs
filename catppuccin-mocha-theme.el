@@ -295,6 +295,13 @@
   (highlight-indent-guides-even-face            (:foreground surface0))
   (highlight-indent-guides-odd-face             (:foreground surface1))
 
+  ;; ido
+  (ido-incomplete-regexp                        (:inherit 'error))
+  (ido-indicator                                (:foreground blue))
+  (ido-only-match                               (:foreground peach))
+  (ido-subdir                                   (:foreground blue))
+  (ido-virtual                                  (:foreground yellow))
+
   ;; ivy
   (ivy-current-match                            (:background blue :foreground crust :bold t))
   (ivy-action                                   (:background nil :foreground lavender))
