@@ -71,6 +71,7 @@
   (error                                (:foreground red))
   (fringe                               (:background base :foreground overlay2))
   (glyph-face                           (:background red))
+  (escape-glyph                         (:foreground overlay1 :italic t))
   (glyphless-char                       (:foreground overlay2))
   (header-line                          (:background base))
   (highlight                            (:background surface1 :foreground lavender))
