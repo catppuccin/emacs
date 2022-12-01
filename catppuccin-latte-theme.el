@@ -297,7 +297,7 @@
   (magit-diffstat-removed            (:foreground red))
   (magit-dimmed (:foreground overlay1))
   (magit-hash (:foreground overlay1))
-  (magit-header-line (:background blue :foreground overlay2 :bold t)
+  (magit-header-line (:background surface0 :foreground text :bold t)
                      :box `(:line-width 3 :color ,blue))
   (magit-filename (:foreground mauve))
   (magit-log-author (:foreground peach))
