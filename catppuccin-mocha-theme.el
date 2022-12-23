@@ -25,7 +25,7 @@
 
 
 (autothemer-deftheme
-	catppuccin-mocha "A theme based on catppuccin's amazing color scheme"
+ catppuccin-mocha "A theme based on catppuccin's amazing color scheme"
 
  ((((class color) (min-colors #xFFFFFF))        ; col 1 GUI/24bit
    ((class color) (min-colors #xFF)))           ; col 2 Xterm/256
@@ -97,6 +97,9 @@
   (warning                              (:foreground yellow))
   (window-border                        (:foreground peach))
   (window-divider                       (:foreground surface0))
+
+  ;; Page break lines
+  (page-break-lines                     (:foreground surface0))
 
   ;; ;; Font lock
   (font-lock-type-face                  (:foreground lavender))
@@ -518,7 +521,7 @@
   (swift-mode:builtin-enum-case-face (:foreground teal))
   (swift-mode:builtin-method-trailing-closure-face (:foreground teal))
   (swift-mode:builtin-function-trailing-closure-face (:foreground teal))
- ))
+  ))
 
 ;;;###autoload
 (and load-file-name
