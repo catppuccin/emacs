@@ -98,9 +98,6 @@
   (window-border                        (:foreground peach))
   (window-divider                       (:foreground surface0))
 
-  ;; Page break lines
-  (page-break-lines                     (:foreground surface0))
-
   ;; ;; Font lock
   (font-lock-type-face                  (:foreground lavender))
   (font-lock-regexp-grouping-backslash  (:foreground yellow))
@@ -521,6 +518,9 @@
   (swift-mode:builtin-enum-case-face (:foreground teal))
   (swift-mode:builtin-method-trailing-closure-face (:foreground teal))
   (swift-mode:builtin-function-trailing-closure-face (:foreground teal))
+  
+  ;; Page break lines
+  (page-break-lines (:foreground surface0))
   ))
 
 ;;;###autoload
