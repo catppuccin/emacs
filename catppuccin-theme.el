@@ -1,7 +1,7 @@
 ;;; catppuccin-theme.el --- Catppuccin Theme
 
 ;; Copyright 2015-present, All rights reserved
-;; 
+;;
 ;; SPDX-License-Identifier: MIT
 
 ;; Maintainer: Name <namesexistsinemails@gmail.com>
@@ -11,7 +11,6 @@
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
-
 ;; A sweet color theme available for a number of editors.
 
 ;;; Code:

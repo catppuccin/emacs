@@ -189,7 +189,7 @@
   ;; org-mode
   (org-done                             (:foreground overlay2))
   (org-code                             (:background crust))
-  (org-meta-line                        (:background surface1 :foreground blue))
+  (org-meta-line                        (:background base :foreground blue))
   (org-block                            (:background base))
   (org-block-begin-line                 (:background base :foreground overlay2))
   (org-block-end-line                   (:background base :foreground overlay2))
@@ -491,24 +491,24 @@
   (solaire-default-face                         (:background mantle))
 
   ;; lsp
-  (lsp-headerline-breadcrumb-path-error-face     (:underline (:color maroon :style 'wave)
-						  :foreground overlay2 :background crust))
+  (lsp-headerline-breadcrumb-path-error-face (:underline (:color maroon :style 'wave)
+                                                         :foreground overlay2 :background base))
 
-  (lsp-headerline-breadcrumb-path-face           (:background crust))
-  (lsp-headerline-breadcrumb-path-hint-face      (:background crust))
-  (lsp-headerline-breadcrumb-path-info-face      (:background crust))
-  (lsp-headerline-breadcrumb-separator-face      (:background crust))
-  (lsp-headerline-breadcrumb-symbols-face        (:background crust))
-  (lsp-headerline-breadcrumb-project-prefix-face (:background crust))
-  (lsp-headerline-breadcrumb-symbols-error-face  (:foreground red))
+  (lsp-headerline-breadcrumb-path-face				(:background base))
+  (lsp-headerline-breadcrumb-path-hint-face	   		(:background base))
+  (lsp-headerline-breadcrumb-path-info-face	   		(:background base))
+  (lsp-headerline-breadcrumb-separator-face			(:background base))
+  (lsp-headerline-breadcrumb-symbols-face			(:background base))
+  (lsp-headerline-breadcrumb-project-prefix-face	(:background base))
+  (lsp-headerline-breadcrumb-symbols-error-face     (:foreground red))
 
-  (lsp-ui-doc-background                         (:background crust :foreground red))
-  (lsp-ui-doc-header                             (:background crust :foreground red))
-  (lsp-ui-doc-border                             (:background nil :foreground nil))
-  (lsp-ui-peek-filename                          (:foreground teal))
-  (lsp-ui-sideline-code-action                   (:foreground yellow))
-  (lsp-ui-sideline-current-symbol                (:foreground sky))
-  (lsp-ui-sideline-symbol                        (:foreground overlay1))
+  (lsp-ui-doc-background							(:background crust :foreground red))
+  (lsp-ui-doc-header								(:background crust :foreground red))
+  (lsp-ui-doc-border								(:background nil :foreground nil))
+  (lsp-ui-peek-filename								(:foreground teal))
+  (lsp-ui-sideline-code-action			   			(:foreground yellow))
+  (lsp-ui-sideline-current-symbol					(:foreground sky))
+  (lsp-ui-sideline-symbol							(:foreground overlay1))
 
   ;; dashboard
   (dashboard-heading                             (:foreground mauve :bold t))
@@ -661,13 +661,17 @@
   (tree-sitter-hl-face:keyword.operator          (:foreground sapphire :bold t))
   (tree-sitter-hl-face:keyword.function          (:foreground maroon :bold t))
   (tree-sitter-hl-face:conditional               (:foreground lavender :bold t))
-
-  (swift-mode:preprocessor-keyword-face              (:foreground text :italic t))
-  (swift-mode:property-access-face                   (:foreground subtext1))
-  (swift-mode:builtin-property-face                  (:foreground teal))
-  (swift-mode:builtin-enum-case-face                 (:foreground teal))
-  (swift-mode:builtin-method-trailing-closure-face   (:foreground teal))
-  (swift-mode:builtin-function-trailing-closure-face (:foreground teal))))
+  
+  (swift-mode:preprocessor-keyword-face (:foreground text :italic t))
+  (swift-mode:property-access-face (:foreground subtext1))
+  (swift-mode:builtin-property-face (:foreground teal))
+  (swift-mode:builtin-enum-case-face (:foreground teal))
+  (swift-mode:builtin-method-trailing-closure-face (:foreground teal))
+  (swift-mode:builtin-function-trailing-closure-face (:foreground teal))
+  
+  ;; Page break lines
+  (page-break-lines (:foreground surface0))
+  ))
 
 ;;;###autoload
 (and load-file-name
