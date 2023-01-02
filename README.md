@@ -38,16 +38,21 @@
 
 1. Download repo locally.
 
-2. Add your theme of choice to:
-   `.emacs.d/themes` if you use vanilla emacs or `.doom.d/themes` if you use Doom emacs <i>(If the `themes` folder doesn't exist make a folder with its name)</i>
-3. Install autothemer using either package.el or your choice of package manager to install from MELPA.
+2. Add your theme of choice to either:
+   - `.emacs.d/themes` if you use vanilla Emacs. If the `themes` folder doesn't
+     exist, make a folder with its name. Make sure to set the
+     `custom-theme-directory` variable. Or,
+   - `.doom.d/themes` if you use Doom Emacs.
+3. Install autothemer using either package.el or your choice of package manager
+   to install from MELPA.
 
 ## Using
 In your `.emacs.d` or `.doom.d` add the following lines in `config.el`
-```
+```elisp
 (use-package autothemer
   :ensure t)
 
+(setq custom-theme-directory "~/.emacs.d/themes/")
 (load-theme 'catppuccin-(mocha, macchiato, frappe or latte go here) t)
 ```
 
