@@ -15,6 +15,10 @@
 <img src="assets/Screenshot.webp"/>
 </p>
 
+# About
+
+This Emacs theme was made with the [Dracula](https://draculatheme.com/emacs) theme as a base.
+
 ## Previews
 
 <details>
@@ -34,8 +38,8 @@
 <img src="assets/Mocha.webp"/>
 </details>
 
-## Installation
-### Emacs
+# Installation
+## Emacs
 1. Download `catppuccin-theme.el` into `.emacs.d/themes`
 1. Add the following to your `init.el`
 
@@ -44,7 +48,7 @@
 (load-theme 'catppuccin t)
 ```
 
-### Doom Emacs
+## Doom Emacs
 1. Download `catppuccin-theme.el` into `.doom.d/themes`
 1. Add the following to your `config.el`
 
@@ -52,7 +56,7 @@
 (setq doom-theme 'catppuccin)
 ```
 
-## Configuration
+# Configuration
 
 The default flavour is Mocha, to change the flavor, place the following in your `init.el` or `config.el`
 after loading the theme
