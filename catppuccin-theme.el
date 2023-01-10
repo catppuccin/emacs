@@ -32,22 +32,22 @@ The theme has to be reloaded after changing anything in this group."
   :group 'catppuccin)
 
 (defcustom catppuccin-height-title-1 1.3
-  "Font size 100%."
+  "Header 1 font size"
   :type 'number
   :group 'catppuccin)
 
 (defcustom catppuccin-height-title-2 1.2
-  "Font size 110%."
+  "Header 2 font size."
   :type 'number
   :group 'catppuccin)
 
 (defcustom catppuccin-height-title-3 1.2
-  "Font size 130%."
+  "Header 3 font size."
   :type 'number
   :group 'catppuccin)
 
 (defcustom catppuccin-height-doc-title 1.44
-  "Font size 144%."
+  "Documentation Title font size."
   :type 'number
   :group 'catppuccin)
 
@@ -188,7 +188,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
   :type '(alist :key-type symbol :value-type string)
   :group 'catppuccin)
 
-;; Internal functions, not documented
+;;;; Internal functions, not documented
+
 (defun catppuccin-quantize-color (color)
   (let ((i 1)
         (str "#"))
@@ -208,6 +209,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
 (defun catppuccin-get-color (color)
   (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name catppuccin-flavor) "-colors")))))
 
+;;;; User functions
+
 (defun catppuccin-reload ()
   "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`"
   (interactive)
@@ -219,10 +222,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
   (interactive "SChange color: \nsSet %s to: ")
   (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
 
-
-
 ;;;; Theme definition:
-;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let* ((lambda-binding (lambda (a) (message a)))
        (colors '((undef     "#ff00ff" "#ff00ff")
                 (ctp-rosewater    (catppuccin-get-color 'rosewater) (catppuccin-quantize-color (catppuccin-get-color 'rosewater)))
@@ -252,8 +252,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                 (ctp-mantle           (catppuccin-get-color 'mantle) (catppuccin-quantize-color (catppuccin-get-color 'mantle)))
                 (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
 
-                ;; automatically lighten base to create ctp-current
-
+                ;; TODO: automatically lighten base to create ctp-current
                 (ctp-current    (if (eq catppuccin-flavor 'latte) "#ffffff" "#262637"))))
       (faces '(;; default / basic faces
                (cursor :background ,ctp-rosewater)
@@ -313,6 +312,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
                ;; company
+               ;; TODO: find undef'ed faces
                (company-echo-common :foreground ,ctp-base :background ,ctp-text)
                (company-preview :background ,ctp-current :foreground ,undef)
                (company-preview-common :inherit company-preview
@@ -623,8 +623,6 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (magit-diff-revision-summary-highlight :foreground ,undef
                                                       :weight bold
                                                       :extend t)
-               ;; the four following lines are just a patch of the
-               ;; upstream color to add the extend keyword.
                (magit-diff-added :foreground ,ctp-green
                                  :extend t)
                (magit-diff-added-highlight :background ,ctp-surface1
@@ -950,7 +948,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                ,(funcall get-func (alist-get 'ctp-teal colors))
                ,(funcall get-func (alist-get 'ctp-text colors))])))))
 
-
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
