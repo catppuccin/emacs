@@ -35,29 +35,42 @@
 </details>
 
 ## Installation
+### Emacs
+1. Download `catppuccin-theme.el` into `.emacs.d/themes`
+1. Add the following to your `init.el`
 
-1. Download repo locally.
+``` lisp
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'catppuccin t)
+```
 
-2. Add your theme of choice to either:
-   - `.emacs.d/themes` if you use vanilla Emacs. If the `themes` folder doesn't
-     exist, make a folder with its name. Make sure to set the
-     `custom-theme-directory` variable. Or,
-   - `.doom.d/themes` if you use Doom Emacs.
-3. Install autothemer using either package.el or your choice of package manager
-   to install from MELPA.
+### Doom Emacs
+1. Download `catppuccin-theme.el` into `.doom.d/themes`
+1. Add the following to your `config.el`
 
-## Using
-In your `.emacs.d` or `.doom.d` add the following lines in `config.el`
-```elisp
-(use-package autothemer
-  :ensure t)
+``` lisp
+(setq doom-theme 'catppuccin)
+```
 
-(setq custom-theme-directory "~/.emacs.d/themes/")
-(load-theme 'catppuccin-(mocha, macchiato, frappe or latte go here) t)
+## Configuration
+
+The default flavour is Mocha, to change the flavor, place the following in your `init.el` or `config.el`
+after loading the theme
+``` lisp
+(setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+(catppuccin-reload)
+```
+
+The theme can also be customzied further by changing individual colors
+``` lisp
+(catppuccin-set-color 'base "#000000") ;; change base to #000000 for the currently active flavor
+(catppuccin-set-color 'crust "#222222" 'frappe) ;; change crust to #222222 for frappe
 ```
 
 ## 💝 Thanks to
 
+- [Nyx](https://github.com/nyxkrage)
+- [Dracula](https://draculatheme.com/emacs)
 - [pspiagicw](https://github.com/pspiagicw)
 - [samuelnihbos](https://github.com/samuelnihbos)
 - [konrad1977](https://github.com/konrad1977)
