@@ -225,8 +225,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
   (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))))
 
 ;;;; Theme definition:
-(let* ((lambda-binding (lambda (a) (message a)))
-       (colors '((undef     "#ff00ff" "#ff00ff")
+(let ((colors '((undef     "#ff00ff" "#ff00ff")
                 (ctp-rosewater    (catppuccin-get-color 'rosewater) (catppuccin-quantize-color (catppuccin-get-color 'rosewater)))
                 (ctp-flamingo   (catppuccin-get-color 'flamingo) (catppuccin-quantize-color (catppuccin-get-color 'flamingo)))
                 (ctp-pink             (catppuccin-get-color 'pink) (catppuccin-quantize-color (catppuccin-get-color 'pink)))
