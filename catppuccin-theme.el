@@ -288,6 +288,15 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (trailing-whitespace :inherit warning)
                (window-divider :foreground ,ctp-mantle)
                (vertical-border :foreground ,ctp-mantle)
+               ;; solaire-mode
+               (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
+               (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
+               (solaire-line-number-face :foreground ,ctp-surface1 :background ,ctp-mantle)
+               (solaire-mode-line-face :background ,ctp-mantle nil :foreground ,ctp-text)
+               (solaire-mode-line-inactive-face
+                :background ,ctp-crust :inverse-video nil :foreground ,ctp-surface2)
+               (solaire-header-line-face :inherit 'solaire-mode-line-face)
+
                ;; evil
                (evil-ex-lazy-highlight :inherit lazy-highlight)
                (evil-ex-substitute-matches :foreground ,ctp-red :underline t)
