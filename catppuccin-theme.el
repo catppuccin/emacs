@@ -206,9 +206,6 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
      17))))
       (setq i (+ i 2)))
     str))
-(defun catppuccin-get-color (color)
-  (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name catppuccin-flavor) "-colors")))))
-
 ;;;; User functions
 
 (defun catppuccin-reload ()
@@ -221,6 +218,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
   "Set the COLOR of FLAVOR or the current flavor to VALUE"
   (interactive "SChange color: \nsSet %s to: ")
   (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
+
+(defun catppuccin-get-color (color &optional flavor)
+  "Get the COLOR of FLAVOR or the current flavor"
+  (interactive "SThe color to get: ")
+  (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))))
 
 ;;;; Theme definition:
 (let* ((lambda-binding (lambda (a) (message a)))
@@ -957,7 +959,6 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
 (provide-theme 'catppuccin)
 
 ;; Unbind functions used for internal use
-(fmakunbound 'catppuccin-get-color)
 (fmakunbound 'catppuccin-quantize-color)
 
 ;; Local Variables:
