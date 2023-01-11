@@ -65,10 +65,12 @@ after loading the theme
 (catppuccin-reload)
 ```
 
-The theme can also be customzied further by changing individual colors
+The theme can also be customzied further by changing individual colors.
+Doom users must call `(load-theme 'catppuccin t t)` before being able to call any of the `catppuccin-*` functions.
 ``` lisp
 (catppuccin-set-color 'base "#000000") ;; change base to #000000 for the currently active flavor
 (catppuccin-set-color 'crust "#222222" 'frappe) ;; change crust to #222222 for frappe
+(catppuccin-reload)
 ```
 
 ## 💝 Thanks to
