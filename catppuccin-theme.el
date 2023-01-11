@@ -956,7 +956,17 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                ,(funcall get-func (alist-get 'ctp-blue colors))
                ,(funcall get-func (alist-get 'ctp-pink colors))
                ,(funcall get-func (alist-get 'ctp-teal colors))
-               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))])))))
+               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
+           `((rustic-ansi-faces
+              (vector 
+                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+                ,(funcall get-func (alist-get 'ctp-red colors))
+                ,(funcall get-func (alist-get 'ctp-green colors))
+                ,(funcall get-func (alist-get 'ctp-yellow colors))
+                ,(funcall get-func (alist-get 'ctp-blue colors))
+                ,(funcall get-func (alist-get 'ctp-pink colors))
+                ,(funcall get-func (alist-get 'ctp-teal colors))
+                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
 
 
 
