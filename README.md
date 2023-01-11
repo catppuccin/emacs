@@ -17,7 +17,7 @@
 
 # About
 
-This Emacs theme was made with the [Dracula](https://draculatheme.com/emacs) theme as a base.
+This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) theme as a base.
 
 ## Previews
 
@@ -74,7 +74,7 @@ The theme can also be customzied further by changing individual colors
 ## 💝 Thanks to
 
 - [Nyx](https://github.com/nyxkrage)
-- [Dracula](https://draculatheme.com/emacs)
+- [Dracula](https://github.com/dracula/emacs)
 - [pspiagicw](https://github.com/pspiagicw)
 - [samuelnihbos](https://github.com/samuelnihbos)
 - [konrad1977](https://github.com/konrad1977)
