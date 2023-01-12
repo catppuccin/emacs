@@ -836,7 +836,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (tab-line-tab :inherit tab-bar-tab)
                (tab-line-tab-inactive :inherit tab-bar-tab-inactive)
                (tab-line-tab-current :inherit tab-line-tab)
-               (tab-line-highlight :background ,catppuccin-surface1)
+               (tab-line-highlight :background ,ctp-surface1)
                ;; centaur-tabs
                (centaur-tabs-default :foreground ,ctp-subtext0, :background ,ctp-base)
                (centaur-tabs-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
