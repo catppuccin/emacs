@@ -837,6 +837,22 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (tab-line-tab-inactive :inherit tab-bar-tab-inactive)
                (tab-line-tab-current :inherit tab-line-tab)
                (tab-line-highlight :background ,ctp-surface1)
+               ;; centaur-tabs
+               (centaur-tabs-default :foreground ,ctp-subtext0, :background ,ctp-base)
+               (centaur-tabs-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
+               (centaur-tabs-selected :foreground ,ctp-text :background ,ctp-current)
+               (centaur-tabs-unselected-modified :foreground ,ctp-maroon :background ,ctp-mantle)
+               (centaur-tabs-selected-modified :foreground ,ctp-red :background ,ctp-current)
+               (centaur-tabs-close-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
+               (centaur-tabs-close-selected :foreground ,ctp-text :background ,ctp-current)
+               (centaur-tabs-name-mouse-face :foreground ,ctp-text :background ,ctp-surface1)
+               (centaur-tabs-close-mouse-face :foreground ,ctp-red :background ,ctp-surface1)
+               (centaur-tabs-modified-marker-selected :inherit centaur-tabs-selected-modified)
+               (centaur-tabs-modified-marker-unselected :inherit centaur-tabs-unselected-modified)
+               ;; telephone-line
+               (telephone-line-accent-active :background ,catppuccin-bg :foreground ,catppuccin-pink)
+               (telephone-line-accent-inactive :background ,bg2 :foreground ,catppuccin-purple)
+               (telephone-line-unimportant :background ,catppuccin-bg :foreground ,catppuccin-comment)
                ;; term
                (term :foreground ,ctp-text :background ,ctp-base)
                (term-color-black ,@(if (eq catppuccin-flavor 'latte)
