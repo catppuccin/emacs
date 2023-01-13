@@ -916,7 +916,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (web-mode-html-attr-value-face :foreground ,ctp-green)
                (web-mode-html-tag-face :foreground ,ctp-mauve)
                (web-mode-keyword-face :foreground ,undef)
-               (web-mode-string-face :foreground ,font-lock-string-face)
+               (web-mode-string-face :inherit font-lock-string-face)
                (web-mode-type-face :inherit font-lock-type-face)
                (web-mode-warning-face :inherit warning)
                ;; which-func
