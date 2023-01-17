@@ -628,11 +628,10 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (magit-diff-context-highlight :background ,ctp-surface0
                                              :foreground ,ctp-text
                                              :extend t)
-               (magit-diff-revision-summary :foreground ,undef
+               (magit-diff-revision-summary :foreground ,ctp-blue
                                             :weight bold)
-               (magit-diff-revision-summary-highlight :foreground ,undef
-                                                      :weight bold
-                                                      :extend t)
+               (magit-diff-revision-summary-highlight :foreground ,ctp-blue
+                                                      :weight bold)
                (magit-diff-added :foreground ,ctp-green
                                  :extend t)
                (magit-diff-added-highlight :background ,ctp-surface1
