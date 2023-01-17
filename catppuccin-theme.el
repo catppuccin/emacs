@@ -756,11 +756,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (org-document-title :weight bold :foreground ,ctp-blue
                                    ,@(when catppuccin-enlarge-headings
                                        (list :height catppuccin-height-doc-title)))
-               (org-done :foreground ,ctp-green)
+               (org-done :inherit font-lock-comment-face)
                (org-ellipsis :inherit font-lock-comment-face)
                (org-footnote :foreground ,ctp-mauve)
                (org-formula :foreground ,ctp-pink)
-               (org-headline-done :inherit font-lock-comment-face :strike-through t)
+               (org-headline-done :inherit org-done)
                (org-hide :foreground ,ctp-crust :background ,ctp-base)
                (org-level-1 :inherit bold :foreground ,ctp-blue
                             ,@(when catppuccin-enlarge-headings
@@ -786,7 +786,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (org-special-keyword :inherit font-lock-keyword-face)
                (org-table :foreground ,ctp-surface2)
                (org-tag :foreground ,ctp-mauve :weight bold)
-               (org-todo :inherit hl-todo)
+               (org-todo :foreground ,ctp-peach)
                (org-upcoming-deadline :foreground ,ctp-maroon)
                (org-verbatim :inherit org-quote)
                (org-warning :inherit warning)
