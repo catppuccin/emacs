@@ -276,9 +276,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (match :background ,ctp-surface1 :foreground ,ctp-text)
                (menu :background ,ctp-current :inverse-video nil :foreground ,ctp-text)
                (minibuffer-prompt :weight normal :foreground ,ctp-subtext0)
-               (mode-line :background ,ctp-base nil :foreground ,ctp-text)
+               (mode-line :background ,ctp-mantle nil :foreground ,ctp-text)
                (mode-line-inactive
-                :background ,ctp-mantle :inverse-video nil :foreground ,ctp-surface2)
+                :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :background ,ctp-surface0 :extend t)
                (shadow :foreground ,ctp-surface2)
@@ -292,9 +292,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
                (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
                (solaire-line-number-face :foreground ,ctp-surface1 :background ,ctp-mantle)
-               (solaire-mode-line-face :background ,ctp-mantle nil :foreground ,ctp-text)
+               (solaire-mode-line-face :background ,ctp-crust nil :foreground ,ctp-text)
                (solaire-mode-line-inactive-face
-                :background ,ctp-crust :inverse-video nil :foreground ,ctp-surface2)
+                :background ,ctp-crust :inverse-video nil :foreground ,ctp-subtext1)
                (solaire-header-line-face :inherit 'solaire-mode-line-face)
 
                ;; evil
