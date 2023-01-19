@@ -578,7 +578,20 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (ido-virtual :foreground ,ctp-sapphire)
                (ido-incomplete-regexp :inherit warning)
                (ido-indicator :foreground ,ctp-text :weight bold)
-               ;; TODO: ivy support
+               ;; ivy
+               (ivy-current-match                            :background ,ctp-blue :foreground ,ctp-mantle :bold t)
+               (ivy-action                                   :background nil :foreground ,ctp-lavender)
+               (ivy-grep-line-number                         :background nil :foreground ,ctp-peach)
+               (ivy-minibuffer-match-face-1                  :background nil :foreground ,ctp-blue :bold t)
+               (ivy-minibuffer-match-face-2                  :background nil :foreground ,ctp-sapphire)
+               (ivy-minibuffer-match-face-3                  :background nil :foreground ,ctp-lavender)
+               (ivy-minibuffer-match-face-4                  :background nil :foreground ,ctp-mauve)
+               (ivy-minibuffer-match-highlight               :foreground ,ctp-blue)
+               (ivy-grep-info                                :foreground ,ctp-blue)
+               (ivy-grep-line-number                         :foreground ,ctp-mauve)
+               (ivy-confirm-face                             :foreground ,ctp-green)
+               (ivy-remote                                   :foreground ,ctp-mauve)
+               (ivy-match-required-face                      :foreground ,ctp-red)
                ;; isearch
                (isearch :inherit match :weight bold)
                (isearch-fail :inherit error)
