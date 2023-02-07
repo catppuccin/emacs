@@ -984,7 +984,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (whitespace-trailing :inherit trailing-whitespace)
                ;; yard-mode
                (yard-tag-face :inherit font-lock-builtin-face)
-               (yard-directive-face :inherit font-lock-builtin-face))))
+               (yard-directive-face :inherit font-lock-builtin-face)
+               ;; line-reminder
+               (line-reminder-modified-sign-face :foreground ,ctp-green))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
