@@ -207,6 +207,28 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
      17))))
       (setq i (+ i 2)))
     str))
+
+;; Color operations
+(let* ((hex-to-rgb (lambda (color)
+                     (mapcar
+                      (lambda (i) (string-to-number (substring color i (+ i 2)) 16))
+                      '(1 3 5))))
+       (rgb-to-hex (lambda (r g b)
+                     (format "#%x%x%x" r g b)))
+       (rnd (lambda (n) (round (+ .5 n)))))
+
+  (defun catppuccin-lighten (color value)
+    "Lighten COLOR by VALUE%."
+    (let* ((factor (/ value 100.0)))
+      (apply rgb-to-hex (mapcar (lambda (v) (funcall rnd (min 255 (+ (* (- 255 v) factor) v))))
+              (funcall hex-to-rgb color)))))
+
+  (defun catppuccin-darken (color value)
+    "Darken COLOR by VALUE%."
+    (let* ((factor (/ value 100.0)))
+      (apply rgb-to-hex (mapcar (lambda (v) (floor (* (- 1 factor) v)))
+                                (funcall hex-to-rgb color))))))
+
 ;;;; User functions
 
 (defun catppuccin-reload ()
@@ -254,8 +276,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 (ctp-mantle           (catppuccin-get-color 'mantle) (catppuccin-quantize-color (catppuccin-get-color 'mantle)))
                 (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
 
-                ;; TODO: automatically lighten base to create ctp-current
-                (ctp-current    (if (eq catppuccin-flavor 'latte) "#ffffff" "#262637"))))
+                (ctp-current          (catppuccin-lighten (catppuccin-get-color 'base) 5)
+                                      (catppuccin-quantize-color (catppuccin-lighten (catppuccin-get-color 'base) 5)))))
       (faces '(;; default / basic faces
                (cursor :background ,ctp-rosewater)
                (default :background ,ctp-base :foreground ,ctp-text)
@@ -1000,7 +1022,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ,(funcall get-func (alist-get 'ctp-teal colors))
                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
            `((rustic-ansi-faces
-              (vector 
+              (vector
                 ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
                 ,(funcall get-func (alist-get 'ctp-red colors))
                 ,(funcall get-func (alist-get 'ctp-green colors))
@@ -1022,6 +1044,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 
 ;; Unbind functions used for internal use
 (fmakunbound 'catppuccin-quantize-color)
+(fmakunbound 'catppuccin-lighten-color)
+(fmakunbound 'catppuccin-darken-color)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
