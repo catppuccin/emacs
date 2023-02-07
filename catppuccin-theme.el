@@ -32,7 +32,7 @@ The theme has to be reloaded after changing anything in this group."
   :group 'catppuccin)
 
 (defcustom catppuccin-height-title-1 1.3
-  "Header 1 font size"
+  "Header 1 font size."
   :type 'number
   :group 'catppuccin)
 
@@ -52,8 +52,8 @@ The theme has to be reloaded after changing anything in this group."
   :group 'catppuccin)
 
 (defcustom catppuccin-flavor 'mocha
-  "The flavor to use for the Catppuccin theme
-Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
+  "The flavor to use for the Catppuccin theme.
+Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
   :type '(choice (const :tag "Mocha" mocha)
                  (const :tag "Macchiato" macchiato)
                  (const :tag "Frappe" frappe)
@@ -86,7 +86,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                                      (base      . "#1e1e2e")
                                      (mantle    . "#181825")
                                      (crust     . "#11111b"))
-  "Colors used for catppuccin-mocha"
+  "Colors used for catppuccin-mocha."
   :tag "Mocha Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
@@ -118,7 +118,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                                          (base      . "#24273a")
                                          (mantle    . "#1e2030")
                                          (crust     . "#181926"))
-  "Colors used for catppuccin-macchiato"
+  "Colors used for catppuccin-macchiato."
   :tag "Macchiato Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
@@ -150,7 +150,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                                       (base      . "#303446")
                                       (mantle    . "#292c3c")
                                       (crust     . "#232634"))
-  "Colors used for catppuccin-frappe"
+  "Colors used for catppuccin-frappe."
   :tag "Frappe Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
@@ -182,15 +182,16 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                                      (base      . "#eff1f5")
                                      (mantle    . "#e6e9ef")
                                      (crust     . "#dce0e8"))
-  "Colors used for catppuccin-latte"
+  "Colors used for catppuccin-latte."
   :tag "Latte Colors"
   :options '(rosewater flamingo pink mauve red maroon peach yellow green teal sky sapphire blue lavender text subtext1 subtext0 overlay2 overlay1 overlay0 surface2 surface1 surface0 base mantle crust)
   :type '(alist :key-type symbol :value-type string)
   :group 'catppuccin)
 
-;;;; Internal functions, not documented
+;;;; Internal functions
 
 (defun catppuccin-quantize-color (color)
+  "Quantize COLOR to a 256 color palette."
   (let ((i 1)
         (str "#"))
     (while (<= i 5)
@@ -209,18 +210,18 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
 ;;;; User functions
 
 (defun catppuccin-reload ()
-  "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`"
+  "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`."
   (interactive)
   (disable-theme 'catppuccin)
   (load-theme 'catppuccin t))
 
 (defun catppuccin-set-color (color value &optional flavor)
-  "Set the COLOR of FLAVOR or the current flavor to VALUE"
+  "Set the COLOR of FLAVOR or the current flavor to VALUE."
   (interactive "SChange color: \nsSet %s to: ")
   (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
 
 (defun catppuccin-get-color (color &optional flavor)
-  "Get the COLOR of FLAVOR or the current flavor"
+  "Get the COLOR of FLAVOR or the current flavor."
   (interactive "SThe color to get: ")
   (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))))
 
