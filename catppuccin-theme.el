@@ -941,7 +941,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`"
                (yard-tag-face :inherit font-lock-builtin-face)
                (yard-directive-face :inherit font-lock-builtin-face)
                ;; line-reminder
-               (defface line-reminder-modified-sign-face :foreground ,ctp-green))))
+               (line-reminder-modified-sign-face :foreground ,ctp-green))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
