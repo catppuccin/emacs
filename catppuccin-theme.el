@@ -327,7 +327,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (company-echo-common :foreground ,ctp-base :background ,ctp-text)
                (company-preview :background ,ctp-current :foreground ,undef)
                (company-preview-common :inherit company-preview
-                                       :foreground ,undef)
+                                       :foreground ,ctp-green)
                (company-preview-search :inherit company-preview
                                        :foreground ,undef)
                (company-scrollbar-bg :background ,ctp-surface0)
@@ -339,14 +339,14 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                                  :foreground ,ctp-base)
                (company-tooltip-selection :inherit match)
                (company-tooltip-mouse :background ,ctp-base)
-               (company-tooltip-common :foreground ,ctp-text :weight bold)
+               (company-tooltip-common :foreground ,ctp-rosewater)
                ;;(company-tooltip-common-selection :inherit company-tooltip-common)
-               (company-tooltip-annotation :foreground ,undef)
+               (company-tooltip-annotation :inherit font-lock-comment-face)
                ;;(company-tooltip-annotation-selection :inherit company-tooltip-annotation)
                ;; completions (minibuffer.el)
                (completions-annotations :inherit font-lock-comment-face)
-               (completions-common-part :foreground ,undef)
-               (completions-first-difference :foreground ,undef)
+               (completions-common-part :foreground ,ctp-rosewater)
+               (completions-first-difference :foreground ,ctp-text)
                ;; diff-hl
                (diff-hl-change :foreground ,ctp-peach :background ,ctp-peach)
                (diff-hl-delete :foreground ,ctp-red :background ,ctp-red)
@@ -530,6 +530,15 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (helm-time-zone-current :foreground ,undef)
                (helm-time-zone-home :foreground ,undef)
                (helm-visible-mark :foreground ,undef)
+               ;; consult
+               (consult-async-split :foreground ,ctp-mauve)
+               ;; corfu
+               (corfu-default :background ,ctp-surface0)
+               (corfu-current :background ,ctp-surface1)
+               (corfu-bar :background ,ctp-subtext0)
+               (corfu-border :inherit corfu-default)
+               (corfu-annotations :inherit font-lock-comment-face)
+               (corfu-deprecated :strike-through t)
                ;; highlight-indentation minor mode
                (highlight-indentation-face :background ,ctp-subtext1)
                ;; icicle
