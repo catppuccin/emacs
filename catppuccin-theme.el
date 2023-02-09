@@ -214,7 +214,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                       (lambda (i) (string-to-number (substring color i (+ i 2)) 16))
                       '(1 3 5))))
        (rgb-to-hex (lambda (r g b)
-                     (format "#%x%x%x" r g b)))
+                     (format "#%02x%02x%02x" r g b)))
        (rnd (lambda (n) (round (+ .5 n)))))
 
   (defun catppuccin-lighten (color value)
