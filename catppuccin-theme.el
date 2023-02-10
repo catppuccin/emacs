@@ -344,6 +344,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
+               ;; avy
+               (avy-background-face :foreground ,ctp-text :background ,ctp-base)
+               (avy-goto-char-timer-face :foreground ,ctp-blue :background ,ctp-surface0)
+               (avy-lead-face :foreground ,ctp-base :background ,ctp-mauve)
+               (avy-lead-face-0 :foreground ,ctp-base :background ,ctp-yellow)
+               (avy-lead-face-1 :foreground ,ctp-base :background ,ctp-overlay0)
+               (avy-lead-face-2 :foreground ,ctp-base :background ,ctp-sky)
                ;; company
                ;; TODO: find undef'ed faces
                (company-echo-common :foreground ,ctp-base :background ,ctp-text)
