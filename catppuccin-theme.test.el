@@ -23,21 +23,18 @@
 (defmacro assert (test-form message)
   `(when (not ,test-form)
      (error "Assertion failed: %s\n%s" (format "%s" ',test-form) ,message)))
+(advice-add 'display-color-cells :override (lambda (&rest r) 16777216))
 
 (add-to-list 'custom-theme-load-path (file-name-directory load-file-name))
-(load-theme 'catppuccin t t) ;; Load theme functions
+(load-theme 'catppuccin t) ;; Load theme functions
+(setq catppuccin-flavor 'mocha)
+(catppuccin-set-color 'base "#000000")
+(catppuccin-reload)
 
-(setq catppuccin-flavor 'latte)
-(catppuccin-reload)
-(setq catppuccin-flavor 'mocha)
-(catppuccin-set-color 'base "#020202")
-(catppuccin-set-color 'mantle "#010101")
-(catppuccin-set-color ' crust "#000000")
-(catppuccin-reload)
-(assert (string-equal "#020202" (catppuccin-get-color 'base)) "Base does not match custom specified")
+(assert (string-equal "#000000" (catppuccin-get-color 'base)) "Base does not match custom specified")
 (setq catppuccin-flavor 'frappe)
-(assert (string-equal "#020202" (catppuccin-get-color 'base 'mocha)) "Base does not match custom specified for other flavor")
+(assert (string-equal "#000000" (catppuccin-get-color 'base 'mocha)) "Base does not match custom specified for other flavor")
 (setq catppuccin-flavor 'mocha)
-(assert (string-equal "#020202" (catppuccin-get-color 'base)) "Base does not match custom specified after switching back")
+(assert (string-equal "#000000" (catppuccin-get-color 'base)) "Base does not match custom specified after switching back")
 
 ;;; catppuccin-tests.el ends here
