@@ -1,0 +1,24 @@
+name: Emacs Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Install Emacs
+        run: sudo apt-get install emacs25-nox elpa-org
+
+      - name: Install Just
+        uses: extractions/setup-just@v1
+        with:
+          just-version: 1.13
+
+      - name: Run tests
+        run: just test

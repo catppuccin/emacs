@@ -1004,7 +1004,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                       ((((min-colors 16777216)) ; fully graphical envs
                         ,(funcall expand-with-func 'cadr spec))
                        (t                       ; terminal with 256 colors
-                        ,(funcall expand-with-func 'caddr spec))))
+                        ,(funcall expand-with-func 'cadr (cdr spec)))))
                     whole-theme))
             whole-theme))
 
