@@ -22,6 +22,8 @@ jobs:
         uses: extractions/setup-just@v1
         with:
           just-version: 1.13
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tests
         run: just test
