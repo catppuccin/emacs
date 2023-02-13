@@ -789,6 +789,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;;(neo-vc-unregistered-face nil)
                (neo-vc-up-to-date-face :foreground ,ctp-text)
                (neo-vc-user-face :foreground ,ctp-mauve)
+               ;; orderless
+               (orderless-match-face-0 :foreground ,ctp-blue :weight bold)
+               (orderless-match-face-1 :foreground ,ctp-mauve :weight bold)
+               (orderless-match-face-2 :foreground ,ctp-teal :weight bold)
+               (orderless-match-face-3 :foreground ,ctp-peach :weight bold)
                ;; org
                (org-agenda-date :foreground ,ctp-subtext0 :weight normal)
                (org-agenda-date-today :foreground ,ctp-subtext0 :weight bold)
