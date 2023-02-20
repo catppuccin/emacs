@@ -998,7 +998,17 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (yard-tag-face :inherit font-lock-builtin-face)
                (yard-directive-face :inherit font-lock-builtin-face)
                ;; line-reminder
-               (line-reminder-modified-sign-face :foreground ,ctp-green))))
+               (line-reminder-modified-sign-face :foreground ,ctp-green)
+               ;; highlight-indent-guides
+               ;; (highlight-indent-guides-odd-face :background ,ctp-base)
+               ;; (highlight-indent-guides-even-face :background ,ctp-base)
+               (highlight-indent-guides-character-face :foreground ,ctp-surface0)
+               ;; (highlight-indent-guides-top-odd-face :background ,ctp-base)
+               ;; (highlight-indent-guides-top-even-face :background ,ctp-base)
+               (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
+               ;; (highlight-indent-guides-stack-odd-face :background ,ctp-base)
+               ;; (highlight-indent-guides-stack-even-face :background ,ctp-base)
+               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
