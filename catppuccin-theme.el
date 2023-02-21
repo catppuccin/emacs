@@ -1008,7 +1008,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
                ;; (highlight-indent-guides-stack-odd-face :background ,ctp-base)
                ;; (highlight-indent-guides-stack-even-face :background ,ctp-base)
-               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo))))
+               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
+               ;; line-number
+               (line-number-current-line :inherit line-number :foreground ,ctp-lavender))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
