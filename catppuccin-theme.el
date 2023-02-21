@@ -296,6 +296,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (link-unvisited :foreground ,ctp-mauve :underline t)
                (linum :foreground ,ctp-surface1 :background ,ctp-base)
                (line-number :foreground ,ctp-surface1 :background ,ctp-base)
+               (line-number-current-line :inherit line-number :foreground ,ctp-lavender)
                (match :background ,ctp-surface1 :foreground ,ctp-text)
                (menu :background ,ctp-current :inverse-video nil :foreground ,ctp-text)
                (minibuffer-prompt :weight normal :foreground ,ctp-subtext0)
@@ -1008,9 +1009,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
                ;; (highlight-indent-guides-stack-odd-face :background ,ctp-base)
                ;; (highlight-indent-guides-stack-even-face :background ,ctp-base)
-               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
-               ;; line-number
-               (line-number-current-line :inherit line-number :foreground ,ctp-lavender))))
+               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
