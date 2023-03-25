@@ -570,7 +570,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (corfu-annotations :inherit font-lock-comment-face)
                (corfu-deprecated :strike-through t)
                ;; highlight-indentation minor mode
-               (highlight-indentation-face :background ,ctp-subtext1)
+               (highlight-indentation-face :background ,ctp-mantle)
                ;; icicle
                ;; TODO: Verify this looks proper
                (icicle-whitespace-highlight :background ,ctp-text)
