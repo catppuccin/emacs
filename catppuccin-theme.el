@@ -276,8 +276,12 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 (ctp-mantle           (catppuccin-get-color 'mantle) (catppuccin-quantize-color (catppuccin-get-color 'mantle)))
                 (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
 
-                (ctp-current          (catppuccin-lighten (catppuccin-get-color 'base) 5)
-                                      (catppuccin-quantize-color (catppuccin-lighten (catppuccin-get-color 'base) 5)))))
+                (ctp-current          (if (eq catppuccin-flavor 'latte)
+                                           (catppuccin-darken (catppuccin-get-color 'base) 5)
+                                           (catppuccin-lighten (catppuccin-get-color 'base) 5))
+                                      (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
+                                                                     (catppuccin-darken (catppuccin-get-color 'base) 5)
+                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 5))))))
       (faces '(;; default / basic faces
                (cursor :background ,ctp-rosewater)
                (default :background ,ctp-base :foreground ,ctp-text)
