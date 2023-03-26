@@ -900,6 +900,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (rst-level-8 :foreground ,ctp-blue)
                ;; show-paren
                (show-paren-match :foreground ,ctp-pink
+                                 :background ,ctp-surface1
                                  :weight bold)
                (show-paren-match-expression :inherit match)
                (show-paren-mismatch :inherit warning)
