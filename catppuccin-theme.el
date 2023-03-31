@@ -51,6 +51,11 @@ The theme has to be reloaded after changing anything in this group."
   :type 'number
   :group 'catppuccin)
 
+(defcustom catppuccin-highlight-matches nil
+  "Use background color to make highlighted matches more visible."
+  :type 'boolean
+  :group 'catppuccin)
+
 (defcustom catppuccin-flavor 'mocha
   "The flavor to use for the Catppuccin theme.
 Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
@@ -900,8 +905,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (rst-level-8 :foreground ,ctp-blue)
                ;; show-paren
                (show-paren-match :foreground ,ctp-pink
-                                 :background ,ctp-surface1
-                                 :weight bold)
+                                 :weight bold
+                                 ,@(when catppuccin-highlight-matches
+                                     (list :background ctp-surface0)))
                (show-paren-match-expression :inherit match)
                (show-paren-mismatch :inherit warning)
                ;; slime
