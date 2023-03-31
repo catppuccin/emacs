@@ -866,7 +866,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (cfw:face-disable :foreground ,ctp-surface1)
                (cfw:face-today-title :foreground ,ctp-peach)
                (cfw:face-today :inherit cfw:face-today-title)
-               (cfw:face-select :background ,ctp-surface1 :foregournd ,ctp-text)
+               (cfw:face-select :background ,ctp-surface1 :foreground ,ctp-text)
                (cfw:face-toolbar :background ,ctp-base)
                (cfw:face-toolbar-button-off :foreground ,ctp-rosewater)
                (cfw:face-toolbar-button-on :foreground ,ctp-mauve)
