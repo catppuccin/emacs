@@ -1039,7 +1039,18 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
                ;; (highlight-indent-guides-stack-odd-face :background ,ctp-base)
                ;; (highlight-indent-guides-stack-even-face :background ,ctp-base)
-               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo))))
+               (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
+               ;; lui
+               (lui-button-face :foreground ,ctp-sky :underline t)
+               (lui-highlight-face :foreground ,ctp-sky)
+               (lui-time-stamp-face :foreground ,ctp-lavender :weight bold)
+               ;; circe
+               (circe-fool-face :foreground ,ctp-subtext1)
+               (circe-highlight-nick-face :foreground ,ctp-sky :weight bold)
+               (circe-prompt-face :foreground ,ctp-base
+                                  :background ,ctp-teal
+                                  :weight bold)
+               (circe-server-face :foreground ,ctp-blue :weight bold))))
 
   (apply #'custom-theme-set-faces
          'catppuccin
