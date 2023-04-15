@@ -831,17 +831,17 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (org-level-1 :inherit bold :foreground ,ctp-blue
                             ,@(when catppuccin-enlarge-headings
                                 (list :height catppuccin-height-title-1)))
-               (org-level-2 :inherit bold :foreground ,ctp-blue
+               (org-level-2 :inherit bold :foreground ,ctp-red
                             ,@(when catppuccin-enlarge-headings
                                 (list :height catppuccin-height-title-2)))
-               (org-level-3 :weight normal :foreground ,ctp-blue
+               (org-level-3 :weight normal :foreground ,ctp-green
                             ,@(when catppuccin-enlarge-headings
                                 (list :height catppuccin-height-title-3)))
-               (org-level-4 :weight normal :foreground ,ctp-blue)
-               (org-level-5 :weight normal :foreground ,ctp-blue)
-               (org-level-6 :weight normal :foreground ,ctp-blue)
-               (org-level-7 :weight normal :foreground ,ctp-blue)
-               (org-level-8 :weight normal :foreground ,ctp-blue)
+               (org-level-4 :weight normal :foreground ,ctp-lavender)
+               (org-level-5 :weight normal :foreground ,ctp-yellow)
+               (org-level-6 :weight normal :foreground ,ctp-maroon)
+               (org-level-7 :weight normal :foreground ,ctp-teal)
+               (org-level-8 :weight normal :foreground ,ctp-mauve)
                (org-link :inherit link)
                (org-priority :foreground ,ctp-yellow)
                (org-quote :inherit markdown-blockquote-face)
