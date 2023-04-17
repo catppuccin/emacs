@@ -321,6 +321,12 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (trailing-whitespace :inherit warning)
                (window-divider :foreground ,ctp-mantle)
                (vertical-border :foreground ,ctp-mantle)
+               
+               ;;tty menu
+               (tty-menu-enabled-face :foreground ,ctp-text :inverse-video nil :background ,ctp-current)
+               (tty-menu-disabled-face :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
+               (tty-menu-selected-face :foreground ,ctp-text :background ,ctp-surface1)
+               
                ;; solaire-mode
                (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
                (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
