@@ -1,25 +1,20 @@
-;;; catppuccin-theme.test.el --- Tests for the catppuccin-theme -*- lexical-binding: t; -*-
+;;; catppuccin-theme.test.el --- Tests for The Catppuccin Emacs Theme -*- lexical-binding: t; no-byte-compile: t; -*-
+
+;; Copyright 2022-present, All rights reserved
 ;;
-;; Copyright (C) 2023 Carsten Kragelund
-;;
-;; Author: Carsten Kragelund <carsten@kragelund.me>
+;; Code licensed under the MIT license
+
 ;; Maintainer: Carsten Kragelund <carsten@kragelund.me>
-;; Created: February 09, 2023
-;; Modified: February 09, 2023
-;; Version: 0.0.1
-;; Keywords: abbrev bib c calendar comm convenience data docs emulations extensions faces files frames games hardware help hypermedia i18n internal languages lisp local maint mail matching mouse multimedia news outlines processes terminals tex tools unix vc wp
-;; Homepage: https://github.com/carsten/catppuccin-tests
+;; Author: nyxkrage
+;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
-;;
-;; This file is not part of GNU Emacs.
-;;
+;; URL: https://github.com/catppuccin/emacs
+
 ;;; Commentary:
-;;
-;;  Description
-;;
+
+;; 🍄 Soothing pastel tests for The Catppuccin Emacs Theme
+
 ;;; Code:
-
-
 (defmacro assert (test-form message)
   `(when (not ,test-form)
      (error "Assertion failed: %s\n%s" (format "%s" ',test-form) ,message)))
@@ -37,4 +32,4 @@
 (setq catppuccin-flavor 'mocha)
 (assert (string-equal "#000000" (catppuccin-get-color 'base)) "Base does not match custom specified after switching back")
 
-;;; catppuccin-tests.el ends here
+;;; catppuccin-tests.test..el ends here
