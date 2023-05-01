@@ -56,6 +56,16 @@ The theme has to be reloaded after changing anything in this group."
   :type 'boolean
   :group 'catppuccin)
 
+(defcustom catppuccin-italic-comments nil
+  "Use :slant italic for comments."
+  :type 'boolean
+  :group 'catppuccin)
+
+(defcustom catppuccin-italic-variables nil
+  "Use :slant italic for variables."
+  :type 'boolean
+  :group 'catppuccin)
+
 (defcustom catppuccin-flavor 'mocha
   "The flavor to use for the Catppuccin theme.
 Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
@@ -343,7 +353,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 
                ;; syntax / font-lock
                (font-lock-builtin-face :foreground ,ctp-lavender)
-               (font-lock-comment-face :inherit shadow)
+               (font-lock-comment-face :inherit shadow ,@(when catppuccin-italic-comments
+                                                                (list :slant 'italic)))
                (font-lock-comment-delimiter-face :inherit shadow)
                (font-lock-constant-face :foreground ,ctp-peach)
                (font-lock-doc-face :inherit font-lock-comment-face)
@@ -356,7 +367,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-regexp-grouping-construct :foreground ,undef)
                (font-lock-string-face :foreground ,ctp-green)
                (font-lock-type-face :inherit font-lock-builtin-face)
-               (font-lock-variable-name-face :foreground ,ctp-text)
+               (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
+                                                                       (list :slant 'italic)))
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
