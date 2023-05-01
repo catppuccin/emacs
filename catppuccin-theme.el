@@ -350,7 +350,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-builtin-face :foreground ,ctp-lavender)
                (font-lock-comment-face :inherit shadow ,@(when catppuccin-italic-comments
                                                                 (list :slant 'italic)))
-               (font-lock-comment-delimiter-face :inherit font-lock-comment-face)
+               (font-lock-comment-delimiter-face :inherit shadow)
                (font-lock-constant-face :foreground ,ctp-peach)
                (font-lock-doc-face :inherit font-lock-comment-face)
                (font-lock-function-name-face :foreground ,ctp-blue)
