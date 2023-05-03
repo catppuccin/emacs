@@ -868,7 +868,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (org-scheduled-today :foreground ,ctp-green :weight bold)
                (org-sexp-date :foreground ,ctp-subtext0)
                (org-special-keyword :inherit font-lock-keyword-face)
-               (org-table :foreground ,ctp-surface2)
+               (org-table :foreground ,ctp-overlay0)
                (org-tag :foreground ,ctp-mauve :weight bold)
                (org-todo :foreground ,ctp-peach)
                (org-upcoming-deadline :foreground ,ctp-maroon)
