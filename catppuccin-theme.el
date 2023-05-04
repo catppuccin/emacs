@@ -369,6 +369,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-type-face :inherit font-lock-builtin-face)
                (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
                                                                        (list :slant 'italic)))
+               (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
+                                                                       (list :slant 'italic)))
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
