@@ -292,8 +292,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
 
                 (ctp-current          (if (eq catppuccin-flavor 'latte)
-                                           (catppuccin-darken (catppuccin-get-color 'base) 5)
-                                           (catppuccin-lighten (catppuccin-get-color 'base) 5))
+                                          (catppuccin-darken (catppuccin-get-color 'base) 5)
+                                        (catppuccin-lighten (catppuccin-get-color 'base) 5))
                                       (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
                                                                      (catppuccin-darken (catppuccin-get-color 'base) 5)
                                                                    (catppuccin-lighten (catppuccin-get-color 'base) 5))))))
@@ -971,11 +971,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;; term
                (term :foreground ,ctp-text :background ,ctp-base)
                (term-color-black ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-subtext1  :background ctp-subtext1)
-                                (list :foreground ctp-surface1 :background ctp-surface1)))
+                                       (list :foreground ctp-subtext1  :background ctp-subtext1)
+                                     (list :foreground ctp-surface1 :background ctp-surface1)))
                (term-color-black-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-subtext0 :background ctp-subtext0)
-                                (list :foreground ctp-surface2 :background ctp-surface2)))
+                                             (list :foreground ctp-subtext0 :background ctp-subtext0)
+                                           (list :foreground ctp-surface2 :background ctp-surface2)))
                (term-color-red :foreground ,ctp-red :background ,ctp-red)
                (term-color-bright-red :foreground ,ctp-red :background ,ctp-red)
                (term-color-green :foreground ,ctp-green :background ,ctp-green)
@@ -989,11 +989,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (term-color-cyan :foreground ,ctp-teal :background ,ctp-teal)
                (term-color-bright-cyan :foreground ,ctp-teal :background ,ctp-teal)
                (term-color-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-surface2  :background ctp-surface2)
-                                (list :foreground ctp-subtext1 :background ctp-subtext1)))
+                                       (list :foreground ctp-surface2  :background ctp-surface2)
+                                     (list :foreground ctp-subtext1 :background ctp-subtext1)))
                (term-color-bright-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-surface1 :background ctp-surface1)
-                                (list :foreground ctp-subtext0 :background ctp-subtext0)))
+                                              (list :foreground ctp-surface1 :background ctp-surface1)
+                                            (list :foreground ctp-subtext0 :background ctp-subtext0)))
                ;; tree-sitter
                (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
                (tree-sitter-hl-face:comment :inherit font-lock-comment-face)
@@ -1095,14 +1095,14 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                      (eval `(let ,reduced-color-list
                               (backquote ,spec))))))
                 whole-theme)
-            (pcase-dolist (`(,face . ,spec) faces)
-              (push `(,face
-                      ((((min-colors 16777216)) ; fully graphical envs
-                        ,(funcall expand-with-func 'cadr spec))
-                       (t                       ; terminal with 256 colors
-                        ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
-                    whole-theme))
-            whole-theme))
+           (pcase-dolist (`(,face . ,spec) faces)
+             (push `(,face
+                     ((((min-colors 16777216)) ; fully graphical envs
+                       ,(funcall expand-with-func 'cadr spec))
+                      (t                       ; terminal with 256 colors
+                       ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
+                   whole-theme))
+           whole-theme))
 
   (apply #'custom-theme-set-variables
          'catppuccin
@@ -1121,14 +1121,14 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
            `((rustic-ansi-faces
               (vector
-                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
-                ,(funcall get-func (alist-get 'ctp-red colors))
-                ,(funcall get-func (alist-get 'ctp-green colors))
-                ,(funcall get-func (alist-get 'ctp-yellow colors))
-                ,(funcall get-func (alist-get 'ctp-blue colors))
-                ,(funcall get-func (alist-get 'ctp-pink colors))
-                ,(funcall get-func (alist-get 'ctp-teal colors))
-                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
+               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+               ,(funcall get-func (alist-get 'ctp-red colors))
+               ,(funcall get-func (alist-get 'ctp-green colors))
+               ,(funcall get-func (alist-get 'ctp-yellow colors))
+               ,(funcall get-func (alist-get 'ctp-blue colors))
+               ,(funcall get-func (alist-get 'ctp-pink colors))
+               ,(funcall get-func (alist-get 'ctp-teal colors))
+               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
 
 
 
