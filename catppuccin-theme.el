@@ -352,28 +352,33 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (evil-ex-substitute-replacement :foreground ,ctp-green :underline t)
 
                ;; syntax / font-lock
-               (font-lock-builtin-face :foreground ,ctp-lavender)
+               (font-lock-builtin-face :foreground ,ctp-red)
                (font-lock-comment-face ,@(if catppuccin-italic-comments
                                              '(:inherit (shadow italic))
                                            '(:inherit shadow)))
                (font-lock-comment-delimiter-face :inherit shadow)
                (font-lock-constant-face :foreground ,ctp-peach)
                (font-lock-doc-face :inherit font-lock-comment-face)
-               (font-lock-function-name-face :foreground ,ctp-blue)
                (font-lock-keyword-face :foreground ,ctp-mauve)
                (font-lock-negation-char-face :foreground ,ctp-sky)
-               (font-lock-preprocessor-face :foreground ,ctp-yellow)
+               (font-lock-preprocessor-face :foreground ,ctp-lavender)
                (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,undef)
                (font-lock-regexp-grouping-construct :foreground ,undef)
                (font-lock-string-face :foreground ,ctp-green)
-               (font-lock-type-face :inherit font-lock-builtin-face)
+               (font-lock-type-face :foreground ,ctp-yellow)
                (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
                                                                        '(:inherit italic)))
                (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                       '(:inherit italic)))
+                                                                      '(:inherit italic)))
                (font-lock-warning-face :inherit warning)
                (font-lock-number-face :foreground ,ctp-peach)
+               (font-lock-escape-face :foreground ,ctp-pink)
+               (font-lock-operator-face :foreground ,ctp-sky)
+               (font-lock-bracket-face :foreground ,ctp-overlay2)
+               (font-lock-delimiter-face :foreground ,ctp-overlay2)
+               (font-lock-function-name-face :foreground ,ctp-blue)
+               (font-lock-function-call-face :foreground ,ctp-blue)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
                ;; avy
