@@ -353,8 +353,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 
                ;; syntax / font-lock
                (font-lock-builtin-face :foreground ,ctp-lavender)
-               (font-lock-comment-face :inherit shadow ,@(when catppuccin-italic-comments
-                                                                (list :slant 'italic)))
+               (font-lock-comment-face ,@(if catppuccin-italic-comments
+                                             '(:inherit (shadow italic))
+                                           '(:inherit shadow)))
                (font-lock-comment-delimiter-face :inherit shadow)
                (font-lock-constant-face :foreground ,ctp-peach)
                (font-lock-doc-face :inherit font-lock-comment-face)
@@ -368,10 +369,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-string-face :foreground ,ctp-green)
                (font-lock-type-face :inherit font-lock-builtin-face)
                (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                       (list :slant 'italic)))
+                                                                       '(:inherit italic)))
                (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                       (list :slant 'italic)))
+                                                                       '(:inherit italic)))
                (font-lock-warning-face :inherit warning)
+               (font-lock-number-face :foreground ,ctp-peach)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
                ;; avy
