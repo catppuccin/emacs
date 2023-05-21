@@ -361,7 +361,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (font-lock-doc-face :inherit font-lock-comment-face)
                (font-lock-keyword-face :foreground ,ctp-mauve)
                (font-lock-negation-char-face :foreground ,ctp-sky)
-               (font-lock-preprocessor-face :foreground ,ctp-lavender)
+               (font-lock-preprocessor-face :foreground ,ctp-yellow)
                (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,undef)
                (font-lock-regexp-grouping-construct :foreground ,undef)
