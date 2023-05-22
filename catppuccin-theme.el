@@ -298,7 +298,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                                                                      (catppuccin-darken (catppuccin-get-color 'base) 5)
                                                                    (catppuccin-lighten (catppuccin-get-color 'base) 5))))))
       (faces '(;; default / basic faces
-               (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer colour you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
+               (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer color you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
                (default :background ,ctp-base :foreground ,ctp-text)
                (default-italic :slant italic)
                (hl-todo :foreground ,ctp-peach)
@@ -324,7 +324,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :background ,ctp-surface0 :extend t)
-               (shadow :foreground ,ctp-surface2)
+               (shadow :foreground ,ctp-overlay0)
                (success :foreground ,ctp-green)
                (warning :foreground ,ctp-yellow)
                (tooltip :foreground ,ctp-overlay2 :background ,ctp-surface0)
