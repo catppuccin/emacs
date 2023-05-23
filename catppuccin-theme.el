@@ -292,13 +292,13 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 (ctp-crust            (catppuccin-get-color 'crust) (catppuccin-quantize-color (catppuccin-get-color 'crust)))
 
                 (ctp-current          (if (eq catppuccin-flavor 'latte)
-                                           (catppuccin-darken (catppuccin-get-color 'base) 5)
-                                           (catppuccin-lighten (catppuccin-get-color 'base) 5))
+                                          (catppuccin-darken (catppuccin-get-color 'base) 5)
+                                        (catppuccin-lighten (catppuccin-get-color 'base) 5))
                                       (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
                                                                      (catppuccin-darken (catppuccin-get-color 'base) 5)
                                                                    (catppuccin-lighten (catppuccin-get-color 'base) 5))))))
       (faces '(;; default / basic faces
-               (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer colour you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
+               (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer color you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
                (default :background ,ctp-base :foreground ,ctp-text)
                (default-italic :slant italic)
                (hl-todo :foreground ,ctp-peach)
@@ -324,7 +324,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                 :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :background ,ctp-surface0 :extend t)
-               (shadow :foreground ,ctp-surface2)
+               (shadow :foreground ,ctp-overlay0)
                (success :foreground ,ctp-green)
                (warning :foreground ,ctp-yellow)
                (tooltip :foreground ,ctp-overlay2 :background ,ctp-surface0)
@@ -352,23 +352,32 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (evil-ex-substitute-replacement :foreground ,ctp-green :underline t)
 
                ;; syntax / font-lock
-               (font-lock-builtin-face :foreground ,ctp-lavender)
-               (font-lock-comment-face :inherit shadow ,@(when catppuccin-italic-comments
-                                                                (list :slant 'italic)))
+               (font-lock-bracket-face :foreground ,ctp-overlay2)
+               (font-lock-builtin-face :foreground ,ctp-red)
+               (font-lock-comment-face ,@(if catppuccin-italic-comments
+                                             '(:inherit (shadow italic))
+                                           '(:inherit shadow)))
                (font-lock-comment-delimiter-face :inherit shadow)
                (font-lock-constant-face :foreground ,ctp-peach)
+               (font-lock-delimiter-face :foreground ,ctp-overlay2)
                (font-lock-doc-face :inherit font-lock-comment-face)
+               (font-lock-escape-face :foreground ,ctp-pink)
+               (font-lock-function-call-face :foreground ,ctp-blue)
                (font-lock-function-name-face :foreground ,ctp-blue)
                (font-lock-keyword-face :foreground ,ctp-mauve)
                (font-lock-negation-char-face :foreground ,ctp-sky)
+               (font-lock-number-face :foreground ,ctp-peach)
+               (font-lock-operator-face :foreground ,ctp-sky)
                (font-lock-preprocessor-face :foreground ,ctp-yellow)
                (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,undef)
                (font-lock-regexp-grouping-construct :foreground ,undef)
                (font-lock-string-face :foreground ,ctp-green)
-               (font-lock-type-face :inherit font-lock-builtin-face)
+               (font-lock-type-face :foreground ,ctp-yellow)
                (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                       (list :slant 'italic)))
+                                                                       '(:inherit italic)))
+               (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
+                                                                      '(:inherit italic)))
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
@@ -962,11 +971,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;; term
                (term :foreground ,ctp-text :background ,ctp-base)
                (term-color-black ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-subtext1  :background ctp-subtext1)
-                                (list :foreground ctp-surface1 :background ctp-surface1)))
+                                       (list :foreground ctp-subtext1  :background ctp-subtext1)
+                                     (list :foreground ctp-surface1 :background ctp-surface1)))
                (term-color-black-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-subtext0 :background ctp-subtext0)
-                                (list :foreground ctp-surface2 :background ctp-surface2)))
+                                             (list :foreground ctp-subtext0 :background ctp-subtext0)
+                                           (list :foreground ctp-surface2 :background ctp-surface2)))
                (term-color-red :foreground ,ctp-red :background ,ctp-red)
                (term-color-bright-red :foreground ,ctp-red :background ,ctp-red)
                (term-color-green :foreground ,ctp-green :background ,ctp-green)
@@ -980,11 +989,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (term-color-cyan :foreground ,ctp-teal :background ,ctp-teal)
                (term-color-bright-cyan :foreground ,ctp-teal :background ,ctp-teal)
                (term-color-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-surface2  :background ctp-surface2)
-                                (list :foreground ctp-subtext1 :background ctp-subtext1)))
+                                       (list :foreground ctp-surface2  :background ctp-surface2)
+                                     (list :foreground ctp-subtext1 :background ctp-subtext1)))
                (term-color-bright-white ,@(if (eq catppuccin-flavor 'latte)
-                                  (list :foreground ctp-surface1 :background ctp-surface1)
-                                (list :foreground ctp-subtext0 :background ctp-subtext0)))
+                                              (list :foreground ctp-surface1 :background ctp-surface1)
+                                            (list :foreground ctp-subtext0 :background ctp-subtext0)))
                ;; tree-sitter
                (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
                (tree-sitter-hl-face:comment :inherit font-lock-comment-face)
@@ -1086,14 +1095,14 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                      (eval `(let ,reduced-color-list
                               (backquote ,spec))))))
                 whole-theme)
-            (pcase-dolist (`(,face . ,spec) faces)
-              (push `(,face
-                      ((((min-colors 16777216)) ; fully graphical envs
-                        ,(funcall expand-with-func 'cadr spec))
-                       (t                       ; terminal with 256 colors
-                        ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
-                    whole-theme))
-            whole-theme))
+           (pcase-dolist (`(,face . ,spec) faces)
+             (push `(,face
+                     ((((min-colors 16777216)) ; fully graphical envs
+                       ,(funcall expand-with-func 'cadr spec))
+                      (t                       ; terminal with 256 colors
+                       ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
+                   whole-theme))
+           whole-theme))
 
   (apply #'custom-theme-set-variables
          'catppuccin
@@ -1112,14 +1121,14 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
            `((rustic-ansi-faces
               (vector
-                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
-                ,(funcall get-func (alist-get 'ctp-red colors))
-                ,(funcall get-func (alist-get 'ctp-green colors))
-                ,(funcall get-func (alist-get 'ctp-yellow colors))
-                ,(funcall get-func (alist-get 'ctp-blue colors))
-                ,(funcall get-func (alist-get 'ctp-pink colors))
-                ,(funcall get-func (alist-get 'ctp-teal colors))
-                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
+               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+               ,(funcall get-func (alist-get 'ctp-red colors))
+               ,(funcall get-func (alist-get 'ctp-green colors))
+               ,(funcall get-func (alist-get 'ctp-yellow colors))
+               ,(funcall get-func (alist-get 'ctp-blue colors))
+               ,(funcall get-func (alist-get 'ctp-pink colors))
+               ,(funcall get-func (alist-get 'ctp-teal colors))
+               ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
 
 
 
