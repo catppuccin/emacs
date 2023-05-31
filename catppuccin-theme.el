@@ -331,12 +331,12 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (trailing-whitespace :inherit warning)
                (window-divider :foreground ,ctp-mantle)
                (vertical-border :foreground ,ctp-mantle)
-               
+
                ;;tty menu
                (tty-menu-enabled-face :foreground ,ctp-text :inverse-video nil :background ,ctp-current)
                (tty-menu-disabled-face :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (tty-menu-selected-face :foreground ,ctp-text :background ,ctp-surface1)
-               
+
                ;; solaire-mode
                (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
                (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
@@ -420,6 +420,18 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;; diff-refine
                (diff-refine-removed :weight bold)
                (diff-refine-added :weight bold)
+               ;; eshell
+               (eshell-ls-archive :foreground ,ctp-mauve)
+               (eshell-ls-backup :foreground ,ctp-yellow)
+               (eshell-ls-clutter :foreground ,ctp-red :weight bold)
+               (eshell-ls-directory :foreground ,ctp-blue :weight bold)
+               (eshell-ls-executable :foreground ,ctp-green :weight bold)
+               (eshell-ls-missing :foreground ,ctp-red :weight bold)
+               (eshell-ls-product :foreground ,ctp-peach)
+               (eshell-ls-readonly :foreground ,ctp-flamingo)
+               (eshell-ls-special :foreground ,ctp-pink :weight bold)
+               (eshell-ls-symlink :foreground ,ctp-sapphire :weight bold)
+               (eshell-prompt :foreground ,ctp-current :weight bold)
                ;; git-gutter
                (git-gutter:modified :foreground ,ctp-peach)
                (git-gutter:deleted :foreground ,ctp-red)
