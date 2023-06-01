@@ -959,7 +959,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;; swiper
                ;; (swiper-line-face :inherit swiper-match-face1)
                ;; (swiper-line-face-1 :inherit swiper-match-face1)
-               ;; (swiper-background-match-face-1 :background ,ctp-teal)
+               (swiper-background-match-face-1 :background ,ctp-teal)
                (swiper-match-face-1 :foreground ,ctp-text :background: ,ctp-red)
                (swiper-background-match-face-2 :foreground ,ctp-mantle :background ,ctp-teal)
                (swiper-match-face-2 :foreground ,ctp-mantle :background ,ctp-red)
