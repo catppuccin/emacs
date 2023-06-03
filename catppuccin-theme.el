@@ -1080,6 +1080,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (whitespace-space-before-tab :inherit warning)
                (whitespace-tab :inherit whitespace-newline)
                (whitespace-trailing :inherit trailing-whitespace)
+               (trailing-whitespace :foreground ,ctp-yellow :background ,ctp-yellow)
                ;; yard-mode
                (yard-tag-face :inherit font-lock-builtin-face)
                (yard-directive-face :inherit font-lock-builtin-face)
