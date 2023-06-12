@@ -1054,7 +1054,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-nerd-icons-root-face :foreground ,ctp-blue)
                (treemacs-nerd-icons-file-face :foreground , ctp-blue)                
                ;; tree-sitter
-               (tree-sitter-hl-face:attribute :foreground ,ctp-teal)
+               (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
+               (tree-sitter-hl-face:property :foreground ,ctp-teal)
                (tree-sitter-hl-face:property.definition :foreground ,ctp-teal)
                (tree-sitter-hl-face:comment :inherit font-lock-comment-face)
                (tree-sitter-hl-face:constant :inherit font-lock-constant-face)
