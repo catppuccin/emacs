@@ -39,20 +39,36 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 </details>
 
 # Installation
-## Emacs
-1. Download `catppuccin-theme.el` into `.emacs.d/themes`
-1. Add the following to your `init.el`
 
-``` lisp
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'catppuccin t)
+`catppuccin-theme` is available on the MELPA package repository.
+
+## Emacs
+
+1. Make sure to have MELPA enabled by adding it to the `package-archives`, or that your package manager of choice has MELPA as a repository.
+2. You can then install the package from the `list-packages` interface, accessible from `M-x list-packages`.
+3. Alternatively, you can install the package using your package manager of choice, such as straight
+
+```lisp
+(straight-use-package 'catppuccin-theme)
+```
+
+4. Then, you can enable it by adding the following to your `init.el` file
+
+```lisp
+(load-theme 'catppuccin :no-confirm)
 ```
 
 ## Doom Emacs
-1. Download `catppuccin-theme.el` into `.doom.d/themes`
-1. Add the following to your `config.el`
 
-``` lisp
+1. Add the following to your `package.el`
+
+```lisp
+(package! catppuccin-theme)
+```
+
+2. Add the following to your `config.el`
+
+```lisp
 (setq doom-theme 'catppuccin)
 ```
 
@@ -60,14 +76,16 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 
 The default flavour is Mocha, to change the flavor, place the following in your `init.el` or `config.el`
 after loading the theme
-``` lisp
+
+```lisp
 (setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
 (catppuccin-reload)
 ```
 
 The theme can also be customzied further by changing individual colors.
 Doom users must call `(load-theme 'catppuccin t t)` before being able to call any of the `catppuccin-*` functions.
-``` lisp
+
+```lisp
 (catppuccin-set-color 'base "#000000") ;; change base to #000000 for the currently active flavor
 (catppuccin-set-color 'crust "#222222" 'frappe) ;; change crust to #222222 for frappe
 (catppuccin-reload)
@@ -83,6 +101,7 @@ Doom users must call `(load-theme 'catppuccin t t)` before being able to call an
 - [Name](https://github.com/NamesCode)
 
 &nbsp;
+
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 <p align="center">Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
 <p align="center"><a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a></p>
