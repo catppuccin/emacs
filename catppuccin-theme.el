@@ -410,7 +410,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (company-tooltip-annotation :foreground ,ctp-green)
                (company-tooltip-annotation-selection :foreground ,ctp-mantle)
                (company-tooltip-scrollbar-thumb :background ,ctp-surface2)
-               (company-tooltip-scrollbar-track :background ,ctp-surface1)             
+               (company-tooltip-scrollbar-track :background ,ctp-surface1)
                ;; completions (minibuffer.el)
                (completions-annotations :inherit font-lock-comment-face)
                (completions-common-part :foreground ,ctp-sky)
@@ -668,6 +668,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (ido-virtual :foreground ,ctp-sapphire)
                (ido-incomplete-regexp :inherit warning)
                (ido-indicator :foreground ,ctp-text :weight bold)
+               ;; iedit
+               (iedit-occurrence :inherit match :weight bold)
+               (iedit-read-only-occurrence :inherit 'region)
                ;; indent-guide
                (indent-guide-face :foreground ,ctp-surface1)
                ;; ivy
@@ -1023,7 +1026,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-async-loading-face :foreground ,ctp-text)
                (treemacs-directory-face :foreground ,ctp-blue)
                (treemacs-directory-collapsed-face :foreground ,ctp-blue)
-               (treemacs-file-face :foreground ,ctp-text) 
+               (treemacs-file-face :foreground ,ctp-text)
                (treemacs-fring-indicator-face :foreground ,ctp-text)
                (treemacs-git-added-face :foreground ,ctp-green)
                (treemacs-git-commit-diff-face :foreground ,ctp-green)
@@ -1036,7 +1039,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-header-button-face :foreground ,ctp-text)
                (treemacs-help-column-face :foreground ,ctp-blue)
                (treemacs-help-title-face :foreground ,ctp-text)
-               (treemacs-hl-line-face :background ,ctp-current :extend t) 
+               (treemacs-hl-line-face :background ,ctp-current :extend t)
                (treemacs-marked-file-face :foreground ,ctp-red)
                (treemacs-nerd-icons-face :foreground ,ctp-blue)
                (treemacs-on-failure-pulse-face :foreground ,ctp-text)
@@ -1052,7 +1055,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-window-background-face :background ,ctp-base)
                ;;treemacs-nerd-icons
                (treemacs-nerd-icons-root-face :foreground ,ctp-blue)
-               (treemacs-nerd-icons-file-face :foreground , ctp-blue)                
+               (treemacs-nerd-icons-file-face :foreground , ctp-blue)
                ;; tree-sitter
                (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
                (tree-sitter-hl-face:property :foreground ,ctp-lavender)
