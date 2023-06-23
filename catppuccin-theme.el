@@ -668,6 +668,9 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (ido-virtual :foreground ,ctp-sapphire)
                (ido-incomplete-regexp :inherit warning)
                (ido-indicator :foreground ,ctp-text :weight bold)
+               ;; iedit
+               (iedit-occurrence :inherit match :weight bold)
+               (iedit-read-only-occurrence :inherit 'region)
                ;; indent-guide
                (indent-guide-face :foreground ,ctp-surface1)
                ;; ivy
