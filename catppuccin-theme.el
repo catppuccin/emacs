@@ -61,6 +61,11 @@ The theme has to be reloaded after changing anything in this group."
   :type 'boolean
   :group 'catppuccin)
 
+(defcustom catppuccin-italic-blockquotes t
+  "Use :slant italic for blockquotes in markdown and org."
+  :type 'boolean
+  :group 'catppuccin)
+
 (defcustom catppuccin-italic-variables nil
   "Use :slant italic for variables."
   :type 'boolean
@@ -765,6 +770,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (magit-process-ok :foreground ,ctp-green :weight bold)
                ;; markdown
                (markdown-blockquote-face :foreground ,ctp-green)
+               (markdown-blockquote-face :extend t :background ,ctp-mantle :foreground ,ctp-green ,@(when catppuccin-italic-blockquotes
+                                                                                                      '(:slant italic)))
                (markdown-code-face :foreground ,ctp-text)
                (markdown-footnote-face :foreground ,ctp-yellow)
                (markdown-header-face :weight normal)
