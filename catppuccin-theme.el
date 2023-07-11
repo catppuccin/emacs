@@ -438,7 +438,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (eshell-ls-readonly :foreground ,ctp-flamingo)
                (eshell-ls-special :foreground ,ctp-pink :weight bold)
                (eshell-ls-symlink :foreground ,ctp-sapphire :weight bold)
-               (eshell-prompt :foreground ,ctp-current :weight bold)
+               (eshell-prompt :foreground ,ctp-blue :weight bold)
                ;; git-gutter
                (git-gutter:modified :foreground ,ctp-peach)
                (git-gutter:deleted :foreground ,ctp-red)
