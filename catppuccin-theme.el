@@ -318,8 +318,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (lazy-highlight :foreground ,ctp-subtext1 :background ,ctp-surface1)
                (link :foreground ,ctp-lavender :underline t)
                (link-unvisited :foreground ,ctp-blue :underline t)
-               (linum :foreground ,ctp-surface1 :background ,ctp-base)
-               (line-number :foreground ,ctp-surface1 :background ,ctp-base)
+               (linum :inherit default :foreground ,ctp-surface1 :background ,ctp-base)
+               (line-number :inherit default :foreground ,ctp-surface1 :background ,ctp-base)
                (line-number-current-line :inherit line-number :foreground ,ctp-lavender)
                (match :background ,ctp-red :foreground ,ctp-mantle)
                (menu :background ,ctp-current :inverse-video nil :foreground ,ctp-text)
@@ -345,7 +345,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                ;; solaire-mode
                (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
                (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
-               (solaire-line-number-face :foreground ,ctp-surface1 :background ,ctp-mantle)
+               (solaire-line-number-face :inherit default :foreground ,ctp-surface1 :background ,ctp-mantle)
                (solaire-mode-line-face :background ,ctp-crust nil :foreground ,ctp-text)
                (solaire-mode-line-inactive-face
                 :background ,ctp-crust :inverse-video nil :foreground ,ctp-subtext1)
@@ -721,7 +721,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (lsp-ui-peek-peek :background ,ctp-mantle)
                (lsp-ui-peek-list :background ,ctp-mantle)
                (lsp-ui-peek-filename :foreground ,ctp-text)
-               (lsp-ui-peek-line-number :foreground ,ctp-surface1)
+               (lsp-ui-peek-line-number :inherit default :foreground ,ctp-surface1)
                (lsp-ui-peek-highlight :inherit highlight :distant-foreground ,ctp-base)
                (lsp-ui-peek-header :background ,ctp-mantle :foreground ,ctp-blue, :weight bold)
                (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
