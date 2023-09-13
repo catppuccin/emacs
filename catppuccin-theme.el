@@ -883,6 +883,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (org-formula :foreground ,ctp-pink)
                (org-headline-done :inherit org-done)
                (org-hide :foreground ,ctp-crust :background ,ctp-base)
+               (org-indent :foreground ,ctp-base)
                (org-level-1 :inherit bold :foreground ,ctp-red
                             ,@(when catppuccin-enlarge-headings
                                 (list :height catppuccin-height-title-1)))
