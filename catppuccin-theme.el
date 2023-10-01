@@ -941,6 +941,8 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (outline-6 :foreground ,ctp-blue)
                ;; perspective
                (persp-selected-face :weight bold :foreground ,ctp-pink)
+               ;; popup
+               (popup-tip-face :background ,ctp-surface0 :foreground ,ctp-text)
                ;; rainbow-delimiters
                (rainbow-delimiters-depth-1-face :foreground ,ctp-red)
                (rainbow-delimiters-depth-2-face :foreground ,ctp-peach)
@@ -1080,7 +1082,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-tags-face :foreground ,ctp-text)
                (treemacs-term-node-face :foreground ,ctp-blue)
                (treemacs-window-background-face :background ,ctp-base)
-               ;;treemacs-nerd-icons
+               ;; treemacs-nerd-icons
                (treemacs-nerd-icons-root-face :foreground ,ctp-blue)
                (treemacs-nerd-icons-file-face :foreground , ctp-blue)
                ;; tree-sitter
