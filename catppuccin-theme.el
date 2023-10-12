@@ -1056,7 +1056,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (treemacs-directory-face :foreground ,ctp-blue)
                (treemacs-directory-collapsed-face :foreground ,ctp-blue)
                (treemacs-file-face :foreground ,ctp-text)
-               (treemacs-fring-indicator-face :foreground ,ctp-text)
+               (treemacs-fringe-indicator-face :foreground ,ctp-text)
                (treemacs-git-added-face :foreground ,ctp-green)
                (treemacs-git-commit-diff-face :foreground ,ctp-green)
                (treemacs-git-conflict-face :foreground ,ctp-red)
