@@ -666,6 +666,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
                (icicle-annotation :foreground ,ctp-overlay2)
                ;; icomplete
                (icompletep-determined :foreground ,ctp-blue)
+               (icomplete-selected-match :inherit match)
                ;; ido
                (ido-first-match :foreground ,ctp-green)
                (ido-only-match :foreground ,ctp-green)
