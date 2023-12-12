@@ -257,6 +257,20 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
   (disable-theme 'catppuccin)
   (load-theme 'catppuccin t))
 
+(defun catppuccin-load-flavor (flavor)
+  "Set the desired FLAVOR or choose one from a list if called interactively.
+
+If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchiato, or 'mocha."
+  (interactive
+   (list (make-symbol (completing-read
+                       "Choose a catppuccin theme flavor: "
+                       '(frappe latte macchiato mocha)
+                       nil   ;; predicate
+                       t)))) ;; require-match
+    (setq catppuccin-flavor flavor)
+    (catppuccin-reload)
+    (message "Catppuccin flavor now %s" flavor))
+
 (defun catppuccin-set-color (color value &optional flavor)
   "Set the COLOR of FLAVOR or the current flavor to VALUE."
   (interactive "SChange color: \nsSet %s to: ")
