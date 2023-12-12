@@ -262,11 +262,11 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 
 If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchiato, or 'mocha."
   (interactive
-   (list (make-symbol (completing-read
-                       "Choose a catppuccin theme flavor: "
-                       '(frappe latte macchiato mocha)
-                       nil   ;; predicate
-                       t)))) ;; require-match
+   (list (intern (completing-read
+                  "Choose a catppuccin theme flavor: "
+                  '(frappe latte macchiato mocha)
+                  nil   ;; predicate
+                  t)))) ;; require-match
     (setq catppuccin-flavor flavor)
     (catppuccin-reload)
     (message "Catppuccin flavor now %s" flavor))
