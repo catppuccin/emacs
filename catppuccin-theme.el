@@ -954,6 +954,15 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (outline-4 :foreground ,ctp-blue)
                (outline-5 :foreground ,ctp-blue)
                (outline-6 :foreground ,ctp-blue)
+               ;; outline-minor-faces
+               (outline-minor-1 :foreground ,ctp-lavender :weight ultra-bold)
+               (outline-minor-2 :foreground ,ctp-pink :weight bold)
+               (outline-minor-3 :foreground ,ctp-blue :weight bold)
+               (outline-minor-4 :foreground ,ctp-red)
+               (outline-minor-5 :foreground ,ctp-green)
+               (outline-minor-6 :foreground ,ctp-peach)
+               (outline-minor-7 :foreground ,ctp-mauve)
+               (outline-minor-8 :foreground ,ctp-text)
                ;; perspective
                (persp-selected-face :weight bold :foreground ,ctp-pink)
                ;; popup
