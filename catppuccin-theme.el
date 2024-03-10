@@ -475,6 +475,21 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (dired-directory :foreground ,ctp-blue)
                (dired-perm-write :foreground ,ctp-green)
                (dired-broken-symlink :foreground ,ctp-text :background ,ctp-red)
+               ;; dired-filetype-face
+               (dired-filetype-common :foreground ,ctp-text)
+               (dired-filetype-compress :foreground ,ctp-yellow)
+               (dired-filetype-document :foreground ,ctp-sky)
+               (dired-filetype-execute :foreground ,ctp-red)
+               (dired-filetype-image :foreground ,ctp-peach)
+               (dired-filetype-js :foreground ,ctp-yellow)
+               (dired-filetype-link :foreground ,ctp-maroon)
+               (dired-filetype-music :foreground ,ctp-maroon)
+               (dired-filetype-omit :foreground ,ctp-mauve)
+               (dired-filetype-plain :foreground ,ctp-text)
+               (dired-filetype-program :foreground ,ctp-peach)
+               (dired-filetype-source :foreground ,ctp-green)
+               (dired-filetype-video :foreground ,ctp-maroon)
+               (dired-filetype-xml :foreground ,ctp-green)
                ;; dired+ (kept for legacy support)
                ;; TODO (maybe): Show deprecation warning
                ;; This doesn't make sense to keep around
