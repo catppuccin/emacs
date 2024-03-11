@@ -589,6 +589,11 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                                           (list :height catppuccin-height-title-3)))
                (gemini-heading-face-rest :foreground ,ctp-blue)
                (gemini-quote-face :foreground ,ctp-green)
+               ;; gnus
+               (gnus-header-content :foreground ,ctp-sky)
+               (gnus-header-from :foreground ,ctp-mauve)
+               (gnus-header-name :foreground ,ctp-blue :weight bold)
+               (gnus-header-subject :foreground ,ctp-mauve :weight bold)
                ;; go-test
                (go-test--ok-face :inherit success)
                (go-test--error-face :inherit error)
@@ -829,17 +834,18 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                ;; mini-modeline
                (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
                ;; mu4e
-               (mu4e-unread-face :foreground ,ctp-maroon)
+               (mu4e-unread-face :foreground ,ctp-red)
                (mu4e-view-url-number-face :foreground ,ctp-yellow)
                (mu4e-highlight-face :background ,ctp-base
                                     :weight bold
                                     :extend t)
                (mu4e-header-highlight-face :background ,ctp-current
-                                           :foreground ,ctp-text
                                            :underline nil :weight bold
                                            :extend t)
                (mu4e-header-key-face :inherit message-mml)
                (mu4e-header-marks-face :foreground ,ctp-mauve)
+               (mu4e-replied-face :foreground ,ctp-green)
+               (mu4e-forwarded-face :foreground ,ctp-peach)
                (mu4e-cited-1-face :foreground ,ctp-green)
                (mu4e-cited-2-face :foreground ,ctp-yellow)
                (mu4e-cited-3-face :inherit font-lock-comment-face)
