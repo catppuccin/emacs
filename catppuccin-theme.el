@@ -845,6 +845,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (mu4e-cited-3-face :inherit font-lock-comment-face)
                (mu4e-cited-4-face :inherit font-lock-comment-face)
                (mu4e-cited-5-face :inherit font-lock-comment-face)
+               ;; mu4e-column-faces
+               (mu4e-column-faces-date :foreground ,ctp-blue)
+               (mu4e-column-faces-flags :foreground ,ctp-yellow)
+               (mu4e-column-faces-to-from :foreground ,ctp-sky)
                ;; neotree
                (neo-banner-face :foreground ,ctp-blue :weight bold)
                ;;(neo-button-face :underline nil)
