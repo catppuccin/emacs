@@ -435,9 +435,9 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (completions-common-part :foreground ,ctp-sky)
                (completions-first-difference :foreground ,ctp-text)
                ;; diff-hl
-               (diff-hl-change :foreground ,ctp-blue :background ,ctp-blue)
-               (diff-hl-delete :foreground ,ctp-red :background ,ctp-red)
-               (diff-hl-insert :foreground ,ctp-green :background ,ctp-green)
+               (diff-hl-change :inherit fringe :foreground ,ctp-blue)
+               (diff-hl-delete :inherit fringe :foreground ,ctp-red)
+               (diff-hl-insert :inherit fringe :foreground ,ctp-green)
                ;; diff-refine
                (diff-refine-removed :weight bold)
                (diff-refine-added :weight bold)
