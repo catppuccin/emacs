@@ -315,7 +315,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                                         (catppuccin-lighten (catppuccin-get-color 'base) 5))
                                       (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
                                                                      (catppuccin-darken (catppuccin-get-color 'base) 5)
-                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 5))))))
+                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 5))))
+                (ctp-selection          (if (eq catppuccin-flavor 'latte)
+                                          (catppuccin-darken (catppuccin-get-color 'base) 12)
+                                        (catppuccin-lighten (catppuccin-get-color 'base) 17))
+                                      (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
+                                                                     (catppuccin-darken (catppuccin-get-color 'base) 12)
+                                                                   (catppuccin-lighten (catppuccin-get-color 'base) 17))))))
       (faces '(;; default / basic faces
                (cursor :background ,ctp-rosewater) ;; If you want to change this to a nicer color you can do so by swapping "ctp-rosewater" with another colour var like "ctp-red"
                (default :background ,ctp-base :foreground ,ctp-text)
@@ -342,7 +348,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (mode-line-inactive
                 :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
                (read-multiple-choice-face :inherit completions-first-difference)
-               (region :background ,ctp-surface0 :extend t)
+               (region :background ,ctp-selection :extend t)
                (shadow :foreground ,ctp-overlay0)
                (success :foreground ,ctp-green)
                (warning :foreground ,ctp-yellow)
