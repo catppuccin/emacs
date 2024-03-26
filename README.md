@@ -91,6 +91,9 @@ Doom users must call `(load-theme 'catppuccin t t)` before being able to call an
 (catppuccin-reload)
 ```
 
+>[!NOTE]
+>If you are using emacsclient and rustic, you should add `(add-hook 'server-after-make-frame-hook #'catppuccin-reload)` to your config to avoid [this issue](https://github.com/catppuccin/emacs/issues/121)
+
 ## 💝 Thanks to
 
 - [Nyx](https://github.com/nyxkrage)
