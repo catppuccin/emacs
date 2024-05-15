@@ -94,6 +94,9 @@ Doom users must call `(load-theme 'catppuccin t t)` before being able to call an
 >[!NOTE]
 >If you are using emacsclient and rustic, you should add `(add-hook 'server-after-make-frame-hook #'catppuccin-reload)` to your config to avoid [this issue](https://github.com/catppuccin/emacs/issues/121)
 
+>[!NOTE]
+>If you are using doom emacs and want to customize the `catppuccin-flavor`, calling `(catppuccin-reload)` after `load-theme` may slow emacs startup time. To change the flavor, it is sufficient to `setq` the desired flavor before loading the theme. Then, calling `(catppuccin-reload)` can be omitted because catppuccin will be loaded with the desired flavor directly.
+
 ## 💝 Thanks to
 
 - [Nyx](https://github.com/nyxkrage)
