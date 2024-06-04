@@ -1,4 +1,4 @@
-;;; catppuccin-theme.el --- Catppuccin for Emacs - 🍄 Soothing pastel theme for Emacs -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; catppuccin-theme.el --- Catppuccin for Emacs - 🍄 Soothing pastel theme for Emacs -*- lexical-binding: t; no-byte-compile: nil; -*-
 
 ;; Copyright 2022-present, All rights reserved
 ;;
