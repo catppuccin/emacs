@@ -334,6 +334,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (ffap :foreground ,undef)
                (fringe :background ,ctp-base :foreground ,ctp-surface1)
                (header-line :inherit mode-line)
+               (help-key-binding :background ,ctp-mantle :foreground ,ctp-blue
+                 :box (:line-width (-1 . -1) :color ,ctp-crust :style nil))
                (highlight :foreground ,ctp-text :background ,ctp-current)
                (hl-line :background ,ctp-current :extend t)
                (info-quoted-name :foreground ,undef)
