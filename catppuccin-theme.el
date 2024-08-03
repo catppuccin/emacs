@@ -278,8 +278,11 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
 
 (defun catppuccin-get-color (color &optional flavor)
   "Get the COLOR of FLAVOR or the current flavor."
-  (interactive "SThe color to get: ")
-  (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))))
+  (interactive "SColor: ")
+  (let ((result (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors"))))))
+    (if (called-interactively-p 'interactive)
+      (message result)
+      result)))
 
 ;;;; Theme definition:
 (let ((colors '((undef     "#ff00ff" "#ff00ff")
