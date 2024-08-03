@@ -412,6 +412,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (font-lock-warning-face :inherit warning)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,undef)
+               ;; anzu
+               (anzu-mode-line :foreground ,ctp-blue)
                ;; avy
                (avy-background-face :foreground ,ctp-text :background ,ctp-base)
                (avy-goto-char-timer-face :foreground ,ctp-blue :background ,ctp-surface0)
