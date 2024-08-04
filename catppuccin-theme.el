@@ -452,9 +452,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (diff-hl-change :inherit fringe :foreground ,ctp-blue)
                (diff-hl-delete :inherit fringe :foreground ,ctp-red)
                (diff-hl-insert :inherit fringe :foreground ,ctp-green)
-               ;; diff-refine
-               (diff-refine-removed :weight bold)
-               (diff-refine-added :weight bold)
+               ;; diff-mode
+               (diff-added :background ,(catppuccin-darken ctp-green 60))
+               (diff-removed :background ,(catppuccin-darken ctp-red 60))
+               (diff-indicator-added :foreground ,ctp-green)
+               (diff-indicator-removed :foreground ,ctp-red)
+               (diff-refine-added :background ,(catppuccin-darken ctp-green 40))
+               (diff-refine-removed :background ,(catppuccin-darken ctp-red 40))
                ;; eshell
                (eshell-ls-archive :foreground ,ctp-mauve)
                (eshell-ls-backup :foreground ,ctp-yellow)
