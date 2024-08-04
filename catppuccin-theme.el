@@ -42,9 +42,10 @@
 ;; For more information visit <https://catppuccin.com>.
 
 ;;; Code:
+
 (deftheme catppuccin)
 
-;;;; Configuration options:
+;;; Configuration options:
 
 (defgroup catppuccin nil
   "Catppuccin theme options.
@@ -234,7 +235,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
   :type '(alist :key-type symbol :value-type string)
   :group 'catppuccin)
 
-;;;; Internal functions
+;;; Internal functions:
 
 (defun catppuccin-quantize-color (color)
   "Quantize COLOR to a 256 color palette."
@@ -275,7 +276,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
       (apply rgb-to-hex (mapcar (lambda (v) (floor (* (- 1 factor) v)))
                                 (funcall hex-to-rgb color))))))
 
-;;; User functions
+;;; User functions:
 
 (defun catppuccin-reload ()
   "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`."
@@ -310,7 +311,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
       (message result)
       result)))
 
-;;;; Theme definition:
+;;; Theme definition:
+
 (let ((colors '((undef     "#ff00ff" "#ff00ff")
                 (ctp-rosewater        (catppuccin-get-color 'rosewater) (catppuccin-quantize-color (catppuccin-get-color 'rosewater)))
                 (ctp-flamingo         (catppuccin-get-color 'flamingo) (catppuccin-quantize-color (catppuccin-get-color 'flamingo)))
@@ -1371,9 +1373,6 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                ,(funcall get-func (alist-get 'ctp-pink colors))
                ,(funcall get-func (alist-get 'ctp-teal colors))
                ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
-
-
-
 
 ;;;###autoload
 (when load-file-name
