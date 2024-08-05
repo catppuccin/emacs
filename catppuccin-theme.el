@@ -435,8 +435,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (font-lock-operator-face :foreground ,ctp-sky)
          (font-lock-preprocessor-face :foreground ,ctp-yellow)
          (font-lock-reference-face :inherit font-lock-constant-face) ; obsolete
-         (font-lock-regexp-grouping-backslash :foreground ,undef)
-         (font-lock-regexp-grouping-construct :foreground ,undef)
+         (font-lock-regexp-grouping-backslash :foreground ,ctp-red)
+         (font-lock-regexp-grouping-construct :foreground ,ctp-red)
          (font-lock-string-face :foreground ,ctp-green)
          (font-lock-type-face :foreground ,ctp-yellow)
          (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
