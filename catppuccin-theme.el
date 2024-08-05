@@ -943,7 +943,6 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (diff-hunk-header :foreground ,ctp-text :background ,ctp-surface2)
          (magit-diff-hunk-heading :inherit diff-hunk-header)
          (magit-diff-hunk-heading-highlight :inherit diff-hunk-header :weight bold)
-         (magit-item-highlight :background ,undef)
          (magit-log-author :foreground ,ctp-subtext0)
          (magit-process-ng :foreground ,ctp-peach :weight bold)
          (magit-process-ok :foreground ,ctp-green :weight bold)
