@@ -374,7 +374,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (highlight :foreground ,ctp-text :background ,ctp-current)
          (hl-line :background ,ctp-current :extend t)
          (info-menu-star :foreground ,ctp-red)
-         (info-quoted-name :foreground ,undef)
+         (info-quoted-name :foreground ,ctp-subtext1)
          (info-string :foreground ,ctp-green)
          (lazy-highlight :foreground ,ctp-subtext1 :background ,ctp-surface1)
          (link :foreground ,ctp-lavender :underline t)
