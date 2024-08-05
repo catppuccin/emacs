@@ -296,8 +296,8 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
       (intern (completing-read
                 "Choose a catppuccin theme flavor: "
                 '(frappe latte macchiato mocha)
-                nil   ;; predicate
-                t)))) ;; require-match
+                nil   ; predicate
+                t)))) ; require-match
   (setq catppuccin-flavor flavor)
   (catppuccin-reload)
   (message "Catppuccin flavor now %s" flavor))
@@ -435,7 +435,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (font-lock-number-face :foreground ,ctp-peach)
          (font-lock-operator-face :foreground ,ctp-sky)
          (font-lock-preprocessor-face :foreground ,ctp-yellow)
-         (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
+         (font-lock-reference-face :inherit font-lock-constant-face) ; obsolete
          (font-lock-regexp-grouping-backslash :foreground ,undef)
          (font-lock-regexp-grouping-construct :foreground ,undef)
          (font-lock-string-face :foreground ,ctp-green)
@@ -445,10 +445,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
                                                                 '(:inherit italic)))
          (font-lock-warning-face :inherit warning)
+
          ;; auto-complete
          (ac-completion-face :underline t :foreground ,undef)
+
          ;; anzu
          (anzu-mode-line :foreground ,ctp-blue)
+
          ;; avy
          (avy-background-face :foreground ,ctp-text :background ,ctp-base)
          (avy-goto-char-timer-face :foreground ,ctp-blue :background ,ctp-surface0)
@@ -456,6 +459,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (avy-lead-face-0 :foreground ,ctp-base :background ,ctp-yellow)
          (avy-lead-face-1 :foreground ,ctp-base :background ,ctp-overlay0)
          (avy-lead-face-2 :foreground ,ctp-base :background ,ctp-sky)
+
          ;; company
          ;; TODO: find undef'ed faces
          (company-echo-common :foreground ,ctp-base :background ,ctp-text)
@@ -479,14 +483,17 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (company-tooltip-annotation-selection :foreground ,ctp-text)
          (company-tooltip-scrollbar-thumb :background ,ctp-surface2)
          (company-tooltip-scrollbar-track :background ,ctp-surface1)
+
          ;; completions (minibuffer.el)
          (completions-annotations :inherit font-lock-comment-face)
          (completions-common-part :foreground ,ctp-sky)
          (completions-first-difference :foreground ,ctp-text)
+
          ;; diff-hl
          (diff-hl-change :inherit fringe :foreground ,ctp-blue)
          (diff-hl-delete :inherit fringe :foreground ,ctp-red)
          (diff-hl-insert :inherit fringe :foreground ,ctp-green)
+
          ;; diff-mode
          (diff-added :background ,(catppuccin-darken ctp-green 60))
          (diff-removed :background ,(catppuccin-darken ctp-red 60))
@@ -494,6 +501,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (diff-indicator-removed :foreground ,ctp-red)
          (diff-refine-added :background ,(catppuccin-darken ctp-green 40))
          (diff-refine-removed :background ,(catppuccin-darken ctp-red 40))
+
          ;; eshell
          (eshell-ls-archive :foreground ,ctp-mauve)
          (eshell-ls-backup :foreground ,ctp-yellow)
@@ -506,16 +514,19 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (eshell-ls-special :foreground ,ctp-pink :weight bold)
          (eshell-ls-symlink :foreground ,ctp-sapphire :weight bold)
          (eshell-prompt :foreground ,ctp-blue :weight bold)
+
          ;; git-gutter
          (git-gutter:modified :foreground ,ctp-peach)
          (git-gutter:deleted :foreground ,ctp-red)
          (git-gutter:added :foreground ,ctp-green)
          (git-gutter:seperator :inherit font-lock-comment-face)
          (git-gutter:unchanged :foreground ,ctp-surface0)
+
          ;; git-gutter fringe
          (git-gutter-fr:modified :inherit git-gutter:modified)
          (git-gutter-fr:deleted :inherit git-gutter:deleted)
          (git-gutter-fr:added :inherit git-gutter:added)
+
          ;; dired
          (dired-flagged :foreground ,ctp-maroon :weight bold)
          (dired-marked :weight bold)
@@ -600,9 +611,11 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (diredfl-link-priv :inherit dired-symlink)
          (diredfl-autofile-name :foreground ,undef)
          (diredfl-tagged-autofile-name :foreground ,undef)
+
          ;; eldoc-box
          (eldoc-box-border :background ,ctp-current)
          (eldoc-box-body :background ,ctp-current)
+
          ;; elfeed
          (elfeed-search-date-face :foreground ,ctp-subtext0)
          (elfeed-search-title-face :foreground ,ctp-text)
@@ -617,6 +630,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (elfeed-log-warn-level-face :foreground ,ctp-peach)
          (elfeed-log-info-level-face :weight bold)
          (elfeed-log-debug-level-face :weight bold)
+
          ;; elpher
          (elpher-gemini-heading1 :weight bold :foreground ,ctp-blue
            ,@(when catppuccin-enlarge-headings
@@ -629,6 +643,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (list :height catppuccin-height-title-3)))
          (elpher-gemini-preformatted :inherit fixed-pitch
            :foreground ,ctp-green)
+
          ;; erc
          (erc-action-face :foreground ,ctp-green)
          (erc-command-indicator-face :foreground ,ctp-mauve)
@@ -683,14 +698,17 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (fg:erc-color-face13 :foreground ,ctp-pink)
          (fg:erc-color-face14 :foreground ,ctp-overlay2)
          (fg:erc-color-face15 :foreground ,ctp-text)
+
          ;; enh-ruby
          (enh-ruby-heredoc-delimiter-face :foreground ,ctp-yellow)
          (enh-ruby-op-face :inherit haskell-operator-face)
          (enh-ruby-regexp-delimiter-face :foreground ,ctp-yellow)
          (enh-ruby-string-delimiter-face :foreground ,ctp-yellow)
+
          ;; flyspell
          (flyspell-duplicate :underline (:style wave :color ,ctp-teal))
          (flyspell-incorrect :underline (:style wave :color ,ctp-maroon))
+
          ;; font-latex
          (font-latex-bold-face :foreground ,ctp-red :weight bold)
          (font-latex-italic-face :foreground ,ctp-yellow :slant italic)
@@ -699,6 +717,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (font-latex-string-face :foreground ,ctp-green)
          (font-latex-warning-face :inherit warning)
          ;; TODO: More latex faces to be themed, especially sections
+
          ;; gemini
          (gemini-heading-face-1 :weight bold :foreground ,ctp-blue
            ,@(when catppuccin-enlarge-headings
@@ -711,20 +730,24 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (list :height catppuccin-height-title-3)))
          (gemini-heading-face-rest :foreground ,ctp-blue)
          (gemini-quote-face :foreground ,ctp-green)
+
          ;; gnus
          (gnus-header-content :foreground ,ctp-sky)
          (gnus-header-from :foreground ,ctp-mauve)
          (gnus-header-name :foreground ,ctp-blue :weight bold)
          (gnus-header-subject :foreground ,ctp-mauve :weight bold)
+
          ;; go-test
          (go-test--ok-face :inherit success)
          (go-test--error-face :inherit error)
          (go-test--warning-face :inherit warning)
          (go-test--pointer-face :foreground ,ctp-pink)
          (go-test--standard-face :foreground ,ctp-teal)
+
          ;; haskell-mode
          (haskell-operator-face :foreground ,ctp-sky)
          (haskell-constructor-face :foreground ,ctp-mauve)
+
          ;; helm
          ;; TODO: Theme helm
          (helm-bookmark-w3m :foreground ,undef)
@@ -756,8 +779,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (helm-time-zone-current :foreground ,undef)
          (helm-time-zone-home :foreground ,undef)
          (helm-visible-mark :foreground ,undef)
+
          ;; consult
          (consult-async-split :foreground ,ctp-mauve)
+
          ;; corfu
          (corfu-default :background ,ctp-surface0)
          (corfu-current :background ,ctp-surface1)
@@ -765,8 +790,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (corfu-border :inherit corfu-default)
          (corfu-annotations :inherit font-lock-comment-face)
          (corfu-deprecated :strike-through t)
+
          ;; highlight-indentation minor mode
          (highlight-indentation-face :background ,ctp-mantle)
+
          ;; icicle
          ;; TODO: Verify this looks proper
          (icicle-whitespace-highlight :background ,ctp-text)
@@ -805,9 +832,11 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (icicle-common-match-highlight-Completions :foreground ,ctp-mauve)
          (icicle-candidate-part :foreground ,ctp-text)
          (icicle-annotation :foreground ,ctp-overlay2)
+
          ;; icomplete
          (icompletep-determined :foreground ,ctp-blue)
          (icomplete-selected-match :inherit match)
+
          ;; ido
          (ido-first-match :foreground ,ctp-green)
          (ido-only-match :foreground ,ctp-green)
@@ -815,11 +844,14 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (ido-virtual :foreground ,ctp-sapphire)
          (ido-incomplete-regexp :inherit warning)
          (ido-indicator :foreground ,ctp-text :weight bold)
+
          ;; iedit
          (iedit-occurrence :inherit match :weight bold)
          (iedit-read-only-occurrence :inherit 'region)
+
          ;; indent-guide
          (indent-guide-face :foreground ,ctp-surface1)
+
          ;; ivy
          (ivy-current-match                            :background ,ctp-red :foreground ,ctp-mantle :bold t)
          (ivy-action                                   :background unspecified :foreground ,ctp-lavender)
@@ -834,9 +866,11 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (ivy-confirm-face                             :foreground ,ctp-green)
          (ivy-remote                                   :foreground ,ctp-mauve)
          (ivy-match-required-face                      :foreground ,ctp-red)
+
          ;; isearch
          (isearch :inherit match :weight bold)
          (isearch-fail :inherit error)
+
          ;; jde-java
          (jde-java-font-lock-constant-face :inherit font-lock-constant-face)
          (jde-java-font-lock-modifier-face :inherit font-lock-keyword-face)
@@ -844,6 +878,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (jde-java-font-lock-package-face :foreground ,ctp-text)
          (jde-java-font-lock-private-face :inherit font-lock-keyword-face)
          (jde-java-font-lock-public-face :inherit font-lock-keyword-face)
+
          ;; js2-mode
          (js2-external-variable :foreground ,ctp-red)
          (js2-function-param :inherit tree-sitter-hl-face:variable.parameter)
@@ -852,6 +887,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (js2-jsdoc-value :foreground ,ctp-text)
          (js2-private-function-call :inherit tree-sitter-hl-face:function.call)
          (js2-private-member :inherit font-lock-variable-name-face)
+
          ;; js3-mode
          (js3-error-face :inherit error)
          (js3-external-variable-face :foreground ,ctp-text)
@@ -859,6 +895,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (js3-instance-member-face :inherit font-lock-variable-name-face)
          (js3-jsdoc-tag-face :inherit web-mode-html-tag-face)
          (js3-warning-face :inherit warning)
+
          ;; lsp
          (lsp-ui-peek-peek :background ,ctp-mantle)
          (lsp-ui-peek-list :background ,ctp-mantle)
@@ -874,6 +911,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (lsp-ui-sideline-symbol-info :slant italic :height 0.99)
          (lsp-ui-doc-background :background ,ctp-mantle)
          (lsp-ui-doc-header :foreground ,ctp-sapphire)
+
          ;; magit
          (magit-branch-local :foreground ,ctp-teal)
          (magit-branch-remote :foreground ,ctp-green)
@@ -910,6 +948,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (magit-log-author :foreground ,ctp-subtext0)
          (magit-process-ng :foreground ,ctp-peach :weight bold)
          (magit-process-ok :foreground ,ctp-green :weight bold)
+
          ;; markdown
          (markdown-blockquote-face :foreground ,ctp-green)
          (markdown-blockquote-face :extend t :background ,ctp-mantle :foreground ,ctp-green ,@(when catppuccin-italic-blockquotes
@@ -938,6 +977,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (markdown-table-face :foreground ,ctp-text)
          (markdown-list-face :foreground ,ctp-mauve)
          (markdown-language-keyword-face :inherit font-lock-comment-face)
+
          ;; message
          (message-header-to :foreground ,ctp-text :weight bold)
          (message-header-cc :foreground ,ctp-text :weight bold)
@@ -953,6 +993,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (message-cited-text-3 :inherit font-lock-comment-face)
          (message-cited-text-4 :inherit font-lock-comment-face)
          (message-mml :foreground ,ctp-green :weight normal)
+
          ;; mini-modeline
          (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
          ;; mu4e
@@ -977,9 +1018,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (mu4e-column-faces-date :foreground ,ctp-blue)
          (mu4e-column-faces-flags :foreground ,ctp-yellow)
          (mu4e-column-faces-to-from :foreground ,ctp-sky)
+
          ;; neotree
          (neo-banner-face :foreground ,ctp-blue :weight bold)
-         ;;(neo-button-face :underline nil)
+         ;(neo-button-face :underline nil)
          (neo-dir-link-face :foreground ,ctp-blue :weight bold)
          (neo-file-link-face :inherit link)
          (neo-expand-btn-face :foreground ,ctp-text)
@@ -993,17 +1035,19 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (neo-vc-missing-face :foreground ,ctp-maroon)
          (neo-vc-needs-merge-face :foreground ,ctp-maroon
            :weight bold)
-         ;;(neo-vc-needs-update-face :underline t)
+         ;(neo-vc-needs-update-face :underline t)
          (neo-vc-removed-face :foreground ,ctp-red)
          (neo-vc-unlocked-changes-face :foreground ,ctp-red)
-         ;;(neo-vc-unregistered-face nil)
+         ;(neo-vc-unregistered-face nil)
          (neo-vc-up-to-date-face :foreground ,ctp-text)
          (neo-vc-user-face :foreground ,ctp-mauve)
+
          ;; orderless
          (orderless-match-face-0 :foreground ,ctp-blue :weight bold)
          (orderless-match-face-1 :foreground ,ctp-mauve :weight bold)
          (orderless-match-face-2 :foreground ,ctp-teal :weight bold)
          (orderless-match-face-3 :foreground ,ctp-peach :weight bold)
+
          ;; org
          (org-agenda-date :foreground ,ctp-subtext0 :weight normal)
          (org-agenda-date-today :foreground ,ctp-subtext0 :weight bold)
@@ -1060,6 +1104,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (org-upcoming-deadline :foreground ,ctp-maroon)
          (org-verbatim :inherit org-quote)
          (org-warning :inherit warning)
+
          ;; calfw
          (cfw:face-title :foreground ,ctp-blue :weight bold :height 1.5)
          (cfw:face-header :foreground ,ctp-text)
@@ -1079,6 +1124,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (cfw:face-toolbar :background ,ctp-base)
          (cfw:face-toolbar-button-off :foreground ,ctp-lavender)
          (cfw:face-toolbar-button-on :foreground ,ctp-mauve)
+
          ;; outline
          (outline-1 :foreground ,ctp-blue)
          (outline-2 :foreground ,ctp-blue)
@@ -1095,10 +1141,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (outline-minor-6 :foreground ,ctp-peach)
          (outline-minor-7 :foreground ,ctp-mauve)
          (outline-minor-8 :foreground ,ctp-text)
+
          ;; perspective
          (persp-selected-face :weight bold :foreground ,ctp-pink)
+
          ;; popup
          (popup-tip-face :background ,ctp-surface0 :foreground ,ctp-text)
+
          ;; rainbow-delimiters
          (rainbow-delimiters-depth-1-face :foreground ,ctp-red)
          (rainbow-delimiters-depth-2-face :foreground ,ctp-peach)
@@ -1109,6 +1158,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (rainbow-delimiters-depth-7-face :foreground ,ctp-mauve)
          (rainbow-delimiters-depth-8-face :foreground ,ctp-maroon)
          (rainbow-delimiters-unmatched-face :inherit warning)
+
          ;; rst (reStructuredText)
          (rst-level-1 :foreground ,ctp-red)
          (rst-level-2 :foreground ,ctp-peach)
@@ -1118,6 +1168,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (rst-level-6 :foreground ,ctp-lavender)
          (rst-level-7 :foreground ,ctp-mauve)
          (rst-level-8 :foreground ,ctp-maroon)
+
          ;; show-paren
          (show-paren-match :foreground ,ctp-pink
            :weight bold
@@ -1125,22 +1176,26 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
                (list :background ctp-surface0)))
          (show-paren-match-expression :inherit match)
          (show-paren-mismatch :inherit warning)
+
          ;; slime
          (slime-repl-inputed-output-face :foreground ,ctp-mauve)
+
          ;; swiper
-         ;; (swiper-line-face :inherit swiper-match-face1)
-         ;; (swiper-line-face-1 :inherit swiper-match-face1)
+         ;(swiper-line-face :inherit swiper-match-face1)
+         ;(swiper-line-face-1 :inherit swiper-match-face1)
          (swiper-background-match-face-1 :background ,ctp-teal)
          (swiper-match-face-1 :foreground ,ctp-text :background: ,ctp-red)
          (swiper-background-match-face-2 :foreground ,ctp-mantle :background ,ctp-teal)
          (swiper-match-face-2 :foreground ,ctp-mantle :background ,ctp-red)
-         ;; (swiper-background-match-face-3 :inherit swiper-match-face1)
-         ;; (swiper-match-face-3 :inherit swiper-match-face1)
-         ;; (swiper-background-match-face-4 :inherit swiper-match-face1)
-         ;; (swiper-match-face-4 :inherit swiper-match-face1)
+         ;(swiper-background-match-face-3 :inherit swiper-match-face1)
+         ;(swiper-match-face-3 :inherit swiper-match-face1)
+         ;(swiper-background-match-face-4 :inherit swiper-match-face1)
+         ;(swiper-match-face-4 :inherit swiper-match-face1)
+
          ;; spam
          (spam :inherit gnus-summary-normal-read :foreground ,ctp-peach
            :strike-through t :slant oblique)
+
          ;; tab-bar & tab-line (since Emacs 27.1)
          (tab-bar :foreground ,ctp-subtext0 :background ,ctp-base)
          (tab-bar-tab :foreground ,ctp-text :background ,ctp-current)
@@ -1150,6 +1205,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (tab-line-tab-inactive :inherit tab-bar-tab-inactive)
          (tab-line-tab-current :inherit tab-line-tab)
          (tab-line-highlight :background ,ctp-surface1)
+
          ;; centaur-tabs
          (centaur-tabs-default :foreground ,ctp-subtext0, :background ,ctp-base)
          (centaur-tabs-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
@@ -1162,6 +1218,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (centaur-tabs-close-mouse-face :foreground ,ctp-red :background ,ctp-surface1)
          (centaur-tabs-modified-marker-selected :inherit centaur-tabs-selected-modified)
          (centaur-tabs-modified-marker-unselected :inherit centaur-tabs-unselected-modified)
+
          ;; term
          (term :foreground ,ctp-text :background ,ctp-base)
          (term-color-black ,@(if (eq catppuccin-flavor 'latte)
@@ -1241,6 +1298,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          ;; treemacs-nerd-icons
          (treemacs-nerd-icons-root-face :foreground ,ctp-blue)
          (treemacs-nerd-icons-file-face :foreground , ctp-blue)
+
          ;; tree-sitter
          (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
          (tree-sitter-hl-face:property :foreground ,ctp-lavender)
@@ -1256,7 +1314,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
            :weight normal)
          (tree-sitter-hl-face:function.macro :inherit font-lock-preprocessor-face)
          (tree-sitter-hl-face:function.special :inherit font-lock-preprocessor-face)
-         (tree-sitter-hl-face:keyword :inherit font-lock-keyword-face) ;; we are missing keyword levels (eg.: Typescript: import / const should be different: blue / mauve)
+         (tree-sitter-hl-face:keyword :inherit font-lock-keyword-face) ; we are missing keyword levels (eg.: Typescript: import / const should be different: blue / mauve)
          (tree-sitter-hl-face:punctuation :foreground ,undef)
          (tree-sitter-hl-face:punctuation.bracket :foreground ,ctp-overlay2)
          (tree-sitter-hl-face:punctuation.delimiter :foreground ,ctp-overlay2)
@@ -1269,11 +1327,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (tree-sitter-hl-face:variable :inherit font-lock-variable-name-face)
          (tree-sitter-hl-face:variable.parameter :foreground ,ctp-red)
          (tree-sitter-hl-face:operator :foreground ,ctp-teal)
+
          ;; undo-tree
          (undo-tree-visualizer-current-face :foreground ,ctp-peach)
          (undo-tree-visualizer-default-face :foreground ,ctp-subtext0)
          (undo-tree-visualizer-register-face :foreground ,ctp-mauve)
          (undo-tree-visualizer-unmodified-face :foreground ,ctp-text)
+
          ;; web-mode
          (web-mode-builtin-face :inherit font-lock-builtin-face)
          (web-mode-comment-face :inherit font-lock-comment-face)
@@ -1288,13 +1348,16 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (web-mode-string-face :inherit font-lock-string-face)
          (web-mode-type-face :inherit font-lock-type-face)
          (web-mode-warning-face :inherit warning)
+
          ;; which-func
          (which-func :inherit font-lock-function-name-face)
+
          ;; which-key
          (which-key-key-face :inherit font-lock-builtin-face)
          (which-key-command-description-face :inherit default)
          (which-key-separator-face :inherit font-lock-comment-delimiter-face)
          (which-key-local-map-description-face :foreground ,ctp-green)
+
          ;; whitespace
          (whitespace-big-indent :foreground ,ctp-peach)
          (whitespace-empty :inherit warning)
@@ -1308,25 +1371,30 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (whitespace-tab :inherit whitespace-newline)
          (whitespace-trailing :inherit trailing-whitespace)
          (trailing-whitespace :foreground ,ctp-peach :background ,ctp-peach)
+
          ;; yard-mode
          (yard-tag-face :inherit font-lock-builtin-face)
          (yard-directive-face :inherit font-lock-builtin-face)
+
          ;; line-reminder
          (line-reminder-modified-sign-face :foreground ,ctp-green)
+
          ;; highlight-indent-guides
-         ;; (highlight-indent-guides-odd-face :background ,ctp-base)
-         ;; (highlight-indent-guides-even-face :background ,ctp-base)
+         ;(highlight-indent-guides-odd-face :background ,ctp-base)
+         ;(highlight-indent-guides-even-face :background ,ctp-base)
          (highlight-indent-guides-character-face :foreground ,ctp-surface0)
-         ;; (highlight-indent-guides-top-odd-face :background ,ctp-base)
-         ;; (highlight-indent-guides-top-even-face :background ,ctp-base)
+         ;(highlight-indent-guides-top-odd-face :background ,ctp-base)
+         ;(highlight-indent-guides-top-even-face :background ,ctp-base)
          (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
-         ;; (highlight-indent-guides-stack-odd-face :background ,ctp-base)
-         ;; (highlight-indent-guides-stack-even-face :background ,ctp-base)
+         ;(highlight-indent-guides-stack-odd-face :background ,ctp-base)
+         ;(highlight-indent-guides-stack-even-face :background ,ctp-base)
          (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
+
          ;; lui
          (lui-button-face :foreground ,ctp-sky :underline t)
          (lui-highlight-face :foreground ,ctp-sky)
          (lui-time-stamp-face :foreground ,ctp-lavender :weight bold)
+
          ;; circe
          (circe-fool-face :foreground ,ctp-subtext1)
          (circe-highlight-nick-face :foreground ,ctp-sky :weight bold)
@@ -1350,7 +1418,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
         (push `(,face
                  ((((min-colors 16777216)) ; fully graphical envs
                     ,(funcall expand-with-func 'cadr spec))
-                   (t                       ; terminal with 256 colors
+                   (t                      ; 256 color terminals
                      ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
           whole-theme))
       whole-theme))
@@ -1360,7 +1428,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
     (let ((get-func
             (pcase (display-color-cells)
               ((pred (<= 16777216)) 'car) ; fully graphical envs
-              (_ 'cadr))))                ; terminal withs 256 colors
+              (_ 'cadr))))                ; 256 color terminals
       `((ansi-color-names-vector
           [,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
             ,(funcall get-func (alist-get 'ctp-red colors))
