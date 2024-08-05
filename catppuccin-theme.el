@@ -1020,7 +1020,7 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
 
          ;; neotree
          (neo-banner-face :foreground ,ctp-blue :weight bold)
-         ;(neo-button-face :underline nil)
+         ;;(neo-button-face :underline nil)
          (neo-dir-link-face :foreground ,ctp-blue :weight bold)
          (neo-file-link-face :inherit link)
          (neo-expand-btn-face :foreground ,ctp-text)
@@ -1034,10 +1034,10 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (neo-vc-missing-face :foreground ,ctp-maroon)
          (neo-vc-needs-merge-face :foreground ,ctp-maroon
            :weight bold)
-         ;(neo-vc-needs-update-face :underline t)
+         ;;(neo-vc-needs-update-face :underline t)
          (neo-vc-removed-face :foreground ,ctp-red)
          (neo-vc-unlocked-changes-face :foreground ,ctp-red)
-         ;(neo-vc-unregistered-face nil)
+         ;;(neo-vc-unregistered-face nil)
          (neo-vc-up-to-date-face :foreground ,ctp-text)
          (neo-vc-user-face :foreground ,ctp-mauve)
 
@@ -1180,16 +1180,16 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (slime-repl-inputed-output-face :foreground ,ctp-mauve)
 
          ;; swiper
-         ;(swiper-line-face :inherit swiper-match-face1)
-         ;(swiper-line-face-1 :inherit swiper-match-face1)
+         ;;(swiper-line-face :inherit swiper-match-face1)
+         ;;(swiper-line-face-1 :inherit swiper-match-face1)
          (swiper-background-match-face-1 :background ,ctp-teal)
          (swiper-match-face-1 :foreground ,ctp-text :background: ,ctp-red)
          (swiper-background-match-face-2 :foreground ,ctp-mantle :background ,ctp-teal)
          (swiper-match-face-2 :foreground ,ctp-mantle :background ,ctp-red)
-         ;(swiper-background-match-face-3 :inherit swiper-match-face1)
-         ;(swiper-match-face-3 :inherit swiper-match-face1)
-         ;(swiper-background-match-face-4 :inherit swiper-match-face1)
-         ;(swiper-match-face-4 :inherit swiper-match-face1)
+         ;;(swiper-background-match-face-3 :inherit swiper-match-face1)
+         ;;(swiper-match-face-3 :inherit swiper-match-face1)
+         ;;(swiper-background-match-face-4 :inherit swiper-match-face1)
+         ;;(swiper-match-face-4 :inherit swiper-match-face1)
 
          ;; spam
          (spam :inherit gnus-summary-normal-read :foreground ,ctp-peach
@@ -1379,14 +1379,14 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
          (line-reminder-modified-sign-face :foreground ,ctp-green)
 
          ;; highlight-indent-guides
-         ;(highlight-indent-guides-odd-face :background ,ctp-base)
-         ;(highlight-indent-guides-even-face :background ,ctp-base)
+         ;;(highlight-indent-guides-odd-face :background ,ctp-base)
+         ;;(highlight-indent-guides-even-face :background ,ctp-base)
          (highlight-indent-guides-character-face :foreground ,ctp-surface0)
-         ;(highlight-indent-guides-top-odd-face :background ,ctp-base)
-         ;(highlight-indent-guides-top-even-face :background ,ctp-base)
+         ;;(highlight-indent-guides-top-odd-face :background ,ctp-base)
+         ;;(highlight-indent-guides-top-even-face :background ,ctp-base)
          (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
-         ;(highlight-indent-guides-stack-odd-face :background ,ctp-base)
-         ;(highlight-indent-guides-stack-even-face :background ,ctp-base)
+         ;;(highlight-indent-guides-stack-odd-face :background ,ctp-base)
+         ;;(highlight-indent-guides-stack-even-face :background ,ctp-base)
          (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
 
          ;; lui
