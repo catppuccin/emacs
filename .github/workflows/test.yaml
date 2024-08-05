@@ -1,4 +1,4 @@
-name: Emacs Tests
+name: Test .el files
 
 on:
   push:
@@ -12,11 +12,10 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
-      - name: Download Emacs25 package
-        run: wget http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-nox_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-bin-common_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-common_25.2+1-6_all.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacsen-common/emacsen-common_2.0.8_all.deb
-
-      - name: Install Emacs
-        run: sudo apt-get install --allow-downgrades ./emacs25-nox_25.2+1-6_amd64.deb ./emacs25-bin-common_25.2+1-6_amd64.deb ./emacs25-common_25.2+1-6_all.deb ./emacsen-common_2.0.8_all.deb
+      - name: Install Emacs 25
+        run: |
+          wget http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-nox_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-bin-common_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-common_25.2+1-6_all.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacsen-common/emacsen-common_2.0.8_all.deb http://mirrors.kernel.org/ubuntu/pool/universe/c/compat-el/elpa-compat_29.1.4.4+dfsg-1_all.deb
+          sudo apt-get install --allow-downgrades ./emacs25-nox_25.2+1-6_amd64.deb ./emacs25-bin-common_25.2+1-6_amd64.deb ./emacs25-common_25.2+1-6_all.deb ./emacsen-common_2.0.8_all.deb ./elpa-compat_29.1.4.4+dfsg-1_all.deb
 
       - name: Install Just
         uses: extractions/setup-just@v1
@@ -27,3 +26,9 @@ jobs:
 
       - name: Run tests
         run: just test
+
+      - name: Check indentation
+        run: emacs --script scripts/indent-lisp-files.el
+
+      - name: Compare changes
+        run: git diff --exit-code
