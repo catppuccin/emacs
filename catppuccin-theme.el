@@ -293,13 +293,13 @@ If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchia
   (interactive
     (list
       (intern (completing-read
-                "Choose a catppuccin theme flavor: "
+                "Catppuccin flavor: "
                 '(frappe latte macchiato mocha)
                 nil   ; predicate
                 t)))) ; require-match
   (setq catppuccin-flavor flavor)
   (catppuccin-reload)
-  (message "Catppuccin flavor now %s" flavor))
+  (message "Catppuccin flavor changed to %s" flavor))
 
 (defun catppuccin-set-color (color value &optional flavor)
   "Set the COLOR of FLAVOR or the current flavor to VALUE."
