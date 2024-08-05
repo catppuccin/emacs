@@ -7,4 +7,4 @@ test:
   done
 
 run: test
-  emacs --load catppuccin-theme.el --eval "(load-theme 'catppuccin t)"
+  emacs --script catppuccin-theme.el --eval "(load-theme 'catppuccin t)"
