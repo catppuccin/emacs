@@ -1,4 +1,4 @@
-name: Emacs Tests
+name: Test with Emacs
 
 on:
   push:
@@ -12,11 +12,8 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v3
 
-      - name: Download Emacs25 package
-        run: wget http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-nox_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-bin-common_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-common_25.2+1-6_all.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacsen-common/emacsen-common_2.0.8_all.deb
-
       - name: Install Emacs
-        run: sudo apt-get install --allow-downgrades ./emacs25-nox_25.2+1-6_amd64.deb ./emacs25-bin-common_25.2+1-6_amd64.deb ./emacs25-common_25.2+1-6_all.deb ./emacsen-common_2.0.8_all.deb
+        run: sudo apt install -y emacs
 
       - name: Install Just
         uses: extractions/setup-just@v1
