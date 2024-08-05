@@ -8,3 +8,7 @@ test:
 
 run: test
   emacs --script catppuccin-theme.el --eval "(load-theme 'catppuccin t)"
+
+definitions:
+  whiskers emacs.tera
+  emacs --script scripts/format-definitions.el -f format-definitions
