@@ -5,7 +5,9 @@
   (require 'compat)) ; file-name-parent-directory
 
 (defun .el-files-in (directory)
-  (seq-filter #'(lambda (path) (string-match "^.+\\.el$" path))
+  (seq-filter #'(lambda (path)
+                  (and (not (string-suffix-p "-definitions.el" path))
+                    (string-match "^.+\\.el$" path)))
     (directory-files directory)))
 
 (let*
