@@ -5,16 +5,17 @@
   (require 'compat)) ; file-name-parent-directory
 
 (defun .el-files-in (directory)
-  (seq-filter #'(lambda (path)
-                  (and (not (string-suffix-p "-definitions.el" path))
-                    (string-match "^.+\\.el$" path)))
-    (directory-files directory)))
+  (mapcar #'(lambda (item) (concat directory item))
+    (seq-filter #'(lambda (path)
+                    (and (not (string-suffix-p "-definitions.el" path))
+                      (string-match "^.+\\.el$" path)))
+      (directory-files directory))))
 
 (let*
   ((root-path (file-name-parent-directory
                 (file-name-parent-directory load-file-name)))
     (files (.el-files-in root-path))
-    (scripts (.el-files-in (concat root-path "/scripts"))))
+    (scripts (.el-files-in (concat root-path "/scripts/"))))
   (dolist (file (append files scripts))
     (with-current-buffer (find-file-noselect file)
       (setq indent-tabs-mode nil
