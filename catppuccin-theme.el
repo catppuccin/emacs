@@ -123,14 +123,16 @@ The colors used will correspond to those in COLORS."
     :type '(alist :key-type symbol :value-type string)
     :group 'catppuccin))
 
+(defvar catppuccin-flavor-alist '()
+  "Alist of flavors to alist of names to hex colors.")
+
 (when load-file-name
   ;; load the flavor definitions
   (with-current-buffer (find-file-noselect
                          (concat (file-name-directory load-file-name)
                            "catppuccin-definitions.el"))
-    (beginning-of-buffer)
-    (defvar catppuccin-flavor-alist (read (current-buffer))
-      "Alist of flavors to alist of names to hex colors."))
+    (goto-char (point-min))
+    (setq catppuccin-flavor-alist (read (current-buffer))))
 
   ;; define flavors
   (let ((flavor #'(lambda (sym) (alist-get sym catppuccin-flavor-alist))))
@@ -190,15 +192,19 @@ The colors used will correspond to those in COLORS."
 ;;; User functions:
 
 (defun catppuccin-reload ()
-  "Reload the Catppuccin theme, useful for after having set custom colors with `catppuccin-set-color`."
+  "Reload the Catppuccin theme.
+
+Useful after setting custom colors with `catppuccin-set-color'."
   (interactive)
   (disable-theme 'catppuccin)
   (load-theme 'catppuccin t))
 
 (defun catppuccin-load-flavor (flavor)
-  "Set the desired FLAVOR or choose one from a list if called interactively.
+  "Set the Catppuccin flavor to FLAVOR.
 
-If called non-interactively, the FLAVOR must be one of 'frappe, 'latte, 'macchiato, or 'mocha."
+If called interactively, a list of flavors is presented. Otherwise,
+FLAVOR must be one of the symbols `frappe', `latte', `macchiato',
+or `mocha'."
   (interactive
     (list
       (intern (completing-read
