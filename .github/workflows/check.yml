@@ -27,8 +27,8 @@ jobs:
       - name: Run tests
         run: just test
 
-      - name: Check indentation
-        run: emacs --script scripts/indent-lisp-files.el
+      - name: Check .el files
+        run: emacs --script scripts/check-lisp-files.el
 
-      - name: Compare changes
+      - name: Check indentation
         run: git diff --exit-code
