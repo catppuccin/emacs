@@ -1,3 +1,4 @@
+;;; catppuccin-definitions.el --- The Catppuccin palette -*- no-byte-compile: t; -*-
 ((latte .
    ((rosewater . "#dc8a78")
    (flamingo . "#dd7878")
