@@ -4,6 +4,7 @@ whiskers:
   filename: catppuccin-definitions.el
   hex_format: "#{{r}}{{g}}{{b}}"
 ---
+;;; {{ whiskers.filename }} --- The Catppuccin palette -*- no-byte-compile: t; -*-
 ({%- for id, flavor in flavors %}({{id}} .
    ({% for id, color in flavor.colors -%}
    ({{id}} . "{{color.hex}}")
