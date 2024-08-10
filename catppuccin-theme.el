@@ -409,6 +409,8 @@ or `mocha'."
          (diff-hl-insert :inherit fringe :foreground ,ctp-green)
 
          ;; diff-mode
+         (diff-header :foreground ,ctp-blue)
+         (diff-hunk-header :foreground ,ctp-text :background ,ctp-surface2)
          (diff-added :background ,(catppuccin-darken ctp-green 60))
          (diff-removed :background ,(catppuccin-darken ctp-red 60))
          (diff-indicator-added :foreground ,ctp-green)
@@ -854,8 +856,6 @@ or `mocha'."
          (magit-diffstat-added :foreground ,ctp-green)
          (magit-diffstat-removed :foreground ,ctp-red)
          (magit-hash :foreground ,ctp-subtext0)
-         (diff-header :foreground ,ctp-blue)
-         (diff-hunk-header :foreground ,ctp-text :background ,ctp-surface2)
          (magit-diff-hunk-heading :inherit diff-hunk-header)
          (magit-diff-hunk-heading-highlight :inherit diff-hunk-header :weight bold)
          (magit-log-author :foreground ,ctp-subtext0)
