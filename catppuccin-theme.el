@@ -1095,6 +1095,14 @@ or `mocha'."
          ;; slime
          (slime-repl-inputed-output-face :foreground ,ctp-mauve)
 
+         ;; smerge
+         (smerge-lower :inherit diff-added :background nil)
+         (smerge-upper :inherit diff-removed :background nil)
+         (smerge-refined-added :inherit diff-refine-added
+           :background nil)
+         (smerge-refined-removed :inherit diff-refine-removed
+           :background nil)
+
          ;; swiper
          ;;(swiper-line-face :inherit swiper-match-face1)
          ;;(swiper-line-face-1 :inherit swiper-match-face1)
