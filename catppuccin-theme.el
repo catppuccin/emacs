@@ -221,13 +221,15 @@ or `mocha'."
   (interactive "SChange color: \nsSet %s to: ")
   (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
 
-(defun catppuccin-get-color (color &optional flavor)
+(defun catppuccin-color (color &optional flavor)
   "Get the COLOR of FLAVOR or the current flavor."
   (interactive "SColor: ")
   (let ((result (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors"))))))
     (if (called-interactively-p 'interactive)
       (message result)
       result)))
+
+(defalias 'catppuccin-get-color 'catppuccin-color)
 
 ;;; Theme definition:
 
