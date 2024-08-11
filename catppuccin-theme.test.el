@@ -21,7 +21,7 @@
 ;; TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 ;; SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-;; Maintainer: Carsten Kragelund <carsten@kragelund.me>
+;; Maintainer: Jeremy Baxter <jeremy@baxters.nz>
 ;; Author: nyxkrage
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
