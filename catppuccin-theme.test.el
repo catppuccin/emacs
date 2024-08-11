@@ -4,7 +4,7 @@
 ;;
 ;; Code licensed under the MIT license
 
-;; Maintainer: Carsten Kragelund <carsten@kragelund.me>
+;; Maintainer: Jeremy Baxter <jeremy@baxters.nz>
 ;; Author: nyxkrage
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1"))
