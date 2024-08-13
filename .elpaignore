@@ -1,0 +1,11 @@
+.editorconfig
+.git-blame-ignore-revs
+.github
+.gitignore
+LICENSE
+assets
+catppuccin-theme.test.el
+emacs.tera
+justfile
+renovate.json
+scripts
