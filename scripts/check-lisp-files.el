@@ -20,7 +20,6 @@
   (dolist (file (append files scripts))
     (setq
       byte-compile-error-on-warn t
-      indent-tabs-mode nil
       lisp-indent-offset 2)
     (unless (byte-compile-file file)
       (error "byte-compile-file failed (%s)" file))

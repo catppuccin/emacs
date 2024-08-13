@@ -1514,6 +1514,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
+;; lisp-indent-offset: 2
 ;; End:
 
 ;;; catppuccin-theme.el ends here
