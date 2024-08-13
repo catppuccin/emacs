@@ -12,7 +12,7 @@
 ;;
 ;; The above copyright notice and this permission notice shall be included
 ;; in all copies or substantial portions of the Software.
-
+;;
 ;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 ;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 ;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
@@ -245,45 +245,73 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 (let
   ((colors
      '((undef     "#ff00ff" "#ff00ff")
-        (ctp-rosewater        (catppuccin-color 'rosewater) (catppuccin-quantize-color (catppuccin-color 'rosewater)))
-        (ctp-flamingo         (catppuccin-color 'flamingo) (catppuccin-quantize-color (catppuccin-color 'flamingo)))
-        (ctp-pink             (catppuccin-color 'pink) (catppuccin-quantize-color (catppuccin-color 'pink)))
-        (ctp-mauve            (catppuccin-color 'mauve) (catppuccin-quantize-color (catppuccin-color 'mauve)))
-        (ctp-red              (catppuccin-color 'red) (catppuccin-quantize-color (catppuccin-color 'red)))
-        (ctp-maroon           (catppuccin-color 'maroon) (catppuccin-quantize-color (catppuccin-color 'maroon)))
-        (ctp-peach            (catppuccin-color 'peach) (catppuccin-quantize-color (catppuccin-color 'peach)))
-        (ctp-yellow           (catppuccin-color 'yellow) (catppuccin-quantize-color (catppuccin-color 'yellow)))
-        (ctp-green            (catppuccin-color 'green) (catppuccin-quantize-color (catppuccin-color 'green)))
-        (ctp-teal             (catppuccin-color 'teal) (catppuccin-quantize-color (catppuccin-color 'teal)))
-        (ctp-sky              (catppuccin-color 'sky) (catppuccin-quantize-color (catppuccin-color 'sky)))
-        (ctp-sapphire         (catppuccin-color 'sapphire) (catppuccin-quantize-color (catppuccin-color 'sapphire)))
-        (ctp-blue             (catppuccin-color 'blue) (catppuccin-quantize-color (catppuccin-color 'blue)))
-        (ctp-lavender         (catppuccin-color 'lavender) (catppuccin-quantize-color (catppuccin-color 'lavender)))
-        (ctp-text             (catppuccin-color 'text) (catppuccin-quantize-color (catppuccin-color 'text)))
-        (ctp-subtext1         (catppuccin-color 'subtext1) (catppuccin-quantize-color (catppuccin-color 'subtext1)))
-        (ctp-subtext0         (catppuccin-color 'subtext0) (catppuccin-quantize-color (catppuccin-color 'subtext0)))
-        (ctp-overlay2         (catppuccin-color 'overlay2) (catppuccin-quantize-color (catppuccin-color 'overlay2)))
-        (ctp-overlay1         (catppuccin-color 'overlay1) (catppuccin-quantize-color (catppuccin-color 'overlay1)))
-        (ctp-overlay0         (catppuccin-color 'overlay0) (catppuccin-quantize-color (catppuccin-color 'overlay0)))
-        (ctp-surface2         (catppuccin-color 'surface2) (catppuccin-quantize-color (catppuccin-color 'surface2)))
-        (ctp-surface1         (catppuccin-color 'surface1) (catppuccin-quantize-color (catppuccin-color 'surface1)))
-        (ctp-surface0         (catppuccin-color 'surface0) (catppuccin-quantize-color (catppuccin-color 'surface0)))
-        (ctp-base             (catppuccin-color 'base) (catppuccin-quantize-color (catppuccin-color 'base)))
-        (ctp-mantle           (catppuccin-color 'mantle) (catppuccin-quantize-color (catppuccin-color 'mantle)))
-        (ctp-crust            (catppuccin-color 'crust) (catppuccin-quantize-color (catppuccin-color 'crust)))
+        (ctp-rosewater (catppuccin-color 'rosewater)
+          (catppuccin-quantize-color (catppuccin-color 'rosewater)))
+        (ctp-flamingo  (catppuccin-color 'flamingo)
+          (catppuccin-quantize-color (catppuccin-color 'flamingo)))
+        (ctp-pink      (catppuccin-color 'pink)
+          (catppuccin-quantize-color (catppuccin-color 'pink)))
+        (ctp-mauve     (catppuccin-color 'mauve)
+          (catppuccin-quantize-color (catppuccin-color 'mauve)))
+        (ctp-red       (catppuccin-color 'red)
+          (catppuccin-quantize-color (catppuccin-color 'red)))
+        (ctp-maroon    (catppuccin-color 'maroon)
+          (catppuccin-quantize-color (catppuccin-color 'maroon)))
+        (ctp-peach     (catppuccin-color 'peach)
+          (catppuccin-quantize-color (catppuccin-color 'peach)))
+        (ctp-yellow    (catppuccin-color 'yellow)
+          (catppuccin-quantize-color (catppuccin-color 'yellow)))
+        (ctp-green     (catppuccin-color 'green)
+          (catppuccin-quantize-color (catppuccin-color 'green)))
+        (ctp-teal      (catppuccin-color 'teal)
+          (catppuccin-quantize-color (catppuccin-color 'teal)))
+        (ctp-sky       (catppuccin-color 'sky)
+          (catppuccin-quantize-color (catppuccin-color 'sky)))
+        (ctp-sapphire  (catppuccin-color 'sapphire)
+          (catppuccin-quantize-color (catppuccin-color 'sapphire)))
+        (ctp-blue      (catppuccin-color 'blue)
+          (catppuccin-quantize-color (catppuccin-color 'blue)))
+        (ctp-lavender  (catppuccin-color 'lavender)
+          (catppuccin-quantize-color (catppuccin-color 'lavender)))
+        (ctp-text      (catppuccin-color 'text)
+          (catppuccin-quantize-color (catppuccin-color 'text)))
+        (ctp-subtext1  (catppuccin-color 'subtext1)
+          (catppuccin-quantize-color (catppuccin-color 'subtext1)))
+        (ctp-subtext0  (catppuccin-color 'subtext0)
+          (catppuccin-quantize-color (catppuccin-color 'subtext0)))
+        (ctp-overlay2  (catppuccin-color 'overlay2)
+          (catppuccin-quantize-color (catppuccin-color 'overlay2)))
+        (ctp-overlay1  (catppuccin-color 'overlay1)
+          (catppuccin-quantize-color (catppuccin-color 'overlay1)))
+        (ctp-overlay0  (catppuccin-color 'overlay0)
+          (catppuccin-quantize-color (catppuccin-color 'overlay0)))
+        (ctp-surface2  (catppuccin-color 'surface2)
+          (catppuccin-quantize-color (catppuccin-color 'surface2)))
+        (ctp-surface1  (catppuccin-color 'surface1)
+          (catppuccin-quantize-color (catppuccin-color 'surface1)))
+        (ctp-surface0  (catppuccin-color 'surface0)
+          (catppuccin-quantize-color (catppuccin-color 'surface0)))
+        (ctp-base      (catppuccin-color 'base)
+          (catppuccin-quantize-color (catppuccin-color 'base)))
+        (ctp-mantle    (catppuccin-color 'mantle)
+          (catppuccin-quantize-color (catppuccin-color 'mantle)))
+        (ctp-crust     (catppuccin-color 'crust)
+          (catppuccin-quantize-color (catppuccin-color 'crust)))
 
-        (ctp-current          (if (eq catppuccin-flavor 'latte)
-                                (catppuccin-darken (catppuccin-color 'base) 5)
-                                (catppuccin-lighten (catppuccin-color 'base) 5))
-          (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
-                                       (catppuccin-darken (catppuccin-color 'base) 5)
-                                       (catppuccin-lighten (catppuccin-color 'base) 5))))
-        (ctp-selection          (if (eq catppuccin-flavor 'latte)
-                                  (catppuccin-darken (catppuccin-color 'base) 12)
-                                  (catppuccin-lighten (catppuccin-color 'base) 17))
-          (catppuccin-quantize-color (if (eq catppuccin-flavor 'latte)
-                                       (catppuccin-darken (catppuccin-color 'base) 12)
-                                       (catppuccin-lighten (catppuccin-color 'base) 17))))))
+        (ctp-current   (if (eq catppuccin-flavor 'latte)
+                         (catppuccin-darken (catppuccin-color 'base) 5)
+                         (catppuccin-lighten (catppuccin-color 'base) 5))
+          (catppuccin-quantize-color
+            (if (eq catppuccin-flavor 'latte)
+              (catppuccin-darken (catppuccin-color 'base) 5)
+              (catppuccin-lighten (catppuccin-color 'base) 5))))
+        (ctp-selection (if (eq catppuccin-flavor 'latte)
+                         (catppuccin-darken (catppuccin-color 'base) 12)
+                         (catppuccin-lighten (catppuccin-color 'base) 17))
+          (catppuccin-quantize-color
+            (if (eq catppuccin-flavor 'latte)
+              (catppuccin-darken (catppuccin-color 'base) 12)
+              (catppuccin-lighten (catppuccin-color 'base) 17))))))
     (faces
       '(
          ;; default / basic faces
@@ -302,17 +330,23 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (info-menu-star :foreground ,ctp-red)
          (info-quoted-name :foreground ,ctp-subtext1)
          (info-string :foreground ,ctp-green)
-         (lazy-highlight :foreground ,ctp-subtext1 :background ,ctp-surface1)
+         (lazy-highlight :foreground ,ctp-subtext1
+           :background ,ctp-surface1)
          (link :foreground ,ctp-lavender :underline t)
          (link-unvisited :foreground ,ctp-blue :underline t)
-         (linum :inherit default :foreground ,ctp-surface1 :background ,ctp-base)
-         (line-number :inherit default :foreground ,ctp-surface1 :background ,ctp-base)
-         (line-number-current-line :inherit line-number :foreground ,ctp-lavender)
+         (linum :inherit default :foreground ,ctp-surface1
+           :background ,ctp-base)
+         (line-number :inherit default :foreground ,ctp-surface1
+           :background ,ctp-base)
+         (line-number-current-line :inherit line-number
+           :foreground ,ctp-lavender)
          (match :background ,ctp-red :foreground ,ctp-mantle)
-         (menu :background ,ctp-current :inverse-video nil :foreground ,ctp-text)
+         (menu :background ,ctp-current :inverse-video nil
+           :foreground ,ctp-text)
          (minibuffer-prompt :weight normal :foreground ,ctp-subtext0)
          (mode-line :background ,ctp-mantle nil :foreground ,ctp-text)
-         (mode-line-inactive :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
+         (mode-line-inactive :background ,ctp-crust :inverse-video nil
+           :foreground ,ctp-overlay0)
          (read-multiple-choice-face :inherit completions-first-difference)
          (region :background ,ctp-selection :extend t)
          (shadow :foreground ,ctp-overlay0)
@@ -323,24 +357,32 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (window-divider :foreground ,ctp-mantle)
          (vertical-border :foreground ,ctp-mantle)
 
-         ;; tty menu
-         (tty-menu-enabled-face :foreground ,ctp-text :inverse-video nil :background ,ctp-current)
-         (tty-menu-disabled-face :background ,ctp-crust :inverse-video nil :foreground ,ctp-overlay0)
-         (tty-menu-selected-face :foreground ,ctp-text :background ,ctp-surface1)
+         ;; tty-menu
+         (tty-menu-enabled-face :foreground ,ctp-text :inverse-video nil
+           :background ,ctp-current)
+         (tty-menu-disabled-face :background ,ctp-crust :inverse-video nil
+           :foreground ,ctp-overlay0)
+         (tty-menu-selected-face :foreground ,ctp-text
+           :background ,ctp-surface1)
 
          ;; solaire-mode
-         (solaire-default-face :background ,ctp-mantle :foreground ,ctp-text)
-         (solaire-fringe-face :background ,ctp-mantle :foreground ,ctp-surface1)
-         (solaire-line-number-face :inherit default :foreground ,ctp-surface1 :background ,ctp-mantle)
-         (solaire-mode-line-face :background ,ctp-crust nil :foreground ,ctp-text)
-         (solaire-mode-line-inactive-face
-           :background ,ctp-crust :inverse-video nil :foreground ,ctp-subtext1)
+         (solaire-default-face :background ,ctp-mantle
+           :foreground ,ctp-text)
+         (solaire-fringe-face :background ,ctp-mantle
+           :foreground ,ctp-surface1)
+         (solaire-line-number-face :inherit default
+           :foreground ,ctp-surface1 :background ,ctp-mantle)
+         (solaire-mode-line-face :background ,ctp-crust nil
+           :foreground ,ctp-text)
+         (solaire-mode-line-inactive-face :inverse-video nil
+           :background ,ctp-crust :foreground ,ctp-subtext1)
          (solaire-header-line-face :inherit 'solaire-mode-line-face)
 
          ;; evil
          (evil-ex-lazy-highlight :inherit lazy-highlight)
          (evil-ex-substitute-matches :foreground ,ctp-red :underline t)
-         (evil-ex-substitute-replacement :foreground ,ctp-green :underline t)
+         (evil-ex-substitute-replacement :foreground ,ctp-green
+           :underline t)
 
          ;; syntax / font-lock
          (font-lock-bracket-face :foreground ,ctp-overlay2)
@@ -365,10 +407,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (font-lock-regexp-grouping-construct :foreground ,ctp-red)
          (font-lock-string-face :foreground ,ctp-green)
          (font-lock-type-face :foreground ,ctp-yellow)
-         (font-lock-variable-name-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                 '(:inherit italic)))
-         (font-lock-variable-use-face :foreground ,ctp-text ,@(when catppuccin-italic-variables
-                                                                '(:inherit italic)))
+         (font-lock-variable-name-face :foreground ,ctp-text
+           ,@(when catppuccin-italic-variables '(:inherit italic)))
+         (font-lock-variable-use-face :foreground ,ctp-text
+           ,@(when catppuccin-italic-variables '(:inherit italic)))
          (font-lock-warning-face :inherit warning)
 
          ;; auto-complete
@@ -379,7 +421,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 
          ;; avy
          (avy-background-face :foreground ,ctp-text :background ,ctp-base)
-         (avy-goto-char-timer-face :foreground ,ctp-blue :background ,ctp-surface0)
+         (avy-goto-char-timer-face :foreground ,ctp-blue
+           :background ,ctp-surface0)
          (avy-lead-face :foreground ,ctp-base :background ,ctp-mauve)
          (avy-lead-face-0 :foreground ,ctp-base :background ,ctp-yellow)
          (avy-lead-face-1 :foreground ,ctp-base :background ,ctp-overlay0)
@@ -400,10 +443,12 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
            :underline t)
          (company-tooltip-search-selection :background ,undef
            :foreground ,ctp-base)
-         (company-tooltip-selection :background ,ctp-overlay0 :foreground ,ctp-text)
+         (company-tooltip-selection :background ,ctp-overlay0
+           :foreground ,ctp-text)
          (company-tooltip-mouse :background ,ctp-base)
          (company-tooltip-common :foreground ,ctp-text :weight bold)
-         (company-tooltip-common-selection :foreground ,ctp-text :weight bold)
+         (company-tooltip-common-selection :foreground ,ctp-text
+           :weight bold)
          (company-tooltip-annotation :foreground ,ctp-green)
          (company-tooltip-annotation-selection :foreground ,ctp-text)
          (company-tooltip-scrollbar-thumb :background ,ctp-surface2)
@@ -577,7 +622,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (erc-action-face :foreground ,ctp-green)
          (erc-command-indicator-face :foreground ,ctp-mauve)
          (erc-current-nick-face :foreground ,ctp-peach)
-         (erc-dangerous-host-face :background ,ctp-red :foreground ,ctp-text)
+         (erc-dangerous-host-face :background ,ctp-red
+           :foreground ,ctp-text)
          (erc-default-face :foreground ,ctp-text)
          (erc-direct-msg-face :foreground ,ctp-rosewater)
          (erc-error-face :foreground ,ctp-red)
@@ -758,7 +804,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (icicle-Completions-instruction-1 :foreground ,ctp-overlay2)
          (icicle-completion :foreground ,ctp-text)
          (icicle-complete-input :foreground ,ctp-peach)
-         (icicle-common-match-highlight-Completions :foreground ,ctp-mauve)
+         (icicle-common-match-highlight-Completions
+           :foreground ,ctp-mauve)
          (icicle-candidate-part :foreground ,ctp-text)
          (icicle-annotation :foreground ,ctp-overlay2)
 
@@ -782,39 +829,52 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (indent-guide-face :foreground ,ctp-surface1)
 
          ;; ivy
-         (ivy-current-match                            :background ,ctp-red :foreground ,ctp-mantle :bold t)
-         (ivy-action                                   :background unspecified :foreground ,ctp-lavender)
-         (ivy-grep-line-number                         :background unspecified :foreground ,ctp-teal)
-         (ivy-minibuffer-match-face-1                  :background unspecified :foreground ,ctp-blue :bold t)
-         (ivy-minibuffer-match-face-2                  :background ,ctp-teal   :foreground ,ctp-mantle)
-         (ivy-minibuffer-match-face-3                  :background unspecified :foreground ,ctp-lavender)
-         (ivy-minibuffer-match-face-4                  :background unspecified :foreground ,ctp-mauve)
-         (ivy-minibuffer-match-highlight               :foreground ,ctp-blue)
-         (ivy-grep-info                                :foreground ,ctp-blue)
-         (ivy-grep-line-number                         :foreground ,ctp-mauve)
-         (ivy-confirm-face                             :foreground ,ctp-green)
-         (ivy-remote                                   :foreground ,ctp-mauve)
-         (ivy-match-required-face                      :foreground ,ctp-red)
+         (ivy-current-match :background ,ctp-red :foreground ,ctp-mantle
+           :bold t)
+         (ivy-action :background unspecified :foreground ,ctp-lavender)
+         (ivy-grep-line-number :background unspecified
+           :foreground ,ctp-teal)
+         (ivy-minibuffer-match-face-1 :background unspecified
+           :foreground ,ctp-blue :bold t)
+         (ivy-minibuffer-match-face-2
+           :background ,ctp-teal   :foreground ,ctp-mantle)
+         (ivy-minibuffer-match-face-3
+           :background unspecified :foreground ,ctp-lavender)
+         (ivy-minibuffer-match-face-4 :background unspecified
+           :foreground ,ctp-mauve)
+         (ivy-minibuffer-match-highlight
+           :foreground ,ctp-blue)
+         (ivy-grep-info :foreground ,ctp-blue)
+         (ivy-grep-line-number :foreground ,ctp-mauve)
+         (ivy-confirm-face :foreground ,ctp-green)
+         (ivy-remote :foreground ,ctp-mauve)
+         (ivy-match-required-face :foreground ,ctp-red)
 
          ;; isearch
          (isearch :inherit match :weight bold)
          (isearch-fail :inherit error)
 
          ;; jde-java
-         (jde-java-font-lock-constant-face :inherit font-lock-constant-face)
-         (jde-java-font-lock-modifier-face :inherit font-lock-keyword-face)
+         (jde-java-font-lock-constant-face
+           :inherit font-lock-constant-face)
+         (jde-java-font-lock-modifier-face
+           :inherit font-lock-keyword-face)
          (jde-java-font-lock-number-face :foreground ,ctp-text)
          (jde-java-font-lock-package-face :foreground ,ctp-text)
-         (jde-java-font-lock-private-face :inherit font-lock-keyword-face)
+         (jde-java-font-lock-private-face
+           :inherit font-lock-keyword-face)
          (jde-java-font-lock-public-face :inherit font-lock-keyword-face)
 
          ;; js2-mode
          (js2-external-variable :foreground ,ctp-red)
-         (js2-function-param :inherit tree-sitter-hl-face:variable.parameter)
-         (js2-jsdoc-html-tag-delimiter :inherit web-mode-html-tag-bracket-face)
+         (js2-function-param
+           :inherit tree-sitter-hl-face:variable.parameter)
+         (js2-jsdoc-html-tag-delimiter
+           :inherit web-mode-html-tag-bracket-face)
          (js2-jsdoc-html-tag-name :inherit web-mode-html-tag-face)
          (js2-jsdoc-value :foreground ,ctp-text)
-         (js2-private-function-call :inherit tree-sitter-hl-face:function.call)
+         (js2-private-function-call
+           :inherit tree-sitter-hl-face:function.call)
          (js2-private-member :inherit font-lock-variable-name-face)
 
          ;; js3-mode
@@ -829,13 +889,17 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (lsp-ui-peek-peek :background ,ctp-mantle)
          (lsp-ui-peek-list :background ,ctp-mantle)
          (lsp-ui-peek-filename :foreground ,ctp-text)
-         (lsp-ui-peek-line-number :inherit default :foreground ,ctp-surface1)
-         (lsp-ui-peek-highlight :inherit highlight :distant-foreground ,ctp-base)
-         (lsp-ui-peek-header :background ,ctp-mantle :foreground ,ctp-blue, :weight bold)
+         (lsp-ui-peek-line-number :inherit default
+           :foreground ,ctp-surface1)
+         (lsp-ui-peek-highlight
+           :inherit highlight :distant-foreground ,ctp-base)
+         (lsp-ui-peek-header :background ,ctp-mantle
+           :foreground ,ctp-blue :weight bold)
          (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
          (lsp-ui-peek-selection :inherit match)
          (lsp-ui-sideline-symbol :foreground ,ctp-subtext0)
-         (lsp-ui-sideline-current-symbol :foreground ,ctp-text :weight bold)
+         (lsp-ui-sideline-current-symbol :foreground ,ctp-text
+           :weight bold)
          (lsp-ui-sideline-code-action :foreground ,ctp-yellow)
          (lsp-ui-sideline-symbol-info :slant italic :height 0.99)
          (lsp-ui-doc-background :background ,ctp-mantle)
@@ -848,50 +912,44 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (magit-section-heading :foreground ,ctp-blue :weight bold)
          (magit-section-highlight :background ,ctp-surface0 :extend t)
          (magit-diff-context-highlight :background ,ctp-surface0
-           :foreground ,ctp-text
-           :extend t)
-         (magit-diff-revision-summary :foreground ,ctp-blue
-           :weight bold)
+           :foreground ,ctp-text :extend t)
+         (magit-diff-revision-summary :foreground ,ctp-blue :weight bold)
          (magit-diff-revision-summary-highlight :foreground ,ctp-blue
            :weight bold)
-         (magit-diff-added :foreground ,ctp-green
-           :extend t)
+         (magit-diff-added :foreground ,ctp-green :extend t)
          (magit-diff-added-highlight :background ,ctp-surface1
-           :foreground ,ctp-green
-           :extend t)
-         (magit-diff-removed :foreground ,ctp-red
-           :extend t)
+           :foreground ,ctp-green :extend t)
+         (magit-diff-removed :foreground ,ctp-red :extend t)
          (magit-diff-removed-highlight :background ,ctp-surface1
-           :foreground ,ctp-red
-           :extend t)
+           :foreground ,ctp-red :extend t)
          (magit-diff-file-heading :foreground ,ctp-text)
-         (magit-diff-file-heading-highlight :inherit magit-section-highlight)
+         (magit-diff-file-heading-highlight
+           :inherit magit-section-highlight)
          (magit-diffstat-added :foreground ,ctp-green)
          (magit-diffstat-removed :foreground ,ctp-red)
          (magit-hash :foreground ,ctp-subtext0)
          (magit-diff-hunk-heading :inherit diff-hunk-header)
-         (magit-diff-hunk-heading-highlight :inherit diff-hunk-header :weight bold)
+         (magit-diff-hunk-heading-highlight :inherit diff-hunk-header
+           :weight bold)
          (magit-log-author :foreground ,ctp-subtext0)
          (magit-process-ng :foreground ,ctp-peach :weight bold)
          (magit-process-ok :foreground ,ctp-green :weight bold)
 
          ;; markdown
          (markdown-blockquote-face :foreground ,ctp-green)
-         (markdown-blockquote-face :extend t :background ,ctp-mantle :foreground ,ctp-green ,@(when catppuccin-italic-blockquotes
-                                                                                                '(:slant italic)))
+         (markdown-blockquote-face :extend t :background ,ctp-mantle
+           :foreground ,ctp-green
+           ,@(when catppuccin-italic-blockquotes '(:slant italic)))
          (markdown-code-face :foreground ,ctp-text)
          (markdown-footnote-face :foreground ,ctp-yellow)
          (markdown-header-face :weight normal)
-         (markdown-header-face-1
-           :foreground ,ctp-red
+         (markdown-header-face-1 :foreground ,ctp-red
            ,@(when catppuccin-enlarge-headings
                (list :height catppuccin-height-title-1)))
-         (markdown-header-face-2
-           :foreground ,ctp-peach
+         (markdown-header-face-2 :foreground ,ctp-peach
            ,@(when catppuccin-enlarge-headings
                (list :height catppuccin-height-title-2)))
-         (markdown-header-face-3
-           :foreground ,ctp-yellow
+         (markdown-header-face-3 :foreground ,ctp-yellow
            ,@(when catppuccin-enlarge-headings
                (list :height catppuccin-height-title-3)))
          (markdown-header-face-4 :foreground ,ctp-green)
@@ -921,7 +979,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (message-mml :foreground ,ctp-green :weight normal)
 
          ;; mini-modeline
-         (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
+         (mini-modeline-mode-line :inherit mode-line :height 0.1
+           :box nil)
          ;; mu4e
          (mu4e-unread-face :foreground ,ctp-red)
          (mu4e-view-url-number-face :foreground ,ctp-yellow)
@@ -978,13 +1037,17 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (org-agenda-date :foreground ,ctp-subtext0 :weight normal)
          (org-agenda-date-today :foreground ,ctp-subtext0 :weight bold)
          (org-agenda-date-weekend :inherit org-agenda-date)
-         (org-agenda-date-weekend-today :inherit org-agenda-date :weight bold)
+         (org-agenda-date-weekend-today :inherit org-agenda-date
+           :weight bold)
          (org-agenda-dimmed-todo-face :inherit font-lock-comment-face)
          (org-agenda-done :foreground ,ctp-green)
          (org-agenda-structure :foreground ,ctp-subtext0)
-         (org-block :extend t :background ,ctp-mantle :foreground ,ctp-green)
-         (org-block-begin-line :inherit org-meta-line :extend t :background ,ctp-mantle)
-         (org-block-end-line :inherit org-block-begin-line :extend t :background ,ctp-mantle)
+         (org-block :extend t :background ,ctp-mantle
+           :foreground ,ctp-green)
+         (org-block-begin-line :inherit org-meta-line :extend t
+           :background ,ctp-mantle)
+         (org-block-end-line :inherit org-block-begin-line :extend t
+           :background ,ctp-mantle)
          (org-code :foreground ,ctp-green)
          (org-column :background ,ctp-surface0)
          (org-column-title :inherit org-column :weight bold :underline t)
@@ -1046,7 +1109,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (cfw:face-disable :foreground ,ctp-surface1)
          (cfw:face-today-title :foreground ,ctp-peach)
          (cfw:face-today :inherit cfw:face-today-title)
-         (cfw:face-select :background ,ctp-surface1 :foreground ,ctp-text)
+         (cfw:face-select :background ,ctp-surface1
+           :foreground ,ctp-text)
          (cfw:face-toolbar :background ,ctp-base)
          (cfw:face-toolbar-button-off :foreground ,ctp-lavender)
          (cfw:face-toolbar-button-on :foreground ,ctp-mauve)
@@ -1096,8 +1160,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (rst-level-8 :foreground ,ctp-maroon)
 
          ;; show-paren
-         (show-paren-match :foreground ,ctp-pink
-           :weight bold
+         (show-paren-match :foreground ,ctp-pink :weight bold
            ,@(when catppuccin-highlight-matches
                (list :background ctp-surface0)))
          (show-paren-match-expression :inherit match)
@@ -1120,8 +1183,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;;(swiper-line-face-1 :inherit swiper-match-face-1)
          (swiper-background-match-face-1 :background ,ctp-teal)
          (swiper-match-face-1 :foreground ,ctp-text :background ,ctp-red)
-         (swiper-background-match-face-2 :foreground ,ctp-mantle :background ,ctp-teal)
-         (swiper-match-face-2 :foreground ,ctp-mantle :background ,ctp-red)
+         (swiper-background-match-face-2 :foreground ,ctp-mantle
+           :background ,ctp-teal)
+         (swiper-match-face-2 :foreground ,ctp-mantle
+           :background ,ctp-red)
          ;;(swiper-background-match-face-3 :inherit swiper-match-face-1)
          ;;(swiper-match-face-3 :inherit swiper-match-face-1)
          ;;(swiper-background-match-face-4 :inherit swiper-match-face-1)
@@ -1134,7 +1199,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; tab-bar & tab-line (since Emacs 27.1)
          (tab-bar :foreground ,ctp-subtext0 :background ,ctp-base)
          (tab-bar-tab :foreground ,ctp-text :background ,ctp-current)
-         (tab-bar-tab-inactive :foreground ,ctp-subtext0 :background ,ctp-base)
+         (tab-bar-tab-inactive :foreground ,ctp-subtext0
+           :background ,ctp-base)
          (tab-line :inherit tab-bar)
          (tab-line-tab :inherit tab-bar-tab)
          (tab-line-tab-inactive :inherit tab-bar-tab-inactive)
@@ -1142,44 +1208,66 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (tab-line-highlight :background ,ctp-surface1)
 
          ;; centaur-tabs
-         (centaur-tabs-default :foreground ,ctp-subtext0 :background ,ctp-base)
-         (centaur-tabs-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
-         (centaur-tabs-selected :foreground ,ctp-text :background ,ctp-current)
-         (centaur-tabs-unselected-modified :foreground ,ctp-maroon :background ,ctp-mantle)
-         (centaur-tabs-selected-modified :foreground ,ctp-red :background ,ctp-current)
-         (centaur-tabs-close-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
-         (centaur-tabs-close-selected :foreground ,ctp-text :background ,ctp-current)
-         (centaur-tabs-name-mouse-face :foreground ,ctp-text :background ,ctp-surface1)
-         (centaur-tabs-close-mouse-face :foreground ,ctp-red :background ,ctp-surface1)
-         (centaur-tabs-modified-marker-selected :inherit centaur-tabs-selected-modified)
-         (centaur-tabs-modified-marker-unselected :inherit centaur-tabs-unselected-modified)
+         (centaur-tabs-default :foreground ,ctp-subtext0
+           :background ,ctp-base)
+         (centaur-tabs-unselected :foreground ,ctp-subtext0
+           :background ,ctp-mantle)
+         (centaur-tabs-selected :foreground ,ctp-text
+           :background ,ctp-current)
+         (centaur-tabs-unselected-modified :foreground ,ctp-maroon
+           :background ,ctp-mantle)
+         (centaur-tabs-selected-modified :foreground ,ctp-red
+           :background ,ctp-current)
+         (centaur-tabs-close-unselected :foreground ,ctp-subtext0
+           :background ,ctp-mantle)
+         (centaur-tabs-close-selected :foreground ,ctp-text
+           :background ,ctp-current)
+         (centaur-tabs-name-mouse-face :foreground ,ctp-text
+           :background ,ctp-surface1)
+         (centaur-tabs-close-mouse-face :foreground ,ctp-red
+           :background ,ctp-surface1)
+         (centaur-tabs-modified-marker-selected
+           :inherit centaur-tabs-selected-modified)
+         (centaur-tabs-modified-marker-unselected
+           :inherit centaur-tabs-unselected-modified)
 
          ;; term
          (term :foreground ,ctp-text :background ,ctp-base)
-         (term-color-black ,@(if (eq catppuccin-flavor 'latte)
-                               (list :foreground ctp-subtext1  :background ctp-subtext1)
-                               (list :foreground ctp-surface1 :background ctp-surface1)))
-         (term-color-black-white ,@(if (eq catppuccin-flavor 'latte)
-                                     (list :foreground ctp-subtext0 :background ctp-subtext0)
-                                     (list :foreground ctp-surface2 :background ctp-surface2)))
+         (term-color-black
+           ,@(if (eq catppuccin-flavor 'latte)
+               (list :foreground ctp-subtext1  :background ctp-subtext1)
+               (list :foreground ctp-surface1 :background ctp-surface1)))
+         (term-color-black-white
+           ,@(if (eq catppuccin-flavor 'latte)
+               (list :foreground ctp-subtext0 :background ctp-subtext0)
+               (list :foreground ctp-surface2 :background ctp-surface2)))
          (term-color-red :foreground ,ctp-red :background ,ctp-red)
-         (term-color-bright-red :foreground ,ctp-red :background ,ctp-red)
+         (term-color-bright-red :foreground ,ctp-red
+           :background ,ctp-red)
          (term-color-green :foreground ,ctp-green :background ,ctp-green)
-         (term-color-bright-green :foreground ,ctp-green :background ,ctp-green)
-         (term-color-yellow :foreground ,ctp-yellow :background ,ctp-yellow)
-         (term-color-bright-yellow :foreground ,ctp-yellow :background ,ctp-yellow)
+         (term-color-bright-green :foreground ,ctp-green
+           :background ,ctp-green)
+         (term-color-yellow :foreground ,ctp-yellow
+           :background ,ctp-yellow)
+         (term-color-bright-yellow :foreground ,ctp-yellow
+           :background ,ctp-yellow)
          (term-color-blue :foreground ,ctp-blue :background ,ctp-blue)
-         (term-color-bright-blue :foreground ,ctp-blue :background ,ctp-blue)
+         (term-color-bright-blue :foreground ,ctp-blue
+           :background ,ctp-blue)
          (term-color-magenta :foreground ,ctp-pink :background ,ctp-pink)
-         (term-color-bright-magenta :foreground ,ctp-pink :background ,ctp-pink)
+         (term-color-bright-magenta :foreground ,ctp-pink
+           :background ,ctp-pink)
          (term-color-cyan :foreground ,ctp-teal :background ,ctp-teal)
-         (term-color-bright-cyan :foreground ,ctp-teal :background ,ctp-teal)
-         (term-color-white ,@(if (eq catppuccin-flavor 'latte)
-                               (list :foreground ctp-surface2  :background ctp-surface2)
-                               (list :foreground ctp-subtext1 :background ctp-subtext1)))
-         (term-color-bright-white ,@(if (eq catppuccin-flavor 'latte)
-                                      (list :foreground ctp-surface1 :background ctp-surface1)
-                                      (list :foreground ctp-subtext0 :background ctp-subtext0)))
+         (term-color-bright-cyan :foreground ,ctp-teal
+           :background ,ctp-teal)
+         (term-color-white
+           ,@(if (eq catppuccin-flavor 'latte)
+               (list :foreground ctp-surface2  :background ctp-surface2)
+               (list :foreground ctp-subtext1 :background ctp-subtext1)))
+         (term-color-bright-white
+           ,@(if (eq catppuccin-flavor 'latte)
+               (list :foreground ctp-surface1 :background ctp-surface1)
+               (list :foreground ctp-subtext0 :background ctp-subtext0)))
 
          ;; ansi-color (emacs >= 28.1)
          (ansi-color-black :foreground ,ctp-surface1)
@@ -1237,29 +1325,40 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; tree-sitter
          (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
          (tree-sitter-hl-face:property :foreground ,ctp-lavender)
-         (tree-sitter-hl-face:property.definition :foreground ,ctp-lavender)
+         (tree-sitter-hl-face:property.definition
+           :foreground ,ctp-lavender)
          (tree-sitter-hl-face:comment :inherit font-lock-comment-face)
          (tree-sitter-hl-face:constant :inherit font-lock-constant-face)
-         (tree-sitter-hl-face:constant.builtin :inherit font-lock-builtin-face)
-         (tree-sitter-hl-face:constructor :inherit font-lock-constant-face)
+         (tree-sitter-hl-face:constant.builtin
+           :inherit font-lock-builtin-face)
+         (tree-sitter-hl-face:constructor
+           :inherit font-lock-constant-face)
          (tree-sitter-hl-face:escape :foreground ,undef)
-         (tree-sitter-hl-face:function :inherit font-lock-function-name-face)
-         (tree-sitter-hl-face:function.builtin :inherit font-lock-builtin-face)
-         (tree-sitter-hl-face:function.call :inherit font-lock-function-name-face
-           :weight normal)
-         (tree-sitter-hl-face:function.macro :inherit font-lock-preprocessor-face)
-         (tree-sitter-hl-face:function.special :inherit font-lock-preprocessor-face)
-         (tree-sitter-hl-face:keyword :inherit font-lock-keyword-face) ; we are missing keyword levels (eg.: Typescript: import / const should be different: blue / mauve)
+         (tree-sitter-hl-face:function
+           :inherit font-lock-function-name-face)
+         (tree-sitter-hl-face:function.builtin
+           :inherit font-lock-builtin-face)
+         (tree-sitter-hl-face:function.call
+           :inherit font-lock-function-name-face :weight normal)
+         (tree-sitter-hl-face:function.macro
+           :inherit font-lock-preprocessor-face)
+         (tree-sitter-hl-face:function.special
+           :inherit font-lock-preprocessor-face)
+         (tree-sitter-hl-face:keyword
+           :inherit font-lock-keyword-face) ; we are missing keyword levels (eg.: Typescript: import / const should be different: blue / mauve)
          (tree-sitter-hl-face:punctuation :foreground ,undef)
-         (tree-sitter-hl-face:punctuation.bracket :foreground ,ctp-overlay2)
-         (tree-sitter-hl-face:punctuation.delimiter :foreground ,ctp-overlay2)
+         (tree-sitter-hl-face:punctuation.bracket
+           :foreground ,ctp-overlay2)
+         (tree-sitter-hl-face:punctuation.delimiter
+           :foreground ,ctp-overlay2)
          (tree-sitter-hl-face:punctuation.special :foreground ,undef)
          (tree-sitter-hl-face:string :inherit font-lock-string-face)
          (tree-sitter-hl-face:string.special :foreground ,ctp-teal)
          (tree-sitter-hl-face:tag :inherit font-lock-keyword-face)
          (tree-sitter-hl-face:type :inherit font-lock-type-face)
          (tree-sitter-hl-face:type.parameter :foreground ,ctp-sapphire)
-         (tree-sitter-hl-face:variable :inherit font-lock-variable-name-face)
+         (tree-sitter-hl-face:variable
+           :inherit font-lock-variable-name-face)
          (tree-sitter-hl-face:variable.parameter :foreground ,ctp-red)
          (tree-sitter-hl-face:operator :foreground ,ctp-teal)
 
@@ -1273,9 +1372,11 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (web-mode-builtin-face :inherit font-lock-builtin-face)
          (web-mode-comment-face :inherit font-lock-comment-face)
          (web-mode-constant-face :inherit font-lock-constant-face)
-         (web-mode-css-property-name-face :inherit font-lock-constant-face)
+         (web-mode-css-property-name-face
+           :inherit font-lock-constant-face)
          (web-mode-doctype-face :inherit font-lock-comment-face)
-         (web-mode-function-name-face :inherit font-lock-function-name-face)
+         (web-mode-function-name-face
+           :inherit font-lock-function-name-face)
          (web-mode-html-attr-name-face :foreground ,ctp-blue)
          (web-mode-html-attr-value-face :foreground ,ctp-green)
          (web-mode-html-tag-face :foreground ,ctp-mauve)
@@ -1290,7 +1391,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; which-key
          (which-key-key-face :inherit font-lock-builtin-face)
          (which-key-command-description-face :inherit default)
-         (which-key-separator-face :inherit font-lock-comment-delimiter-face)
+         (which-key-separator-face
+           :inherit font-lock-comment-delimiter-face)
          (which-key-local-map-description-face :foreground ,ctp-green)
 
          ;; whitespace
@@ -1305,7 +1407,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (whitespace-space-before-tab :inherit warning)
          (whitespace-tab :inherit whitespace-newline)
          (whitespace-trailing :inherit trailing-whitespace)
-         (trailing-whitespace :foreground ,ctp-peach :background ,ctp-peach)
+         (trailing-whitespace :foreground ,ctp-peach
+           :background ,ctp-peach)
 
          ;; yard-mode
          (yard-tag-face :inherit font-lock-builtin-face)
@@ -1317,13 +1420,17 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; highlight-indent-guides
          ;;(highlight-indent-guides-odd-face :background ,ctp-base)
          ;;(highlight-indent-guides-even-face :background ,ctp-base)
-         (highlight-indent-guides-character-face :foreground ,ctp-surface0)
+         (highlight-indent-guides-character-face
+           :foreground ,ctp-surface0)
          ;;(highlight-indent-guides-top-odd-face :background ,ctp-base)
          ;;(highlight-indent-guides-top-even-face :background ,ctp-base)
-         (highlight-indent-guides-top-character-face :foreground ,ctp-pink)
+         (highlight-indent-guides-top-character-face
+           :foreground ,ctp-pink)
          ;;(highlight-indent-guides-stack-odd-face :background ,ctp-base)
-         ;;(highlight-indent-guides-stack-even-face :background ,ctp-base)
-         (highlight-indent-guides-stack-character-face :foreground ,ctp-flamingo)
+         ;;(highlight-indent-guides-stack-even-face
+         ;;  :background ,ctp-base)
+         (highlight-indent-guides-stack-character-face
+           :foreground ,ctp-flamingo)
 
          ;; lui
          (lui-button-face :foreground ,ctp-sky :underline t)
@@ -1354,7 +1461,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
                  ((((min-colors 16777216)) ; fully graphical envs
                     ,(funcall expand-with-func 'cadr spec))
                    (t                      ; 256 color terminals
-                     ,(funcall expand-with-func '(lambda (v) (cadr (cdr v))) spec))))
+                     ,(funcall expand-with-func
+                        '(lambda (v) (cadr (cdr v))) spec))))
           whole-theme))
       whole-theme))
 
@@ -1365,24 +1473,32 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
               ((pred (<= 16777216)) 'car) ; fully graphical envs
               (_ 'cadr))))                ; 256 color terminals
       `((ansi-color-names-vector
-          [,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+          [,(funcall get-func
+              (alist-get (if (eq catppuccin-flavor 'latte)
+                           'ctp-subtext1  'ctp-surface1) colors))
             ,(funcall get-func (alist-get 'ctp-red colors))
             ,(funcall get-func (alist-get 'ctp-green colors))
             ,(funcall get-func (alist-get 'ctp-yellow colors))
             ,(funcall get-func (alist-get 'ctp-blue colors))
             ,(funcall get-func (alist-get 'ctp-pink colors))
             ,(funcall get-func (alist-get 'ctp-teal colors))
-            ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))]))
+            ,(funcall get-func
+               (alist-get (if (eq catppuccin-flavor 'latte)
+                            'ctp-surface2 'ctp-subtext1) colors))]))
       `((rustic-ansi-faces
           (vector
-            ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-subtext1  'ctp-surface1) colors))
+            ,(funcall get-func
+               (alist-get (if (eq catppuccin-flavor 'latte)
+                            'ctp-subtext1  'ctp-surface1) colors))
             ,(funcall get-func (alist-get 'ctp-red colors))
             ,(funcall get-func (alist-get 'ctp-green colors))
             ,(funcall get-func (alist-get 'ctp-yellow colors))
             ,(funcall get-func (alist-get 'ctp-blue colors))
             ,(funcall get-func (alist-get 'ctp-pink colors))
             ,(funcall get-func (alist-get 'ctp-teal colors))
-            ,(funcall get-func (alist-get (if (eq catppuccin-flavor 'latte) 'ctp-surface2  'ctp-subtext1) colors))))))))
+            ,(funcall get-func
+               (alist-get (if (eq catppuccin-flavor 'latte)
+                            'ctp-surface2  'ctp-subtext1) colors))))))))
 
 ;;;###autoload
 (when load-file-name

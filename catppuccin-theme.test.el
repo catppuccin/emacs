@@ -17,7 +17,8 @@
 ;;; Code:
 (defmacro assert (test-form message)
   `(when (not ,test-form)
-     (error "Assertion failed: %s\n%s" (format "%s" ',test-form) ,message)))
+     (error "Assertion failed: %s\n%s"
+       (format "%s" ',test-form) ,message)))
 (advice-add 'display-color-cells :override (lambda (&rest r) 16777216))
 
 (add-to-list 'custom-theme-load-path (file-name-directory load-file-name))
@@ -26,10 +27,13 @@
 (catppuccin-set-color 'base "#000000")
 (catppuccin-reload)
 
-(assert (string-equal "#000000" (catppuccin-color 'base)) "Base does not match custom specified")
+(assert (string-equal "#000000" (catppuccin-color 'base))
+  "Base does not match custom specified")
 (setq catppuccin-flavor 'frappe)
-(assert (string-equal "#000000" (catppuccin-color 'base 'mocha)) "Base does not match custom specified for other flavor")
+(assert (string-equal "#000000" (catppuccin-color 'base 'mocha))
+  "Base does not match custom specified for other flavor")
 (setq catppuccin-flavor 'mocha)
-(assert (string-equal "#000000" (catppuccin-color 'base)) "Base does not match custom specified after switching back")
+(assert (string-equal "#000000" (catppuccin-color 'base))
+  "Base does not match custom specified after switching back")
 
 ;;; catppuccin-tests.test..el ends here
