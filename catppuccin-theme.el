@@ -216,15 +216,24 @@ or `mocha'."
   (catppuccin-reload)
   (message "Catppuccin flavor changed to %s" flavor))
 
+(defun catppuccin-colors-of (&optional flavor)
+  "Return a symbol for the alist containing FLAVOR's colors.
+
+FLAVOR defaults to the value of `catppuccin-flavor'."
+  (intern-soft (concat "catppuccin-"
+                 (symbol-name (or flavor catppuccin-flavor)) "-colors")))
+
 (defun catppuccin-set-color (color value &optional flavor)
   "Set the COLOR of FLAVOR or the current flavor to VALUE."
   (interactive "SChange color: \nsSet %s to: ")
-  (setcdr (assoc color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors")))) value))
+  (setcdr (assoc color
+            (symbol-value (catppuccin-colors-of flavor))) value))
 
 (defun catppuccin-color (color &optional flavor)
   "Get the COLOR of FLAVOR or the current flavor."
   (interactive "SColor: ")
-  (let ((result (alist-get color (symbol-value (intern-soft (concat "catppuccin-" (symbol-name (or flavor catppuccin-flavor)) "-colors"))))))
+  (let ((result (alist-get color
+                  (symbol-value (catppuccin-colors-of flavor)))))
     (if (called-interactively-p 'interactive)
       (message result)
       result)))
