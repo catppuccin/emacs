@@ -128,10 +128,9 @@ The colors used will correspond to those in COLORS."
 
 (when load-file-name
   ;; load the flavor definitions
-  (with-current-buffer (find-file-noselect
-                         (concat (file-name-directory load-file-name)
-                           "catppuccin-definitions.el"))
-    (goto-char (point-min))
+  (with-temp-buffer
+    (insert-file-contents (expand-file-name "catppuccin-definitions.el"
+                            (file-name-directory load-file-name)))
     (setq catppuccin-flavor-alist (read (current-buffer))))
 
   ;; define flavors
