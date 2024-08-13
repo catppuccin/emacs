@@ -1116,16 +1116,16 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (smerge-base :inherit diff-refine-changed :background nil)
 
          ;; swiper
-         ;;(swiper-line-face :inherit swiper-match-face1)
-         ;;(swiper-line-face-1 :inherit swiper-match-face1)
+         ;;(swiper-line-face :inherit swiper-match-face-1)
+         ;;(swiper-line-face-1 :inherit swiper-match-face-1)
          (swiper-background-match-face-1 :background ,ctp-teal)
-         (swiper-match-face-1 :foreground ,ctp-text :background: ,ctp-red)
+         (swiper-match-face-1 :foreground ,ctp-text :background ,ctp-red)
          (swiper-background-match-face-2 :foreground ,ctp-mantle :background ,ctp-teal)
          (swiper-match-face-2 :foreground ,ctp-mantle :background ,ctp-red)
-         ;;(swiper-background-match-face-3 :inherit swiper-match-face1)
-         ;;(swiper-match-face-3 :inherit swiper-match-face1)
-         ;;(swiper-background-match-face-4 :inherit swiper-match-face1)
-         ;;(swiper-match-face-4 :inherit swiper-match-face1)
+         ;;(swiper-background-match-face-3 :inherit swiper-match-face-1)
+         ;;(swiper-match-face-3 :inherit swiper-match-face-1)
+         ;;(swiper-background-match-face-4 :inherit swiper-match-face-1)
+         ;;(swiper-match-face-4 :inherit swiper-match-face-1)
 
          ;; spam
          (spam :inherit gnus-summary-normal-read :foreground ,ctp-peach
@@ -1142,7 +1142,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (tab-line-highlight :background ,ctp-surface1)
 
          ;; centaur-tabs
-         (centaur-tabs-default :foreground ,ctp-subtext0, :background ,ctp-base)
+         (centaur-tabs-default :foreground ,ctp-subtext0 :background ,ctp-base)
          (centaur-tabs-unselected :foreground ,ctp-subtext0 :background ,ctp-mantle)
          (centaur-tabs-selected :foreground ,ctp-text :background ,ctp-current)
          (centaur-tabs-unselected-modified :foreground ,ctp-maroon :background ,ctp-mantle)
