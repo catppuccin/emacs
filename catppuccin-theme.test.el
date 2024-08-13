@@ -26,10 +26,10 @@
 (catppuccin-set-color 'base "#000000")
 (catppuccin-reload)
 
-(assert (string-equal "#000000" (catppuccin-get-color 'base)) "Base does not match custom specified")
+(assert (string-equal "#000000" (catppuccin-color 'base)) "Base does not match custom specified")
 (setq catppuccin-flavor 'frappe)
-(assert (string-equal "#000000" (catppuccin-get-color 'base 'mocha)) "Base does not match custom specified for other flavor")
+(assert (string-equal "#000000" (catppuccin-color 'base 'mocha)) "Base does not match custom specified for other flavor")
 (setq catppuccin-flavor 'mocha)
-(assert (string-equal "#000000" (catppuccin-get-color 'base)) "Base does not match custom specified after switching back")
+(assert (string-equal "#000000" (catppuccin-color 'base)) "Base does not match custom specified after switching back")
 
 ;;; catppuccin-tests.test..el ends here
