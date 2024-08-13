@@ -417,6 +417,8 @@ or `mocha'."
          (diff-indicator-removed :foreground ,ctp-red)
          (diff-refine-added :background ,(catppuccin-darken ctp-green 40))
          (diff-refine-removed :background ,(catppuccin-darken ctp-red 40))
+         (diff-refine-changed :background ,ctp-yellow
+           :foreground ,ctp-base)
 
          ;; eshell
          (eshell-ls-archive :foreground ,ctp-mauve)
@@ -1100,6 +1102,7 @@ or `mocha'."
            :background nil)
          (smerge-refined-removed :inherit diff-refine-removed
            :background nil)
+         (smerge-base :inherit diff-refine-changed :background nil)
 
          ;; swiper
          ;;(swiper-line-face :inherit swiper-match-face1)
