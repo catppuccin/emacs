@@ -453,6 +453,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (company-tooltip-scrollbar-thumb :background ,ctp-surface2)
          (company-tooltip-scrollbar-track :background ,ctp-surface1)
 
+         ;; compile
+         (compilation-mode-line-exit :foreground ,ctp-green)
+         (compilation-mode-line-fail :foreground ,ctp-red)
+
          ;; completions (minibuffer.el)
          (completions-annotations :inherit font-lock-comment-face)
          (completions-common-part :foreground ,ctp-sky)
