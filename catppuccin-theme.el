@@ -1083,6 +1083,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (org-level-8 :weight normal :foreground ,ctp-maroon)
          (org-link :inherit link)
          (org-meta-line :inherit font-lock-comment-face)
+         (org-mode-line-clock-overrun :inherit mode-line :foreground ,ctp-red)
          (org-priority :foreground ,ctp-yellow)
          (org-quote :inherit markdown-blockquote-face)
          (org-scheduled :foreground ,ctp-green)
