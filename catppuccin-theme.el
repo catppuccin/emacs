@@ -1084,7 +1084,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (org-meta-line :inherit font-lock-comment-face)
          (org-mode-line-clock-overrun :inherit mode-line :foreground ,ctp-red)
          (org-priority :foreground ,ctp-yellow)
-         (org-quote :inherit markdown-blockquote-face)
+         (org-quote :extend t :background ,ctp-mantle
+           :foreground ,ctp-green
+           ,@(when catppuccin-italic-blockquotes '(:slant italic)))
          (org-scheduled :foreground ,ctp-green)
          (org-scheduled-previously :foreground ,ctp-teal)
          (org-scheduled-today :foreground ,ctp-green :weight bold)
