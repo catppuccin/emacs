@@ -939,7 +939,6 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (magit-process-ok :foreground ,ctp-green :weight bold)
 
          ;; markdown
-         (markdown-blockquote-face :foreground ,ctp-green)
          (markdown-blockquote-face :extend t :background ,ctp-mantle
            :foreground ,ctp-green
            ,@(when catppuccin-italic-blockquotes '(:slant italic)))
