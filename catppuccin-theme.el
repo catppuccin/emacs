@@ -459,9 +459,12 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (completions-first-difference :foreground ,ctp-text)
 
          ;; diff-hl
-         (diff-hl-change :inherit fringe :foreground ,ctp-blue)
-         (diff-hl-delete :inherit fringe :foreground ,ctp-red)
-         (diff-hl-insert :inherit fringe :foreground ,ctp-green)
+         (diff-hl-change :background ,ctp-blue
+           :foreground ,(catppuccin-darken ctp-blue 50))
+         (diff-hl-delete :background ,ctp-red
+           :foreground ,(catppuccin-darken ctp-red 50))
+         (diff-hl-insert :background ,ctp-green
+           :foreground ,(catppuccin-darken ctp-green 50))
 
          ;; diff-mode
          (diff-header :foreground ,ctp-blue)
