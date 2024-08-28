@@ -1515,11 +1515,6 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 
 (provide-theme 'catppuccin)
 
-;; Unbind functions used for internal use
-(fmakunbound 'catppuccin-quantize-color)
-(fmakunbound 'catppuccin-lighten-color)
-(fmakunbound 'catppuccin-darken-color)
-
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; lisp-indent-offset: 2
