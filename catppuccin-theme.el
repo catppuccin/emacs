@@ -378,6 +378,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (solaire-header-line-face :inherit 'solaire-mode-line-face)
 
          ;; evil
+         (evil-search-highlight-persist-highlight-face :inherit lazy-highlight)
          (evil-ex-lazy-highlight :inherit lazy-highlight)
          (evil-ex-substitute-matches :foreground ,ctp-red :underline t)
          (evil-ex-substitute-replacement :foreground ,ctp-green
