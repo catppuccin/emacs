@@ -43,6 +43,8 @@
 
 ;;; Code:
 
+(eval-when-compile (require 'subr-x))
+
 (deftheme catppuccin)
 
 ;;; Configuration options:
@@ -238,6 +240,15 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
       result)))
 
 (defalias 'catppuccin-get-color 'catppuccin-color)
+
+(defun catppuccin-insert-color (color &optional flavor)
+  "Insert COLOR at point."
+  (interactive "SColor: ")
+  (let ((color (catppuccin-color color flavor)))
+    (insert
+      (if (char-equal (char-before) ?#)
+        (string-remove-prefix "#" color)
+        color))))
 
 ;;; Theme definition:
 
