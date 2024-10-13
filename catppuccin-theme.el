@@ -1190,13 +1190,13 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (slime-repl-inputed-output-face :foreground ,ctp-mauve)
 
          ;; smerge
-         (smerge-lower :inherit diff-added :background nil)
-         (smerge-upper :inherit diff-removed :background nil)
+         (smerge-lower :inherit diff-added :background unspecified)
+         (smerge-upper :inherit diff-removed :background unspecified)
          (smerge-refined-added :inherit diff-refine-added
-           :background nil)
+           :background unspecified)
          (smerge-refined-removed :inherit diff-refine-removed
-           :background nil)
-         (smerge-base :inherit diff-refine-changed :background nil)
+           :background unspecified)
+         (smerge-base :inherit diff-refine-changed :background unspecified)
 
          ;; swiper
          ;;(swiper-line-face :inherit swiper-match-face-1)
