@@ -32,7 +32,7 @@
 
 ;; 🍄 Soothing pastel theme for Emacs
 ;;
-;; `catppuccin-theme.el' provides the theme `catppuccin', a port of the
+;; catppuccin-theme.el provides the theme `catppuccin', a port of the
 ;; Catppuccin colors to Emacs.  To select a palette and enable the theme,
 ;; evaluate:
 ;;
