@@ -25,14 +25,14 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
 
 ;; 🍄 Soothing pastel theme for Emacs
 ;;
-;; `catppuccin-theme.el' provides the theme `catppuccin', a port of the
+;; catppuccin-theme.el provides the theme `catppuccin', a port of the
 ;; Catppuccin colors to Emacs.  To select a palette and enable the theme,
 ;; evaluate:
 ;;
