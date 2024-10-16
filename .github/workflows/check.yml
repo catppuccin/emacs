@@ -12,10 +12,10 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Install Emacs 25
+      - name: Install Emacs 26
         run: |
-          wget http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-nox_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-bin-common_25.2+1-6_amd64.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacs25/emacs25-common_25.2+1-6_all.deb http://mirrors.kernel.org/ubuntu/pool/main/e/emacsen-common/emacsen-common_2.0.8_all.deb http://mirrors.kernel.org/ubuntu/pool/universe/c/compat-el/elpa-compat_29.1.4.4+dfsg-1_all.deb
-          sudo apt-get install --allow-downgrades ./emacs25-nox_25.2+1-6_amd64.deb ./emacs25-bin-common_25.2+1-6_amd64.deb ./emacs25-common_25.2+1-6_all.deb ./emacsen-common_2.0.8_all.deb ./elpa-compat_29.1.4.4+dfsg-1_all.deb
+          wget https://security.debian.org/debian-security/pool/updates/main/e/emacs/emacs_26.1+1-3.2+deb10u6_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/c/compat-el/elpa-compat_29.1.4.4+dfsg-1_all.deb
+          sudo apt install --allow-downgrades ./emacs_26.1+1-3.2+deb10u6_all.deb ./elpa-compat_29.1.4.4+dfsg-1_all.deb
 
       - name: Install Just
         uses: extractions/setup-just@v2
