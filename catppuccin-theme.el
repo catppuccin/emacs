@@ -742,7 +742,6 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (haskell-constructor-face :foreground ,ctp-mauve)
 
          ;; helm
-         ;; TODO: Theme helm
          (helm-bookmark-w3m :foreground ,ctp-subtext1)
          (helm-buffer-not-saved :foreground ,ctp-red)
          (helm-buffer-process :foreground ,ctp-red)
