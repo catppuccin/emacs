@@ -778,7 +778,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (powerline-active1 :background ,ctp-peach :foreground ,ctp-surface0)
          (powerline-active2 :background ,ctp-rosewater :foreground ,ctp-surface0)
          (powerline-inactive1 :background ,ctp-surface2 :foreground ,ctp-text)
-         (powerline-inactive2 :background ,ctp-overlay2 :foreground, ctp-subtext1)
+         (powerline-inactive2 :background ,ctp-overlay2 :foreground ,ctp-subtext1)
 
          ;; consult
          (consult-async-split :foreground ,ctp-mauve)
@@ -1347,7 +1347,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (treemacs-window-background-face :background ,ctp-base)
          ;; treemacs-nerd-icons
          (treemacs-nerd-icons-root-face :foreground ,ctp-blue)
-         (treemacs-nerd-icons-file-face :foreground , ctp-blue)
+         (treemacs-nerd-icons-file-face :foreground ,ctp-blue)
 
          ;; tree-sitter
          (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
