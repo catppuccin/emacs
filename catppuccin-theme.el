@@ -699,6 +699,11 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (enh-ruby-regexp-delimiter-face :foreground ,ctp-yellow)
          (enh-ruby-string-delimiter-face :foreground ,ctp-yellow)
 
+         ;; flymake
+         (flymake-error :underline (:style wave :color ,ctp-red))
+         (flymake-note :underline (:style wave :color ,ctp-green))
+         (flymake-warning :underline (:style wave :color ,ctp-yellow))
+
          ;; flyspell
          (flyspell-duplicate :underline (:style wave :color ,ctp-teal))
          (flyspell-incorrect :underline (:style wave :color ,ctp-maroon))
