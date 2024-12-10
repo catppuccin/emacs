@@ -413,6 +413,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (font-lock-number-face :foreground ,ctp-peach)
          (font-lock-operator-face :foreground ,ctp-sky)
          (font-lock-preprocessor-face :foreground ,ctp-yellow)
+         (font-lock-property-name-face :foreground ,ctp-blue)
          (font-lock-reference-face :inherit font-lock-constant-face) ; obsolete
          (font-lock-regexp-grouping-backslash :foreground ,ctp-red)
          (font-lock-regexp-grouping-construct :foreground ,ctp-red)
