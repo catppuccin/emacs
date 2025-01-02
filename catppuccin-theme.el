@@ -441,20 +441,15 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (avy-lead-face-2 :foreground ,ctp-base :background ,ctp-sky)
 
          ;; company
-         ;; TODO: find undef'ed faces
          (company-echo-common :foreground ,ctp-base :background ,ctp-text)
-         (company-preview :background ,ctp-current :foreground ,undef)
+         (company-preview :inherit shadow)
          (company-preview-common :inherit company-preview
            :foreground ,ctp-green)
          (company-preview-search :inherit company-preview
-           :foreground ,undef)
-         (company-scrollbar-bg :background ,ctp-surface0)
-         (company-scrollbar-fg :foreground ,undef)
+           :foreground ,ctp-red)
          (company-tooltip :inherit tooltip)
-         (company-tooltip-search :foreground ,undef
-           :underline t)
-         (company-tooltip-search-selection :background ,undef
-           :foreground ,ctp-base)
+         (company-tooltip-search :inherit lazy-highlight)
+         (company-tooltip-search-selection :inherit match)
          (company-tooltip-selection :background ,ctp-overlay0
            :foreground ,ctp-text)
          (company-tooltip-mouse :background ,ctp-base)
