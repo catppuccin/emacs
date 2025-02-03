@@ -425,6 +425,31 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
            ,@(when catppuccin-italic-variables '(:inherit italic)))
          (font-lock-warning-face :inherit warning)
 
+         ;; adoc-mode
+         (adoc-anchor-face :foreground ,ctp-blue)
+         (adoc-code-face :inherit ,ctp-text)
+         (adoc-command-face :foreground ,ctp-yellow)
+         (adoc-emphasis-face :inherit bold)
+         (adoc-internal-reference-face :foreground ,ctp-yellow :underline t)
+         (adoc-list-face :foreground ,ctp-text)
+         (adoc-meta-face :foreground ,ctp-yellow)
+         (adoc-meta-hide-face :foreground ,ctp-yellow)
+         (adoc-secondary-text-face :foreground ,ctp-yellow)
+         (adoc-title-0-face :foreground ,ctp-red
+           ,@(when catppuccin-enlarge-headings
+               (list :height catppuccin-height-title-1)))
+         (adoc-title-1-face :foreground ,ctp-peach
+           ,@(when catppuccin-enlarge-headings
+               (list :height catppuccin-height-title-2)))
+         (adoc-title-2-face :foreground ,ctp-yellow
+           ,@(when catppuccin-enlarge-headings
+               (list :height catppuccin-height-title-3)))
+         (adoc-title-3-face :foreground ,ctp-green)
+         (adoc-title-4-face :foreground ,ctp-sapphire)
+         (adoc-typewriter-face :foreground ,ctp-green)
+         (adoc-verbatim-face :inherit ,ctp-green)
+         (adoc-value-face :foreground ,ctp-yellow)
+
          ;; auto-complete
          (ac-completion-face :underline t :foreground ,undef)
 
