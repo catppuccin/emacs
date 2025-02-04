@@ -447,7 +447,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (adoc-title-3-face :foreground ,ctp-green)
          (adoc-title-4-face :foreground ,ctp-sapphire)
          (adoc-typewriter-face :foreground ,ctp-green)
-         (adoc-verbatim-face :inherit ,ctp-green)
+         (adoc-verbatim-face :foreground ,ctp-green)
          (adoc-value-face :foreground ,ctp-yellow)
 
          ;; auto-complete
