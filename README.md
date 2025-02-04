@@ -97,6 +97,40 @@ Doom users must call `(load-theme 'catppuccin t t)` before being able to call an
 >[!NOTE]
 >If you are using doom emacs and want to customize the `catppuccin-flavor`, calling `(catppuccin-reload)` after `load-theme` may slow emacs startup time. To change the flavor, it is sufficient to `setq` the desired flavor before loading the theme. Then, calling `(catppuccin-reload)` can be omitted because catppuccin will be loaded with the desired flavor directly.
 
+Some aspects of this theme are customizable. You can change them either by doing
+`M-x customize-group catppuccin` or setting one or more of the following values in
+your Emacs init file. Note that these variables need to be set **before** `load-theme`
+is invoked for Catppuccin.
+
+``` emacs-lisp
+;; Don't change the font size for some headings and titles (default t)
+(setq catppuccin-enlarge-headings nil)
+
+;; Adjust font size of titles level 1 (default 1.3)
+(setq catppuccin-height-title-1 1.25)
+
+;; Adjust font size of titles level 2 (default 1.1)
+(setq catppuccin-height-title-2 1.15)
+
+;; Adjust font size of titles level 3 (default 1.0)
+(setq catppuccin-height-title-3 1.05)
+
+;; Adjust font size of document titles (default 1.44)
+(setq catppuccin-height-doc-title 1.4)
+
+;; Use background color to make highlighted matches more visible. (default nil)
+(setq catppuccin-highlight-matches t)
+
+;; Use :slant italic for comments. (default nil)
+(setq catppuccin-italic-comments t)
+
+;; Use :slant italic for blockquotes in markdown and org. (default nil)
+(setq catppuccin-italic-blockquotes t)
+
+;; Use :slant italic for variables. (default nil)
+(setq catppuccin-italic-variables nil)
+```
+
 ## 💝 Thanks to
 
 - [Nyx](https://github.com/nyxkrage)
