@@ -427,7 +427,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 
          ;; adoc-mode
          (adoc-anchor-face :foreground ,ctp-blue)
-         (adoc-code-face :inherit ,ctp-text)
+         (adoc-code-face :foreground ,ctp-text)
          (adoc-command-face :foreground ,ctp-yellow)
          (adoc-emphasis-face :inherit bold)
          (adoc-internal-reference-face :foreground ,ctp-yellow :underline t)
