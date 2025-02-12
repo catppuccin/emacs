@@ -55,31 +55,6 @@
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
-(defcustom catppuccin-enlarge-headings t
-  "Use different font sizes for some headings and titles."
-  :type 'boolean
-  :group 'catppuccin)
-
-(defcustom catppuccin-height-title-1 1.3
-  "Header 1 font size."
-  :type 'number
-  :group 'catppuccin)
-
-(defcustom catppuccin-height-title-2 1.2
-  "Header 2 font size."
-  :type 'number
-  :group 'catppuccin)
-
-(defcustom catppuccin-height-title-3 1.2
-  "Header 3 font size."
-  :type 'number
-  :group 'catppuccin)
-
-(defcustom catppuccin-height-doc-title 1.44
-  "Documentation Title font size."
-  :type 'number
-  :group 'catppuccin)
-
 (defcustom catppuccin-highlight-matches nil
   "Use background color to make highlighted matches more visible."
   :type 'boolean
@@ -436,15 +411,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (adoc-meta-hide-face :inherit font-lock-comment-face)
          (adoc-reference-face :inherit link)
          (adoc-secondary-text-face :foreground ,ctp-yellow)
-         (adoc-title-0-face :foreground ,ctp-red
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-1)))
-         (adoc-title-1-face :foreground ,ctp-peach
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-2)))
-         (adoc-title-2-face :foreground ,ctp-yellow
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-3)))
+         (adoc-title-0-face :foreground ,ctp-red)
+         (adoc-title-1-face :foreground ,ctp-peach)
+         (adoc-title-2-face :foreground ,ctp-yellow)
          (adoc-title-3-face :foreground ,ctp-green)
          (adoc-title-4-face :foreground ,ctp-sapphire)
          (adoc-typewriter-face :foreground ,ctp-green)
@@ -651,15 +620,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (elfeed-log-debug-level-face :weight bold)
 
          ;; elpher
-         (elpher-gemini-heading1 :weight bold :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-1)))
-         (elpher-gemini-heading2 :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-2)))
-         (elpher-gemini-heading3 :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-3)))
+         (elpher-gemini-heading1 :weight bold :foreground ,ctp-blue)
+         (elpher-gemini-heading2 :foreground ,ctp-blue)
+         (elpher-gemini-heading3 :foreground ,ctp-blue)
          (elpher-gemini-preformatted :inherit fixed-pitch
            :foreground ,ctp-green)
 
@@ -744,15 +707,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; TODO: More latex faces to be themed, especially sections
 
          ;; gemini
-         (gemini-heading-face-1 :weight bold :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-1)))
-         (gemini-heading-face-2 :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-2)))
-         (gemini-heading-face-3 :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-3)))
+         (gemini-heading-face-1 :weight bold :foreground ,ctp-blue)
+         (gemini-heading-face-2 :foreground ,ctp-blue)
+         (gemini-heading-face-3 :foreground ,ctp-blue)
          (gemini-heading-face-rest :foreground ,ctp-blue)
          (gemini-quote-face :foreground ,ctp-green)
 
@@ -998,15 +955,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (markdown-code-face :foreground ,ctp-text)
          (markdown-footnote-face :foreground ,ctp-yellow)
          (markdown-header-face :weight normal)
-         (markdown-header-face-1 :foreground ,ctp-red
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-1)))
-         (markdown-header-face-2 :foreground ,ctp-peach
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-2)))
-         (markdown-header-face-3 :foreground ,ctp-yellow
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-3)))
+         (markdown-header-face-1 :foreground ,ctp-red)
+         (markdown-header-face-2 :foreground ,ctp-peach)
+         (markdown-header-face-3 :foreground ,ctp-yellow)
          (markdown-header-face-4 :foreground ,ctp-green)
          (markdown-header-face-5 :foreground ,ctp-sapphire)
          (markdown-header-face-6 :foreground ,ctp-lavender)
@@ -1109,9 +1060,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (org-date :inherit org-agenda-date)
          (org-document-info :foreground ,ctp-sapphire)
          (org-document-info-keyword :inherit font-lock-comment-face)
-         (org-document-title :weight bold :foreground ,ctp-blue
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-doc-title)))
+         (org-document-title :weight bold :foreground ,ctp-blue)
          (org-done :inherit font-lock-comment-face)
          (org-ellipsis :inherit font-lock-comment-face)
          (org-footnote :foreground ,ctp-mauve)
@@ -1119,15 +1068,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (org-headline-done :inherit org-done)
          (org-hide :foreground ,ctp-crust :background ,ctp-base)
          (org-indent :foreground ,ctp-base)
-         (org-level-1 :inherit bold :foreground ,ctp-red
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-1)))
-         (org-level-2 :inherit bold :foreground ,ctp-peach
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-2)))
-         (org-level-3 :weight normal :foreground ,ctp-yellow
-           ,@(when catppuccin-enlarge-headings
-               (list :height catppuccin-height-title-3)))
+         (org-level-1 :inherit bold :foreground ,ctp-red)
+         (org-level-2 :inherit bold :foreground ,ctp-peach)
+         (org-level-3 :weight normal :foreground ,ctp-yellow)
          (org-level-4 :weight normal :foreground ,ctp-green)
          (org-level-5 :weight normal :foreground ,ctp-sapphire)
          (org-level-6 :weight normal :foreground ,ctp-lavender)
