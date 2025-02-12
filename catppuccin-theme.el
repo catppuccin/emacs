@@ -430,10 +430,11 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (adoc-code-face :foreground ,ctp-text)
          (adoc-command-face :foreground ,ctp-yellow)
          (adoc-emphasis-face :inherit bold)
-         (adoc-internal-reference-face :foreground ,ctp-yellow :underline t)
+         (adoc-internal-reference-face :foreground ,ctp-green)
          (adoc-list-face :foreground ,ctp-text)
-         (adoc-meta-face :foreground ,ctp-yellow)
-         (adoc-meta-hide-face :foreground ,ctp-yellow)
+         (adoc-meta-face :inherit font-lock-comment-face)
+         (adoc-meta-hide-face :inherit font-lock-comment-face)
+         (adoc-reference-face :inherit link)
          (adoc-secondary-text-face :foreground ,ctp-yellow)
          (adoc-title-0-face :foreground ,ctp-red
            ,@(when catppuccin-enlarge-headings
