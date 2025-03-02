@@ -302,6 +302,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          ;; default / basic faces
          (cursor :background ,ctp-rosewater)
          (default :background ,ctp-base :foreground ,ctp-text)
+         (italic :slant italic)
          (default-italic :slant italic)
          (hl-todo :foreground ,ctp-peach)
          (error :foreground ,ctp-red)
