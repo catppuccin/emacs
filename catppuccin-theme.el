@@ -683,6 +683,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (fg:erc-color-face14 :foreground ,ctp-overlay2)
          (fg:erc-color-face15 :foreground ,ctp-text)
 
+         ;; eglot-supplements
+         (eglot-cthier-recursive-mark-face :foreground ,ctp-red)
+         (eglot-marocc-occurence-text :foreground ,ctp-green)
+
          ;; enh-ruby
          (enh-ruby-heredoc-delimiter-face :foreground ,ctp-yellow)
          (enh-ruby-op-face :inherit haskell-operator-face)
