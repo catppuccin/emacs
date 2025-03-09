@@ -465,6 +465,8 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (completions-annotations :inherit font-lock-comment-face)
          (completions-common-part :foreground ,ctp-sky)
          (completions-first-difference :foreground ,ctp-text)
+         ;; completion-preview
+         (completion-preview-exact :underline ,ctp-red :inherit completion-preview-common)
 
          ;; diff-hl
          (diff-hl-change :background ,ctp-blue
