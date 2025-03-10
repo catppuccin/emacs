@@ -395,8 +395,7 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (font-lock-regexp-grouping-construct :foreground ,ctp-red)
          (font-lock-string-face :foreground ,ctp-green)
          (font-lock-type-face :foreground ,ctp-yellow)
-         (font-lock-variable-name-face :foreground ,ctp-text
-           ,@(when catppuccin-italic-variables '(:inherit italic)))
+         (font-lock-variable-name-face :foreground ,ctp-lavender)
          (font-lock-variable-use-face :foreground ,ctp-text
            ,@(when catppuccin-italic-variables '(:inherit italic)))
          (font-lock-warning-face :inherit warning)
