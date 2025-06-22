@@ -765,10 +765,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (helm-visible-mark :foreground ,ctp-red)
 
          ;; powerline
-         (powerline-active1 :background ,ctp-peach :foreground ,ctp-surface0)
-         (powerline-active2 :background ,ctp-rosewater :foreground ,ctp-surface0)
-         (powerline-inactive1 :background ,ctp-surface2 :foreground ,ctp-text)
-         (powerline-inactive2 :background ,ctp-overlay2 :foreground ,ctp-subtext1)
+         (powerline-active1 :foreground ,ctp-peach :background ,ctp-surface0)
+         (powerline-active2 :foreground ,ctp-rosewater :background ,ctp-surface0)
+         (powerline-inactive1 :foreground ,ctp-text :background ,ctp-surface2)
+         (powerline-inactive2 :foreground ,ctp-subtext1 :background ,ctp-overlay2)
 
          ;; consult
          (consult-async-split :foreground ,ctp-mauve)
