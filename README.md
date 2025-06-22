@@ -72,6 +72,36 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 (setq doom-theme 'catppuccin)
 ```
 
+## Spacemacs
+
+1. Add catppuccin-theme to the dotspacemacs-additional-packages list
+
+```lisp
+(defun dotspacemacs/layers ()
+  (setq-default 
+   dotspacemacs-additional-packages '(catppuccin-theme)
+   )
+  )
+```
+
+2. Set dotspacemacs-themes to catppuccin
+
+```lisp
+(defun dotspacemacs/init ()
+  (setq-default
+   dotspacemacs-themes '(catppuccin)
+   )
+  )
+```
+
+3. Config your flavour in user-init function
+
+```lisp
+(defun dotspacemacs/user-init ()
+  (setq catppuccin-flavor 'frappe)
+  )
+```
+
 # Configuration
 
 The default flavour is Mocha, to change the flavor, place the following in your `init.el` or `config.el`
