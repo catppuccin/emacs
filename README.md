@@ -75,31 +75,20 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 ## Spacemacs
 
 1. Add catppuccin-theme to the dotspacemacs-additional-packages list
+2. Set dotspacemacs-themes to catppuccin
+3. Configure your flavor in the user-init function:
 
 ```lisp
 (defun dotspacemacs/layers ()
   (setq-default 
-   dotspacemacs-additional-packages '(catppuccin-theme)
-   )
-  )
-```
+   dotspacemacs-additional-packages '(catppuccin-theme)))
 
-2. Set dotspacemacs-themes to catppuccin
-
-```lisp
 (defun dotspacemacs/init ()
   (setq-default
-   dotspacemacs-themes '(catppuccin)
-   )
-  )
-```
+   dotspacemacs-themes '(catppuccin)))
 
-3. Config your flavour in user-init function
-
-```lisp
 (defun dotspacemacs/user-init ()
-  (setq catppuccin-flavor 'frappe)
-  )
+  (setq catppuccin-flavor 'frappe))
 ```
 
 # Configuration
