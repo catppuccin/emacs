@@ -142,28 +142,35 @@ The colors used will correspond to those in COLORS."
     str))
 
 ;; Color operations
-(let* ((hex-to-rgb (lambda (color)
-                     (mapcar
-                       (lambda (i) (string-to-number (substring color i
-                                                       (+ i 2)) 16))
-                       '(1 3 5))))
-        (rgb-to-hex (lambda (r g b)
-                      (format "#%02x%02x%02x" r g b)))
-        (rnd (lambda (n) (round (+ .5 n)))))
+(defun catppuccin--hex-to-rgb (color)
+  "Convert a hex COLOR string like \"#rrggbb\" to a list of three integers."
+  (mapcar (lambda (i) (string-to-number (substring color i (+ i 2)) 16))
+    '(1 3 5)))
 
-  (defun catppuccin-lighten (color value)
-    "Lighten COLOR by VALUE%."
-    (let* ((factor (/ value 100.0)))
-      (apply rgb-to-hex (mapcar (lambda (v) (funcall rnd
-                                              (min 255 (+ (* (- 255 v)
-                                                            factor) v))))
-                          (funcall hex-to-rgb color)))))
+(defun catppuccin--rgb-to-hex (r g b)
+  "Convert R, G, B integers to a hex color string."
+  (format "#%02x%02x%02x" r g b))
 
-  (defun catppuccin-darken (color value)
-    "Darken COLOR by VALUE%."
-    (let* ((factor (/ value 100.0)))
-      (apply rgb-to-hex (mapcar (lambda (v) (floor (* (- 1 factor) v)))
-                          (funcall hex-to-rgb color))))))
+(defun catppuccin--rnd (n)
+  "Round N to the nearest integer."
+  (round (+ 0.5 n)))
+
+(defun catppuccin-lighten (color value)
+  "Lighten COLOR by VALUE% (0–100)."
+  (let* ((factor (/ value 100.0)))
+    (apply #'catppuccin--rgb-to-hex
+      (mapcar (lambda (v)
+                (catppuccin--rnd
+                  (min 255 (+ (* (- 255 v) factor) v))))
+        (catppuccin--hex-to-rgb color)))))
+
+(defun catppuccin-darken (color value)
+  "Darken COLOR by VALUE% (0–100)."
+  (let* ((factor (/ value 100.0)))
+    (apply #'catppuccin--rgb-to-hex
+      (mapcar (lambda (v)
+                (floor (* (- 1 factor) v)))
+        (catppuccin--hex-to-rgb color)))))
 
 ;;; User functions:
 
