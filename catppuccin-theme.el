@@ -172,6 +172,12 @@ The colors used will correspond to those in COLORS."
                 (floor (* (- 1 factor) v)))
         (catppuccin--hex-to-rgb color)))))
 
+(defun catppuccin-recolor (color value)
+  "Darken or lightens COLOR based on the current flavour."
+  (if (eq catppuccin-flavor 'latte)
+    (catppuccin-lighten color value)
+    (catppuccin-darken color value)))
+
 ;;; User functions:
 
 (defun catppuccin-reload ()
@@ -477,21 +483,21 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
 
          ;; diff-hl
          (diff-hl-change :background ,ctp-blue
-           :foreground ,(catppuccin-darken ctp-blue 50))
+           :foreground ,(catppuccin-recolor ctp-blue 50))
          (diff-hl-delete :background ,ctp-red
-           :foreground ,(catppuccin-darken ctp-red 50))
+           :foreground ,(catppuccin-recolor ctp-red 50))
          (diff-hl-insert :background ,ctp-green
-           :foreground ,(catppuccin-darken ctp-green 50))
+           :foreground ,(catppuccin-recolor ctp-green 50))
 
          ;; diff-mode
          (diff-header :foreground ,ctp-blue)
          (diff-hunk-header :foreground ,ctp-text :background ,ctp-surface2)
-         (diff-added :background ,(catppuccin-darken ctp-green 60))
-         (diff-removed :background ,(catppuccin-darken ctp-red 60))
+         (diff-added :background ,(catppuccin-recolor ctp-green 60))
+         (diff-removed :background ,(catppuccin-recolor ctp-red 60))
          (diff-indicator-added :foreground ,ctp-green)
          (diff-indicator-removed :foreground ,ctp-red)
-         (diff-refine-added :background ,(catppuccin-darken ctp-green 40))
-         (diff-refine-removed :background ,(catppuccin-darken ctp-red 40))
+         (diff-refine-added :background ,(catppuccin-recolor ctp-green 40))
+         (diff-refine-removed :background ,(catppuccin-recolor ctp-red 40))
          (diff-refine-changed :background ,ctp-yellow
            :foreground ,ctp-base)
 
