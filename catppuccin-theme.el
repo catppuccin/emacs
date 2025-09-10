@@ -25,7 +25,7 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
@@ -67,6 +67,11 @@ The theme has to be reloaded after changing anything in this group."
 
 (defcustom catppuccin-italic-blockquotes t
   "Use :slant italic for blockquotes in markdown and org."
+  :type 'boolean
+  :group 'catppuccin)
+
+(defcustom catppuccin-dark-line-numbers-background nil
+  "Use the mantle background color for line numbers to make them stand out more."
   :type 'boolean
   :group 'catppuccin)
 
@@ -309,7 +314,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
           (catppuccin-quantize-color
             (if (eq catppuccin-flavor 'latte)
               (catppuccin-darken (catppuccin-color 'base) 12)
-              (catppuccin-lighten (catppuccin-color 'base) 17))))))
+              (catppuccin-lighten (catppuccin-color 'base) 17))))
+        (ctp-linum (if catppuccin-dark-line-numbers-background
+                     (catppuccin-color 'mantle)
+                     (catppuccin-color 'base)))))
     (faces
       '(
          ;; default / basic faces
@@ -334,9 +342,9 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (link :foreground ,ctp-lavender :underline t)
          (link-unvisited :foreground ,ctp-blue :underline t)
          (linum :inherit default :foreground ,ctp-surface1
-           :background ,ctp-base)
+           :background ,ctp-linum)
          (line-number :inherit default :foreground ,ctp-surface1
-           :background ,ctp-base)
+           :background ,ctp-linum)
          (line-number-current-line :inherit line-number
            :foreground ,ctp-lavender)
          (match :background ,ctp-red :foreground ,ctp-mantle)
