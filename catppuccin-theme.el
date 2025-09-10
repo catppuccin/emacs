@@ -25,7 +25,7 @@
 ;; Author: nyxkrage
 ;; Original-Author: film42
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/catppuccin/emacs
 
 ;;; Commentary:
