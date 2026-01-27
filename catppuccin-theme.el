@@ -1242,10 +1242,6 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
            :background ,ctp-mantle)
          (centaur-tabs-selected-modified :foreground ,ctp-red
            :background ,ctp-current)
-         (centaur-tabs-close-unselected :foreground ,ctp-subtext0
-           :background ,ctp-mantle)
-         (centaur-tabs-close-selected :foreground ,ctp-text
-           :background ,ctp-current)
          (centaur-tabs-name-mouse-face :foreground ,ctp-text
            :background ,ctp-surface1)
          (centaur-tabs-close-mouse-face :foreground ,ctp-red
