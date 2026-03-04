@@ -509,6 +509,20 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
          (diff-refine-changed :background ,ctp-yellow
            :foreground ,ctp-base)
 
+         ;; ediff
+         (ediff-current-diff-A :background ,ctp-surface0 :foreground ,ctp-red :extend t)
+         (ediff-current-diff-B :background ,ctp-surface0 :foreground ,ctp-green :extend t)
+         (ediff-current-diff-C :background ,ctp-surface0 :foreground ,ctp-yellow :extend t)
+         (ediff-even-diff-A :background ,ctp-mantle :extend t)
+         (ediff-even-diff-B :background ,ctp-mantle :extend t)
+         (ediff-even-diff-C :background ,ctp-mantle :extend t)
+         (ediff-odd-diff-A :background ,ctp-surface0 :extend t)
+         (ediff-odd-diff-B :background ,ctp-surface0 :extend t)
+         (ediff-odd-diff-C :background ,ctp-surface0 :extend t)
+         (ediff-fine-diff-A :background ,ctp-surface1 :foreground ,ctp-red :weight bold :extend t)
+         (ediff-fine-diff-B :background ,ctp-surface1 :foreground ,ctp-green :weight bold :extend t)
+         (ediff-fine-diff-C :background ,ctp-surface1 :foreground ,ctp-yellow :weight bold :extend t)
+
          ;; eshell
          (eshell-ls-archive :foreground ,ctp-mauve)
          (eshell-ls-backup :foreground ,ctp-yellow)
