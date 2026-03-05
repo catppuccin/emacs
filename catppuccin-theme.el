@@ -317,7 +317,10 @@ FLAVOR defaults to the value of `catppuccin-flavor'."
               (catppuccin-lighten (catppuccin-color 'base) 17))))
         (ctp-linum (if catppuccin-dark-line-numbers-background
                      (catppuccin-color 'mantle)
-                     (catppuccin-color 'base)))))
+                     (or (catppuccin-color 'base) 'unspecified))
+          (if catppuccin-dark-line-numbers-background
+            (catppuccin-quantize-color (catppuccin-color 'mantle))
+            (or (catppuccin-quantize-color (catppuccin-color 'base)) 'unspecified)))))
     (faces
       '(
          ;; default / basic faces
