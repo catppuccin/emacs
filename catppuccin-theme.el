@@ -108,6 +108,21 @@ The colors used will correspond to those in alist COLORS."
 (defvar catppuccin-flavor-alist '()
   "Alist of flavors to alist of names to hex colors.")
 
+(defun define-catppuccin-flavor-from (flavor name new)
+  "Define a custom flavor NAME based on FLAVOR.
+
+Calls `define-catppuccin-flavor' on an alist of FLAVOR's colors,
+updated with colors from NEW. That is, the produced alist will
+have all of the colors in FLAVOR and NEW. If a color is present
+in both, then the color from NEW is used."
+  (define-catppuccin-flavor
+    name
+    (let ((base (alist-get flavor catppuccin-flavor-alist))
+           (result (list)))
+      (dolist (elem base result)
+        (push (cons (car elem) (or (alist-get (car elem) new) (cdr elem)))
+          result)))))
+
 (when load-file-name
   ;; load the flavor definitions
   (with-temp-buffer
