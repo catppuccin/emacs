@@ -93,7 +93,7 @@ Must be one of `mocha`, `macchiato`, `frappe`, or `latte`."
 (defun define-catppuccin-flavor (flavor colors)
   "Define a new Catppuccin flavor named FLAVOR.
 
-The colors used will correspond to those in COLORS."
+The colors used will correspond to those in alist COLORS."
   (custom-declare-variable (intern (concat "catppuccin-"
                                      (symbol-name flavor) "-colors"))
     `(funcall ',(lambda () colors))
