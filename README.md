@@ -48,29 +48,29 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 2. You can then install the package from the `list-packages` interface, accessible from `M-x list-packages`.
 3. Alternatively, you can install the package using your package manager of choice, such as straight
 
-```lisp
-(straight-use-package 'catppuccin-theme)
-```
+    ```lisp
+    (straight-use-package 'catppuccin-theme)
+    ```
 
 4. Then, you can enable it by adding the following to your `init.el` file
 
-```lisp
-(load-theme 'catppuccin :no-confirm)
-```
+    ```lisp
+    (load-theme 'catppuccin :no-confirm)
+    ```
 
 ## Doom Emacs
 
 1. Add the following to your `package.el`
 
-```lisp
-(package! catppuccin-theme)
-```
+    ```lisp
+    (package! catppuccin-theme)
+    ```
 
 2. Add the following to your `config.el`
 
-```lisp
-(setq doom-theme 'catppuccin)
-```
+    ```lisp
+    (setq doom-theme 'catppuccin)
+    ```
 
 ## Spacemacs
 
@@ -78,18 +78,18 @@ This Emacs theme was made with the [Dracula](https://github.com/dracula/emacs) t
 2. Set dotspacemacs-themes to catppuccin
 3. Configure your flavor in the user-init function:
 
-```lisp
-(defun dotspacemacs/layers ()
-  (setq-default 
-   dotspacemacs-additional-packages '(catppuccin-theme)))
+    ```lisp
+    (defun dotspacemacs/layers ()
+      (setq-default 
+       dotspacemacs-additional-packages '(catppuccin-theme)))
 
-(defun dotspacemacs/init ()
-  (setq-default
-   dotspacemacs-themes '(catppuccin)))
+    (defun dotspacemacs/init ()
+      (setq-default
+       dotspacemacs-themes '(catppuccin)))
 
-(defun dotspacemacs/user-init ()
-  (setq catppuccin-flavor 'frappe))
-```
+    (defun dotspacemacs/user-init ()
+      (setq catppuccin-flavor 'frappe))
+    ```
 
 # Configuration
 
@@ -97,7 +97,7 @@ The default flavour is Mocha, to change the flavor, place the following in your 
 after loading the theme
 
 ```lisp
-(setq catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
+(setopt catppuccin-flavor 'frappe) ;; or 'latte, 'macchiato, or 'mocha
 (catppuccin-reload)
 ```
 
